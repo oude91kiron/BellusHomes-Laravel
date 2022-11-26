@@ -59,7 +59,7 @@
                     <h4>Recent Properties</h4>
                     <div class="media mb-4">
                         <a href="properties-details.html">
-                            <img src="http://placehold.it/60x60" alt="sub-property">
+                            <img src="https://via.placeholder.com/60x60" alt="sub-property">
                         </a>
                         <div class="media-body align-self-center">
                             <h5>
@@ -70,7 +70,7 @@
                     </div>
                     <div class="media mb-4">
                         <a href="properties-details.html">
-                            <img src="http://placehold.it/60x60" alt="sub-property-2">
+                            <img src="https://via.placeholder.com/60x60" alt="sub-property-2">
                         </a>
                         <div class="media-body align-self-center">
                             <h5>
@@ -81,7 +81,7 @@
                     </div>
                     <div class="media">
                         <a href="properties-details.html">
-                            <img src="http://placehold.it/60x60" alt="sub-property-3">
+                            <img src="https://via.placeholder.com/60x60" alt="sub-property-3">
                         </a>
                         <div class="media-body align-self-center">
                             <h5>
@@ -166,10 +166,10 @@
                                         <iframe class="modalIframe" src="https://www.youtube.com/embed/5e0LxrLSzok"  allowfullscreen></iframe>
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="http://placehold.it/400x267" alt="Test ALT">
+                                        <img src="https://via.placeholder.com/400x267" alt="Test ALT">
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="http://placehold.it/400x267" alt="Test ALT">
+                                        <img src="https://via.placeholder.com/400x267" alt="Test ALT">
                                     </div>
                                 </div>
                                 <a class="control control-prev" href="#modalCarousel" role="button" data-slide="prev">

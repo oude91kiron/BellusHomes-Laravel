@@ -2,7 +2,7 @@
 @section('content')
 
 <!-- Sub banner start -->
-<div class="sub-banner">
+<!-- <div class="sub-banner">
     <div class="container">
         <div class="breadcrumb-area">
             <h1>Property Detail</h1>
@@ -14,7 +14,7 @@
             </ul>
         </div>
     </div>
-</div>
+</div> -->
 <!-- Sub banner end -->
 
 <!-- Properties details page start -->
@@ -31,9 +31,9 @@
                                    <div>
                                        <div class="float-left">
                                            <ul class="clearfix">
-                                               <li><i class="flaticon-bed"></i>{{$property -> rooms}} rooms </li>
-                                               <li><i class="flaticon-bath"></i>{{$property -> bedrooms}} bedrooms </li>
-                                               <li><i class="flaticon-square-layouting-with-black-square-in-east-area"></i>{{$property ->erea}} metter</li>
+                                               <li><i class="flaticon-bed"></i> {{$property -> rooms}} Rooms </li>
+                                               <li><i class="flaticon-bath"></i> {{$property -> bedrooms}} Bedrooms </li>
+                                               <li><i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property ->erea}} Metter</li>
                                         
                                            </ul>
                                        </div>
@@ -53,12 +53,12 @@
                     
                     </div>
                     <!-- main slider carousel nav controls -->
-                    <ul class="carousel-indicators sp-2 smail-properties list-inline nav nav-justified ">
+                    <ul class="carousel-indicators sp-2 smail-properties list-inline nav nav-justified mt-4">
                         @isset($property->images)
                         @foreach($property ->images as $image)
-                        <li class="list-inline-item active">
+                        <li class="list-inline-item active ml-4">
                             <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#propertiesDetailsSlider">
-                                <img src="{{$image->photo}}" class="img-fluid" alt="properties-photo-smale">
+                                <img src="{{$image->photo}}" class="" alt="properties-photo-smale">
                             </a>
                         </li>
                        @endforeach
@@ -77,7 +77,6 @@
                     <p>{{$property -> description}} </p>
                 </div>
 
-                 // you can contunue ....!!!!
                 <!-- Property details start -->
                 <div class="property-details mb-45">
                     <h3 class="heading-3">Property Details</h3>
@@ -259,20 +258,25 @@
                         </tr>
                         </tbody>
                     </table>
-                    <img src="http://placehold.it/730x370" alt="floor-plans" class="img-fluid">
+                    <img src="https://via.placeholder.com/730x370" alt="floor-plans" class="img-fluid">
                 </div>
                 <!-- Property vedio start -->
                 <div class="property-video mb-60">
                     <h3 class="heading-3">Property Vedio</h3>
                     <iframe src="https://www.youtube.com/embed/m5_AKjDdqaU"></iframe>
                 </div>
+
+
                 <!-- Section Location start -->
                 <div class="section-location mb-60">
                     <h3 class="heading-3">Property Location</h3>
                     <div class="map">
-                        <div id="contactMap" class="contact-map"></div>
+                        <div id="contactMap" class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12042.09030311691!2d28.9412191!3d41.01382175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caba31709c1721%3A0x3627fc1bcdc7337f!2sSeyyid%20%C3%96mer%2C%20%C5%9Eair%20Mehmet%20Emin%20Sk.%20No%3A37%2C%2034098%20Fatih%2F%C4%B0stanbul!5e0!3m2!1sen!2str!4v1669421392390!5m2!1sen!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
                     </div>
                 </div>
+
+
+
                 <!-- Related properties start -->
                 <div class="related-properties hedin-mb-30">
                     <h3 class="heading-3">Related Properties</h3>
@@ -283,7 +287,7 @@
                                     <a href="properties-details.html" class="property-img">
                                         <div class="tag-2">For Rent</div>
                                         <div class="price-box"><span>$850.00</span> Per night</div>
-                                        <img src="http://placehold.it/350x233" alt="property" class="img-fluid">
+                                        <img src="https://via.placeholder.com/350x233" alt="property" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="detail">
@@ -327,7 +331,7 @@
                                     <a href="properties-details.html" class="property-img">
                                         <div class="tag-2">For Sale</div>
                                         <div class="price-box"><span>$850.00</span> Per night</div>
-                                        <img src="http://placehold.it/350x233" alt="property" class="img-fluid">
+                                        <img src="https://via.placeholder.com/350x233" alt="property" class="img-fluid">
                                     </a>
                                 </div>
                                 <div class="detail">
@@ -471,7 +475,7 @@
                         <h5 class="sidebar-title">Recent Properties</h5>
                         <div class="media mb-4">
                             <a href="properties-details.html">
-                                <img src="http://placehold.it/60x60" alt="sub-property">
+                                <img src="https://via.placeholder.com/60x60" alt="sub-property">
                             </a>
                             <div class="media-body align-self-center">
                                 <h5>
@@ -482,7 +486,7 @@
                         </div>
                         <div class="media mb-4">
                             <a href="properties-details.html">
-                                <img src="http://placehold.it/60x60" alt="sub-property-2">
+                                <img src="https://via.placeholder.com/60x60" alt="sub-property-2">
                             </a>
                             <div class="media-body align-self-center">
                                 <h5>
@@ -493,7 +497,7 @@
                         </div>
                         <div class="media">
                             <a href="properties-details.html">
-                                <img src="http://placehold.it/60x60" alt="sub-property-3">
+                                <img src="https://via.placeholder.com/60x60" alt="sub-property-3">
                             </a>
                             <div class="media-body align-self-center">
                                 <h5>
@@ -520,31 +524,6 @@
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor dui, scelerisque ac nisi</p>
                         <p></p>
                         <a href="properties-details.html" class="btn btn-md btn-color">Register Now</a>
-                    </div>
-                    <!-- Financing calculator  start -->
-                    <div class="contact-3 financing-calculator widget-3">
-                        <h5 class="sidebar-title">Mortgage Calculator</h5>
-                        <form action="#" method="GET" enctype="multipart/form-data">
-                            <div class="form-group">
-                                <label class="form-label">Property Price</label>
-                                <input type="text" class="form-control" placeholder="$36.400">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Interest Rate (%)</label>
-                                <input type="text" class="form-control" placeholder="10%">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Period In Months</label>
-                                <input type="text" class="form-control" placeholder="10 Months">
-                            </div>
-                            <div class="form-group">
-                                <label class="form-label">Down PaymenT</label>
-                                <input type="text" class="form-control" placeholder="$21,300">
-                            </div>
-                            <div class="form-group mb-0">
-                                <button type="submit" class="btn btn-color btn-md btn-message btn-block">Cauculate</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>

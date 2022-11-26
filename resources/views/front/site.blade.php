@@ -5,8 +5,8 @@
 <div class="featured-properties content-area-7">
     <div class="container-fluid">
         <div class="main-title">
-            <h1>Featured Properties</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h1>Featured Projects</h1>
+            <p><i>Check our best projects and the opportunities we are providing</i></p>
         </div>
         <div class="row slick-fullwidth wow fadeInUp delay-04s">
             @isset($properties)
@@ -19,24 +19,12 @@
                                 <span class="featured">Featured</span>
                             </div>
                             <div class="tag-for">For Sale</div>
-                            <div class="plan-price"><sup>$</sup>{{$property ->total_price}}</div>
-                            <img src="{{$property -> images[0] -> photo ?? '' }}" alt="property-box" class="img-fluid" style="height: 280px;">
+                            <img src="{{$property -> images[0] -> photo ?? '' }}" 
+                                 alt="property-box" 
+                                 class="img-fluid" 
+                                 style="height: 280px;">
                         </a>
-                        <div class="property-overlay">
-                            <a href="properties-details.html" class="overlay-link">
-                                <i class="fa fa-link"></i>
-                            </a>
-                            <a class="overlay-link property-video" title="Test Title">
-                                <i class="fa fa-video-camera"></i>
-                            </a>
-                            <div class="property-magnify-gallery">
-                                <a href="http://placehold.it/750x540" class="overlay-link">
-                                    <i class="fa fa-expand"></i>
-                                </a>
-                                <a href="http://placehold.it/750x540" class="hidden"></a>
-                                <a href="http://placehold.it/750x540" class="hidden"></a>
-                            </div>
-                        </div>
+
                     </div>
                     <div class="detail">
                         <h1 class="title">
@@ -44,29 +32,24 @@
                         </h1>
                         <div class="location">
                             <a href="properties-details.html">
-                                <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>{{$property ->location}}
+                                <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i> {{$property ->location}}
                             </a>
                         </div>
                         <ul class="facilities-list clearfix">
                             <li>
-                                <i class="flaticon-bed"></i> {{$property -> bedroom}}
+                                <i class="flaticon-bed"></i> {{$property -> bedrooms}}
                             </li>
                             <li>
-                                <i class="flaticon-bath"></i>{{$property ->bathroom}}
+                                <i class="flaticon-bath"></i> {{$property -> bathrooms}}
                             </li>
                             <li>
-                                <i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property -> area}}meter
+                                <i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property -> area}} Meter
                             </li>
                            
                         </ul>
                     </div>
-                    <div class="footer">
-                        <a href="#">
-                            <i class="fa fa-user"></i> Jhon Doe 
-                        </a>
-                        <span>
-                            <i class="fa fa-calendar-o"></i> {{$property->building_age}}
-                        </span>
+                    <div class="plan-price">
+                        ${{$property ->total_price}}
                     </div>
                 </div>
             </div>
@@ -142,7 +125,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
                 <div class="property-box-8">
                     <div class="property-photo">
-                        <img src="http://placehold.it/255x170" alt="property-8" class="img-fluid">
+                        <img src="https://via.placeholder.com/255x170" alt="property-8" class="img-fluid">
                         <div class="tag-for">For Rent</div>
                         <div class="price-ratings-box">
                             <p class="price">
@@ -179,7 +162,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp delay-04s">
                 <div class="property-box-8">
                     <div class="property-photo">
-                        <img src="http://placehold.it/255x170" alt="property-8" class="img-fluid">
+                        <img src="https://via.placeholder.com/255x170" alt="property-8" class="img-fluid">
                         <div class="tag-for">For Rent</div>
                         <div class="price-ratings-box">
                             <p class="price">
@@ -216,7 +199,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp delay-04s">
                 <div class="property-box-8">
                     <div class="property-photo">
-                        <img src="http://placehold.it/255x170" alt="property-8" class="img-fluid">
+                        <img src="https://via.placeholder.com/255x170" alt="property-8" class="img-fluid">
                         <div class="tag-for">For Sale</div>
                         <div class="price-ratings-box">
                             <p class="price">
@@ -253,7 +236,7 @@
             <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInRight delay-04s">
                 <div class="property-box-8">
                     <div class="property-photo">
-                        <img src="http://placehold.it/255x170" alt="property-8" class="img-fluid">
+                        <img src="https://via.placeholder.com/255x170" alt="property-8" class="img-fluid">
                         <div class="tag-for">For Rent</div>
                         <div class="price-ratings-box">
                             <p class="price">
@@ -337,7 +320,7 @@
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
                 <div class="agent-2">
                     <div class="agent-photo">
-                        <img src="http://placehold.it/255x285" alt="agent-grid-2" class="img-fluid">
+                        <img src="https://via.placeholder.com/255x285" alt="agent-grid-2" class="img-fluid">
                         <ul class="social-list clearfix">
                             <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
@@ -353,7 +336,7 @@
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
                 <div class="agent-2">
                     <div class="agent-photo">
-                        <img src="http://placehold.it/255x285" alt="agent-grid-2" class="img-fluid">
+                        <img src="https://via.placeholder.com/255x285" alt="agent-grid-2" class="img-fluid">
                         <ul class="social-list clearfix">
                             <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
@@ -369,7 +352,7 @@
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInRight delay-04s">
                 <div class="agent-2">
                     <div class="agent-photo">
-                        <img src="http://placehold.it/255x285" alt="agent-grid-2" class="img-fluid">
+                        <img src="https://via.placeholder.com/255x285" alt="agent-grid-2" class="img-fluid">
                         <ul class="social-list clearfix">
                             <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
@@ -385,7 +368,7 @@
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInRight delay-04s">
                 <div class="agent-2">
                     <div class="agent-photo">
-                        <img src="http://placehold.it/255x285" alt="agent-grid-2" class="img-fluid">
+                        <img src="https://via.placeholder.com/255x285" alt="agent-grid-2" class="img-fluid">
                         <ul class="social-list clearfix">
                             <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
@@ -423,7 +406,7 @@
                         <div class="arrow-down"></div>
                         <div class="media user">
                             <a href="#">
-                                <img src="http://placehold.it/60x60 " alt="testimonial-4" class="img-fluid">
+                                <img src="https://via.placeholder.com/60x60 " alt="testimonial-4" class="img-fluid">
                             </a>
                             <div class="media-body align-self-center">
                                 <h5>Maria Blank</h5>
@@ -440,7 +423,7 @@
                         <div class="arrow-down"></div>
                         <div class="media user">
                             <a href="#">
-                                <img src="http://placehold.it/60x60 " alt="testimonial-4" class="img-fluid">
+                                <img src="https://via.placeholder.com/60x60 " alt="testimonial-4" class="img-fluid">
                             </a>
                             <div class="media-body align-self-center">
                                 <h5>Karen Paran</h5>
@@ -457,7 +440,7 @@
                         <div class="arrow-down"></div>
                         <div class="media user">
                             <a href="#">
-                                <img src="http://placehold.it/60x60 " alt="testimonial-4" class="img-fluid">
+                                <img src="https://via.placeholder.com/60x60 " alt="testimonial-4" class="img-fluid">
                             </a>
                             <div class="media-body align-self-center">
                                 <h5>
@@ -476,7 +459,7 @@
                         <div class="arrow-down"></div>
                         <div class="media user">
                             <a href="#">
-                                <img src="http://placehold.it/60x60 " alt="testimonial-4" class="img-fluid">
+                                <img src="https://via.placeholder.com/60x60 " alt="testimonial-4" class="img-fluid">
                             </a>
                             <div class="media-body align-self-center">
                                 <h5>
@@ -505,10 +488,10 @@
                 <div class="row blog-3">
                     <div class="col-lg-5 col-md-12 col-pad ">
                         <div class="photo">
-                            <img src="http://placehold.it/224x288" alt="blog-3" class="img-fluid blog-img">
+                            <img src="https://via.placeholder.com/224x288" alt="blog-3" class="img-fluid blog-img">
                             <div class="user">
                                 <div class="avatar">
-                                    <img src="http://placehold.it/30x30" alt="avatar" class="img-fluid rounded-circle">
+                                    <img src="https://via.placeholder.com/30x30" alt="avatar" class="img-fluid rounded-circle">
                                 </div>
                                 <div class="name">
                                     <h5>Rx Vodro</h5>
@@ -538,10 +521,10 @@
                 <div class="row blog-3">
                     <div class="col-lg-5 col-md-12 col-pad ">
                         <div class="photo">
-                            <img src="http://placehold.it/224x288" alt="blog-3" class="img-fluid blog-img">
+                            <img src="https://via.placeholder.com/224x288" alt="blog-3" class="img-fluid blog-img">
                             <div class="user">
                                 <div class="avatar">
-                                    <img src="http://placehold.it/30x30" alt="avatar" class="img-fluid rounded-circle">
+                                    <img src="https://via.placeholder.com/30x30" alt="avatar" class="img-fluid rounded-circle">
                                 </div>
                                 <div class="name">
                                     <h5>Teseira</h5>

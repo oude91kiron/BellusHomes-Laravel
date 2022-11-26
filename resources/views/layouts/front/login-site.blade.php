@@ -38,6 +38,11 @@
 <!-- Top header end -->
 
 
+<!-- Top header start -->
+@include('front.includes.main-header')
+<!-- Top header end -->
+
+
 <main class="py-4">
             @yield('content')
 </main>
