@@ -21,13 +21,19 @@
                                 <a href="#" type="button" class="btn btn-submit font-weight-bold">About Us</a>
                             </li>
                             <li class=" dropdown">
-                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Properties</a>
-                            </li>
-                            <li class=" dropdown">
-                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Our Service</a>
+                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Service</a>
                             </li>
                             <li class=" dropdown">
                                 <a href="#" type="button" class="btn btn-submit font-weight-bold">Contact Us</a>
+                            </li>
+                            <li class=" dropdown">
+                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Properties Gried</a>
+                            </li>
+                            <li class=" dropdown">
+                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Blog Post</a>
+                            </li>
+                            <li class=" dropdown">
+                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Property Details</a>
                             </li>
                             <li class=" dropdown">
                                 <a href="fr" type="button" class="btn btn-submit font-weight-bold">
