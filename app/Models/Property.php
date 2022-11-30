@@ -5,6 +5,7 @@ namespace App\Models;
 use Astrotomic\Translatable\Translatable;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Category;
 
 class Property extends Model
 {
@@ -31,15 +32,13 @@ protected $fillable = [
     'price_meter',
     'location',
     'area',
+    'parking',
     'rooms',
     'bedrooms',
     'bathrooms',
-    'air_conditioning',
     'central_heating',
-    'laundry_room',
     'gym',
     'alarm',
-    'window_covering',
     'internet',
     'is_active'
 ];
@@ -50,12 +49,9 @@ protected $fillable = [
  * @var array
  */
 protected $casts = [
-    'air_conditioning',
     'central_heating',
-    'laundry_room',
     'gym',
     'alarm',
-    'window_covering',
     'internet',
     'is_active'
 ];
@@ -73,7 +69,7 @@ protected $casts = [
  *
  * @var array
  */
-protected $translatedAttributes = ['building_age','name',  'description', 'parking', 'cooling', 'heating', 'sewer','water','torage_room','exercise_room'];
+protected $translatedAttributes = ['building_age','name',  'description'];
 
 public function city()
 {
@@ -88,7 +84,7 @@ public function getActive()
 
 public function categories()
 {
-    return $this->belongsToMany(Category::class, 'property_categories');
+    return $this->belongsToMany(Category::class, 'property_categories', 'property_id', 'category_id')->withPivot('property_id', 'category_id');
 }
 
 

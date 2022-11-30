@@ -33,7 +33,7 @@
                                            <ul class="clearfix">
                                                <li><i class="flaticon-bed"></i> {{$property -> rooms}} Rooms </li>
                                                <li><i class="flaticon-bath"></i> {{$property -> bedrooms}} Bedrooms </li>
-                                               <li><i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property ->erea}} Metter</li>
+                                               <li><i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property ->area}} Metter</li>
                                         
                                            </ul>
                                        </div>
@@ -84,57 +84,31 @@
                         <div class="col-md-4 col-sm-6">
                             <ul>
                                 <li>
-                                    <strong>Property Id:</strong>215
+                                    <strong>Property ID: </strong>{{100 + $property->id}}
                                 </li>
                                 <li>
-                                    <strong>Price:</strong>$1240/ Month
-                                </li>
-                                <li>
-                                    <strong>Property Type:</strong>House
-                                </li>
-                                <li>
-                                    <strong>Bathrooms:</strong>3
-                                </li>
-                                <li>
-                                    <strong>Bathrooms:</strong>2
+                                    <strong>Year Built:</strong>{{date('Y') - $property->building_age}}
                                 </li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <ul>
                                 <li>
-                                    <strong>Property Lot Size:</strong>800 ft2
+                                    <strong>Price:</strong>{{$property->total_price}}
                                 </li>
                                 <li>
-                                    <strong>Land area</strong>230 ft2
-                                </li>
-                                <li>
-                                    <strong>Year Built</strong>2018
-                                </li>
-                                <li>
-                                    <strong>Available From</strong>2018
-                                </li>
-                                <li>
-                                    <strong>Garages:</strong>2
+                                    <strong>Category:</strong>
+                                    {{$property->categories()->first()->name}}
                                 </li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <ul>
                                 <li>
-                                    <strong>Sold:</strong>Yes
+                                    <strong>City:</strong>{{$city->name}}
                                 </li>
                                 <li>
-                                    <strong>City:</strong>Usa
-                                </li>
-                                <li>
-                                    <strong>Parking:</strong>Yes
-                                </li>
-                                <li>
-                                    <strong>Property Owner:</strong>Sohel Rana
-                                </li>
-                                <li>
-                                    <strong>Zip Code: </strong>2451
+                                    <strong>Location: </strong>{{$property->location}}
                                 </li>
                             </ul>
                         </div>
@@ -146,13 +120,26 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
                             <ul>
-                                <li><span><i class="flaticon-draw-check-mark"></i> 3 Bedrooms</span></li>
+                                <li>
+                                    <span>
+                                        <i class="flaticon-draw-check-mark"></i>
+                                        {{$property->bedrooms}} Bedrooms
+                                    </span>
+                                </li>
+
                                 <li><span><i class="flaticon-draw-check-mark"></i> 2 Bathroom</span></li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <ul>
-                                <li><span><i class="flaticon-draw-check-mark"></i> 1 Garage</span></li>
+                            <li>
+                                    @if($property->Parking)
+                                    <i class="flaticon-draw-check-mark"></i>
+                                    @else
+                                    <i><strong>X</strong></i>      
+                                    @endif
+                                    Parking
+                                </li>
                                 <li><span><i class="flaticon-draw-check-mark"></i> 1 Balcony</span></li>
                             </ul>
                         </div>
@@ -170,73 +157,66 @@
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
                             <ul>
+                                
                                 <li>
+                                    @if($property->central_heating)
                                     <i class="flaticon-draw-check-mark"></i>
-                                    Air conditioning
+                                    @else
+                                    <i><strong>X</strong></i>      
+                                    @endif
+                                    Heating
                                 </li>
+
                                 <li>
+                                    @if($property->internet)
                                     <i class="flaticon-draw-check-mark"></i>
+                                    @else
+                                    <i><strong>X</strong></i>      
+                                    @endif
                                     Wifi
                                 </li>
-                                <li>
-                                    <i class="flaticon-draw-check-mark"></i>
-                                    Swimming Pool
-                                </li>
-                                <li>
-                                    <i class="flaticon-draw-check-mark"></i>
-                                    Double Bed
-                                </li>
-                                <li>
-                                    <i class="flaticon-draw-check-mark"></i>
-                                    Balcony
-                                </li>
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <ul>
                                 <li>
+                                    @if($property->Parking)
                                     <i class="flaticon-draw-check-mark"></i>
-                                    Telephone
-                                </li>
-                                <li>
-                                    <i class="flaticon-draw-check-mark"></i>
-                                    Garage
-                                </li>
-                                <li>
-                                    <i class="flaticon-draw-check-mark"></i>
+                                    @else
+                                    <i><strong>X</strong></i>      
+                                    @endif
                                     Parking
                                 </li>
+
                                 <li>
+                                    @if($property->alarm)
                                     <i class="flaticon-draw-check-mark"></i>
-                                    TV
+                                    @else
+                                    <i><strong>X</strong></i>      
+                                    @endif
+                                    Alarm
                                 </li>
-                                <li>
-                                    <i class="flaticon-draw-check-mark"></i>
-                                    Home Theater
-                                </li>
+
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <ul>
                                 <li>
+                                    @if($property->gym)
                                     <i class="flaticon-draw-check-mark"></i>
-                                    Alarm
-                                </li>
-                                <li>
-                                    <i class="flaticon-draw-check-mark"></i>
-                                    Garage
-                                </li>
-                                <li>
-                                    <i class="flaticon-draw-check-mark"></i>
+                                    @else
+                                    <i><strong>X</strong></i>      
+                                    @endif
                                     Gym
                                 </li>
+
                                 <li>
+                                    @if($property->swimming_pool)
                                     <i class="flaticon-draw-check-mark"></i>
-                                    Electric Range
-                                </li>
-                                <li>
-                                    <i class="flaticon-draw-check-mark"></i>
-                                    Private space
+                                    @else
+                                    <i><strong>X</strong></i>      
+                                    @endif                                    
+                                    Swimming Pool
                                 </li>
                             </ul>
                         </div>
@@ -247,18 +227,18 @@
                     <h3 class="heading-3">Floor Plans</h3>
                     <table>
                         <tbody><tr>
-                            <td><strong>Size</strong></td>
+                            <td><strong>Area</strong></td>
                             <td><strong>Rooms</strong></td>
                             <td><strong>Bathrooms</strong></td>
                         </tr>
                         <tr>
-                            <td>1600</td>
-                            <td>3</td>
-                            <td>2</td>
+                            <td>{{$property->area}}</td>
+                            <td>{{$property->rooms}}</td>
+                            <td>{{$property->bathrooms}}</td>
                         </tr>
                         </tbody>
                     </table>
-                    <img src="https://via.placeholder.com/730x370" alt="floor-plans" class="img-fluid">
+                    <img src="https://via.placeholder.com/760x370" alt="floor-plans" class="img-fluid">
                 </div>
                 <!-- Property vedio start -->
                 <div class="property-video mb-60">
@@ -275,10 +255,8 @@
                     </div>
                 </div>
 
-
-
                 <!-- Related properties start -->
-                <div class="related-properties hedin-mb-30">
+                <!-- <div class="related-properties hedin-mb-30">
                     <h3 class="heading-3">Related Properties</h3>
                     <div class="row">
                         <div class="col-md-6">
@@ -370,12 +348,14 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
+
+            <!-- Side bar starting -->
             <div class="col-lg-4 col-md-12">
                 <div class="sidebar mbl">
                     <!-- Search area start -->
-                    <div class="widget search-area advanced-search as">
+                    <!-- <div class="widget search-area advanced-search as">
                         <h5 class="sidebar-title">Advanced Search</h5>
                         <div class="search-area-inner">
                             <div class="search-contents ">
@@ -457,7 +437,7 @@
                                 </form>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Categories start -->
                     <div class="widget categories">
                         <h5 class="sidebar-title">Categories</h5>
@@ -519,12 +499,12 @@
                         </ul>
                     </div>
                     <!-- Sell Your Property -->
-                    <div class="sell-your-properties">
+                    <!-- <div class="sell-your-properties">
                         <h3>Sell Your Property</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut tortor dui, scelerisque ac nisi</p>
                         <p></p>
                         <a href="properties-details.html" class="btn btn-md btn-color">Register Now</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

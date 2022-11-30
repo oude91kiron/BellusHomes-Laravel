@@ -56,13 +56,6 @@ class PropertiesController extends Controller
       $property->building_age = $request->building_age;
       $property->name = $request->name;
       $property->description = $request->description;
-      $property->parking = $request->parking;
-      $property->cooling = $request->cooling;
-      $property->heating = $request->heating;
-      $property->sewer = $request->sewer;
-      $property->water = $request->water;
-      $property->torage_room = $request->torage_room;
-      $property->exercise_room = $request->exercise_room;
       $property->location = $request->location;
       $property->save();
 

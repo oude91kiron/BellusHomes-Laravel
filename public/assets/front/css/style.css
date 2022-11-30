@@ -9600,7 +9600,7 @@ body.off-canvas-sidebar-open {
     }
 
     .top-header.th-bg{
-        position: fixed;
+        position: static;
         top: 0px;
         z-index: 999;
         width: 100%;
@@ -10620,7 +10620,7 @@ body.off-canvas-sidebar-open {
     }
 
     .top-header.th-bg{
-        position: fixed;
+        position: static;
         top: 0px;
         z-index: 999;
         width: 100%;

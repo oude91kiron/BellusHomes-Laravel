@@ -1,7 +1,8 @@
 
 @extends('layouts.front.site')
 @section('content')
-<!-- Featured properties start -->
+
+<!-- Featured projects start -->
 <div class="featured-properties content-area-7">
     <div class="container-fluid">
         <div class="main-title">
@@ -13,25 +14,25 @@
             @foreach($properties as $property)
             <div class="slick-slide-item">
                 <div class="property-box">
-                    <div class="property-thumbnail">
-                        <a href="{{route('property.details',$property->id)}}" class="property-img">
-                            <div class="listing-badges">
-                                <span class="featured">Featured</span>
-                            </div>
-                            <div class="tag-for">For Sale</div>
-                            <img src="{{$property -> images[0] -> photo ?? '' }}" 
-                                 alt="property-box" 
-                                 class="img-fluid" 
-                                 style="height: 280px;">
-                        </a>
+                    <a href="{{route('property.details',$property->id)}}" class="property-img">
+                        <div class="property-thumbnail">
+                                <div class="listing-badges">
+                                    <span class="featured">Featured</span>
+                                </div>
+                                <div class="tag-for">For Sale</div>
+                                <img src="{{$property -> images[0] -> photo ?? '' }}" 
+                                     alt="property-box" 
+                                     class="img-fluid" 
+                                     style="height: 280px;">
+                        </div>
+                    </a>
 
-                    </div>
                     <div class="detail">
                         <h1 class="title">
-                            <a href="properties-details.html">{{$property->name }}</a>
+                            <a href="{{route('property.details',$property->id)}}">{{$property->name }}</a>
                         </h1>
                         <div class="location">
-                            <a href="properties-details.html">
+                            <a href="{{route('property.details',$property->id)}}">
                                 <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i> {{$property ->location}}
                             </a>
                         </div>
@@ -64,7 +65,7 @@
         </div>
     </div>
 </div>
-<!-- Featured properties end -->
+<!-- Featured projects end -->
 
 <!-- services 3 start -->
 <div class="services-3 content-area-20 bg-white">
