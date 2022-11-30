@@ -84,7 +84,7 @@ public function getActive()
 
 public function categories()
 {
-    return $this->belongsToMany(Category::class, 'property_categories', 'property_id', 'category_id')->withPivot('property_id', 'category_id');
+    return $this->belongsToMany(Category::class, 'property_categories', 'property_id', 'category_id');
 }
 
 

@@ -71,6 +71,6 @@ class Category extends Model
 
     public function properties()
     {
-        return $this -> belongsToMany(Property::class,'property_categories', 'category_id', 'property_id')->withPivot('category_id');
+        return $this -> belongsToMany(Property::class,'property_categories', 'category_id', 'property_id');
     }
 }

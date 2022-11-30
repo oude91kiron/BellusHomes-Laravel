@@ -123,35 +123,35 @@
                                 <li>
                                     <span>
                                         <i class="flaticon-draw-check-mark"></i>
+                                        {{$property->rooms}} Rooms
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <ul>
+                                <li>
+                                    <span>
+                                        <i class="flaticon-draw-check-mark"></i>
                                         {{$property->bedrooms}} Bedrooms
                                     </span>
                                 </li>
-
-                                <li><span><i class="flaticon-draw-check-mark"></i> 2 Bathroom</span></li>
+                                
                             </ul>
                         </div>
                         <div class="col-md-4 col-sm-6">
                             <ul>
-                            <li>
-                                    @if($property->Parking)
-                                    <i class="flaticon-draw-check-mark"></i>
-                                    @else
-                                    <i><strong>X</strong></i>      
-                                    @endif
-                                    Parking
+                                <li>
+                                    <span>
+                                        <i class="flaticon-draw-check-mark"></i>
+                                        {{$property->bathrooms}} Bathrooms
+                                    </span>
                                 </li>
-                                <li><span><i class="flaticon-draw-check-mark"></i> 1 Balcony</span></li>
-                            </ul>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <ul>
-                                <li><span><i class="flaticon-draw-check-mark"></i> 4800 sq ft</span></li>
-                                <li><span><i class="flaticon-draw-check-mark"></i> TV</span></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <!-- Features opions start -->
+                <!-- Features start -->
                 <div class="features-opions af mb-45">
                     <h3 class="heading-3">Features</h3>
                     <div class="row">
@@ -247,7 +247,7 @@
                 </div>
 
 
-                <!-- Section Location start -->
+                <!-- Location Section start -->
                 <div class="section-location mb-60">
                     <h3 class="heading-3">Property Location</h3>
                     <div class="map">
@@ -442,12 +442,9 @@
                     <div class="widget categories">
                         <h5 class="sidebar-title">Categories</h5>
                         <ul>
-                            <li><a href="#">Apartments<span>(12)</span></a></li>
-                            <li><a href="#">Houses<span>(8)</span></a></li>
-                            <li><a href="#">Family Houses<span>(23)</span></a></li>
-                            <li><a href="#">Offices<span>(5)</span></a></li>
-                            <li><a href="#">Villas<span>(63)</span></a></li>
-                            <li><a href="#">Other<span>(7)</span></a></li>
+                            @foreach($categories as $category)
+                            <li><a href="#">{{$category->name}}<span>{{random_int(10, 50)}}</span></a></li>
+                            @endforeach
                         </ul>
                     </div>
                     <!-- Recent posts start -->
