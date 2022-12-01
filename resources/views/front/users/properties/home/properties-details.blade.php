@@ -45,25 +45,47 @@
                            </div>
                        </div>
                     </div>
+
+                    
+
                     <!-- main slider carousel items -->
                     <div class="carousel-inner">
-                        <div class="active item carousel-item" data-slide-number="0">
-                            <img src="{{$property->images[0] -> photo ?? ''}}" class="img-fluid" alt="properties-photo">
+                        @isset($property->images)
+                        @foreach($property ->images as $image)
+                        @if($loop->first)                        
+                        <div class="carousel-item active" ">
+                            <img src="{{$image -> photo ?? ''}}" class="img-fluid" alt="properties-photo">
                         </div>
-                    
+                        @else
+                        <div class="carousel-item" ">
+                            <img src="{{$image -> photo ?? ''}}" class="img-fluid" alt="properties-photo">
+                        </div>
+                        @endif
+                        @endforeach
+                        @endisset              
                     </div>
+
                     <!-- main slider carousel nav controls -->
                     <ul class="carousel-indicators sp-2 smail-properties list-inline nav nav-justified mt-4">
                         @isset($property->images)
                         @foreach($property ->images as $image)
+                        @if($loop->first)
                         <li class="list-inline-item active ml-4">
-                            <a  class="selected" data-slide-to="{{$image->id}}" data-target="#propertiesDetailsSlider">
+                            <a  class="selected" data-slide-to="{{$image->id - 1 }}" data-target="#propertiesDetailsSlider">
                                 <img src="{{$image->photo}}" class="" alt="properties-photo-smale">
                             </a>
                         </li>
+                        @else
+                        <li class="list-inline-item   ml-4">
+                            <a  class="selected" data-slide-to="{{$image->id - 1}}" data-target="#propertiesDetailsSlider">
+                                <img src="{{$image->photo}}" class="" alt="properties-photo-smale">
+                            </a>
+                        </li>
+                        @endif
                        @endforeach
                        @endisset 
                     </ul>
+                    
                 </div>
             </div>
         </div>
