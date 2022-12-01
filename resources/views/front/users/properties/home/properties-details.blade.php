@@ -22,7 +22,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <div id="propertiesDetailsSlider" class="carousel properties-details-sliders slide mb-60">
+                <div id="propertiesDetailsSlider" class="carousel properties-details-sliders slide mb-60" data-ride="carousel">
                     <div class="heading-properties-2">
                        <div class="row">
                            <div class="col-lg-12">
@@ -45,19 +45,30 @@
                            </div>
                        </div>
                     </div>
-                    <!-- main slider carousel items -->
+                    <!-- The slideshow -->
                     <div class="carousel-inner">
-                        <div class="active item carousel-item" data-slide-number="0">
-                            <img src="{{$property->images[0] -> photo ?? ''}}" class="img-fluid" alt="properties-photo">
+                    @isset($property->images)
+                    @foreach($property ->images as $image)
+                    @if($loop->first)
+                        <div class="item carousel-item active" data-slide-number="{{$image->id}}">
+                            <img src="{{$image -> photo ?? ''}}" class="img-fluid" alt="properties-photo">
                         </div>
+                    @else
+                        <div class="item carousel-item " data-slide-number="{{$image->id}}">
+                            <img src="{{$image -> photo ?? ''}}" class="img-fluid" alt="properties-photo">
+                        </div>
+                    @endif
+                    @endforeach
+                    @endisset
                     
-                    </div>
+                    
+                    
                     <!-- main slider carousel nav controls -->
                     <ul class="carousel-indicators sp-2 smail-properties list-inline nav nav-justified mt-4">
                         @isset($property->images)
                         @foreach($property ->images as $image)
                         <li class="list-inline-item active ml-4">
-                            <a id="carousel-selector-0" class="selected" data-slide-to="0" data-target="#propertiesDetailsSlider">
+                            <a  class="selected" data-slide-to="{{$image->id}}" data-target="#propertiesDetailsSlider">
                                 <img src="{{$image->photo}}" class="" alt="properties-photo-smale">
                             </a>
                         </li>
