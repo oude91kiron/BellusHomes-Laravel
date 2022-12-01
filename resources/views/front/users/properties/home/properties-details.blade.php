@@ -45,13 +45,17 @@
                            </div>
                        </div>
                     </div>
+
+
                     <!-- main slider carousel items -->
                     <div class="carousel-inner">
-                        <div class="active item carousel-item" data-slide-number="0">
+                        <li class="active item carousel-item" data-slide-number="0">
                             <img src="{{$property->images[0] -> photo ?? ''}}" class="img-fluid" alt="properties-photo">
-                        </div>
+                        </li>
                     
                     </div>
+
+                    
                     <!-- main slider carousel nav controls -->
                     <ul class="carousel-indicators sp-2 smail-properties list-inline nav nav-justified mt-4">
                         @isset($property->images)
