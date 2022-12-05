@@ -71,13 +71,13 @@
                         @foreach($property ->images as $image)
                         @if($loop->first)
                         <li class="list-inline-item active ml-4">
-                            <a  class="selected" data-slide-to="{{$image->id - 1 }}" data-target="#propertiesDetailsSlider">
+                            <a  class="selected" data-slide-to="{{$loop->index }}" data-target="#propertiesDetailsSlider">
                                 <img src="{{$image->photo}}" class="" alt="properties-photo-smale">
                             </a>
                         </li>
                         @else
                         <li class="list-inline-item   ml-4">
-                            <a  class="selected" data-slide-to="{{$image->id - 1}}" data-target="#propertiesDetailsSlider">
+                            <a  class="selected" data-slide-to="{{$loop->index}}" data-target="#propertiesDetailsSlider">
                                 <img src="{{$image->photo}}" class="" alt="properties-photo-smale">
                             </a>
                         </li>
