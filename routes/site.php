@@ -15,6 +15,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
         route::get('/','HomeController@home')->name('home');
         route::get('property/{id}','PropertyController@propertyById')->name('property.details');
+        Route::get('services', 'PagesController@index')->name('services');
 
     
     }); 
