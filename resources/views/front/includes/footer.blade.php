@@ -37,19 +37,16 @@
                             <a href="#"><i class="fa fa-angle-right"></i>About us</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-angle-right"></i>Service</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-angle-right"></i>Contact Us</a>
+                            <a href="{{route('services')}}"><i class="fa fa-angle-right"></i>Service</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-angle-right"></i>Properties Grid</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-angle-right"></i>Blog Post</a>
+                            <a href="#"><i class="fa fa-angle-right"></i>Our Blog</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-angle-right"></i>Property Details</a>
+                            <a href="#"><i class="fa fa-angle-right"></i>Contact Us</a>
                         </li>
                     </ul>
                 </div>

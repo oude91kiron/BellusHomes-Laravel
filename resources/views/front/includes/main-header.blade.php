@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg navbar-light rounded">
-                    <a class="navbar-brand logo" href="#">
+                    <a class="navbar-brand logo" href="{{route('home')}}">
                         <img src="{{asset('assets/front/img/logos/black-logo.png')}}" alt="logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,10 +21,7 @@
                                 <a href="#" type="button" class="btn btn-submit font-weight-bold">About Us</a>
                             </li>
                             <li class=" dropdown">
-                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Service</a>
-                            </li>
-                            <li class=" dropdown">
-                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Contact Us</a>
+                                <a href="{{route('services')}}" type="button" class="btn btn-submit font-weight-bold">Service</a>
                             </li>
                             <li class=" dropdown">
                                 <a href="#" type="button" class="btn btn-submit font-weight-bold">Properties Gried</a>
