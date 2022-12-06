@@ -120,17 +120,21 @@
     <div class="container">
         <div class="main-title">
             <h1>Recent Properties</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>Most popular properties that get our customer attention.</p>
         </div>
+
         <div class="row">
+
+            @isset($properties)
+            @foreach($properties as $property)
             <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
                 <div class="property-box-8">
                     <div class="property-photo">
-                        <img src="https://via.placeholder.com/255x170" alt="property-8" class="img-fluid">
-                        <div class="tag-for">For Rent</div>
+                        <img src="{{$property -> images[$loop->first] -> photo ?? '' }}" alt="property-8" class="img-fluid">
+                        <div class="tag-for">For Sale</div>
                         <div class="price-ratings-box">
                             <p class="price">
-                                $178,000
+                                ${{$property -> total_price}}
                             </p>
                             <div class="ratings">
                                 <i class="fa fa-star"></i>
@@ -144,23 +148,27 @@
                     <div class="detail">
                         <div class="heading">
                             <h3>
-                                <a href="properties-details.html">Real Luxury Villa</a>
+                                <a href="{{route('property.details',$property->id)}}">{{$property -> name}}</a>
                             </h3>
                             <div class="location">
-                                <a href="properties-details.html">
-                                    <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>123 Kathal St. Tampa City,
+                                <a href="{{route('property.details',$property->id)}}">
+                                    <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>{{$property -> locaation}}
                                 </a>
                             </div>
                         </div>
                         <div class="properties-listing">
-                            <span>3 Beds</span>
-                            <span>2 Baths</span>
-                            <span>980 sqft</span>
+                            <span>{{$property -> bedrooms}} Beds</span>
+                            <span>{{$property -> bathrooms}} Baths</span>
+                            <span>{{$property -> area}} sqMeter</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp delay-04s">
+            @endforeach
+            @endisset
+
+
+            <!-- <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp delay-04s">
                 <div class="property-box-8">
                     <div class="property-photo">
                         <img src="https://via.placeholder.com/255x170" alt="property-8" class="img-fluid">
@@ -269,8 +277,8 @@
                             <span>980 sqft</span>
                         </div>
                     </div>
-                </div>
-            </div>
+                </div> 
+            </div> -->
         </div>
     </div>
 </div>
@@ -281,7 +289,7 @@
     <div class="container">
         <div class="main-title">
             <h1>Most Popular Places</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>The location of our most featured projects in Turkey.</p>
         </div>
         <div class="container">
             <div class="row">
@@ -290,7 +298,7 @@
                   
                 <div class="col-lg-4 col-md-12 col-sm-12 col-pad cp-3 wow fadeInUp delay-04s d-none-992">
                     <div class="overview aa overview-box">
-                        <img src="{{$city->photo}}" alt="popular-places" class="big-img">
+                        <img src="https://via.placeholder.com/354x723" alt="popular-places" class="big-img">
                         <div class="mask">
                             <div class="info-2">
                                 <div class="ds">
@@ -554,35 +562,10 @@
         </div>
     </div>
 </div>
-<!-- Blog start -->
+<!-- Blog end -->
 
-<!-- Our newslatters start -->
-<div class="our-newslatters">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <h3>Get Newsletter</h3>
-                <p>Your download should start automatically, if not Click here. Should I give up, huh?.</p>
-                <div class="form-info">
-                    <form action="#" method="GET" enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="col-lg-9 col-md-9 col-sm-9 col-12">
-                                <div class="form-group email">
-                                    <input type="email" name="email" class="form-control" placeholder="Email">
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-12">
-                                <div class="send-btn">
-                                    <button type="submit" class="btn btn-color btn-md btn-message">Get it now</button>
-                                </div>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Our newslatters end -->
+<!-- form start -->
+
+<!-- form end -->
 
 @endsection
