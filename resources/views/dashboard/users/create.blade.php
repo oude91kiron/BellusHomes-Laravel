@@ -40,7 +40,7 @@
 									<div class="form-group">
 									    <label>Pictur of Agent</label>
 										<label class="form-label"  id="projectinput">
-											<input type="file"  id="file" name="photo">
+											<input type="file"  id="photo" name="photo">
 										</label>
 
 										@error("photo")

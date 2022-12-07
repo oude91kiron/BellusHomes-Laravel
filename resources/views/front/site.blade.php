@@ -219,7 +219,7 @@
                 <div class="agent-2">
                     <div class="agent-photo">
                         <!-- recomanded photo size 255x285 -->
-                        <img src="https://via.placeholder.com/255x285" alt="agent-grid-2" class="img-fluid">
+                        <img src="{{asset('assets/admin/images/users/'. $user->photo )}}" alt="agent-grid-2" class="img-fluid">
                         <ul class="social-list clearfix">
                             <li><a href="http://{{$user -> facebook}}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="http://{{$user -> twitter}}" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
@@ -230,62 +230,13 @@
                     </div>
                     <div class="agent-details">
                         <h5><a href="agent-detail.html"></a>{{$user -> name}}</h5>
-                        <p>Creative Director</p>
+                        <p>{{$user -> position}}</p>
                     </div>
                 </div>
             </div>
             @endforeach
             @endisset
 
-
-            <!-- <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
-                <div class="agent-2">
-                    <div class="agent-photo">
-                        <img src="https://via.placeholder.com/255x285" alt="agent-grid-2" class="img-fluid">
-                        <ul class="social-list clearfix">
-                            <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="google-bg"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="agent-details">
-                        <h5><a href="agent-detail.html">Martin Smith</a></h5>
-                        <p>Web Developer</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInRight delay-04s">
-                <div class="agent-2">
-                    <div class="agent-photo">
-                        <img src="https://via.placeholder.com/255x285" alt="agent-grid-2" class="img-fluid">
-                        <ul class="social-list clearfix">
-                            <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="google-bg"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="agent-details">
-                        <h5><a href="agent-detail.html">Brandon Miller</a></h5>
-                        <p>Office Manager</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInRight delay-04s">
-                <div class="agent-2">
-                    <div class="agent-photo">
-                        <img src="https://via.placeholder.com/255x285" alt="agent-grid-2" class="img-fluid">
-                        <ul class="social-list clearfix">
-                            <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="google-bg"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="agent-details">
-                        <h5><a href="#">Karen Paran</a></h5>
-                        <p>Support Manager</p>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </div >

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\UserRequest;
 use Validator;
 
@@ -44,12 +45,17 @@ class UsersController extends Controller
         $user->whatsapp = $request->whatsapp;
         $user->instagram = $request->instagram;
 
-        // Save image to user
-        $photoName = $request->file('photo');
-        $user->photo = $photoName;
+        
+       
+        $photo_name = "";
+        if($request->has('photo')){
+        $photo_name= uploadImage('users',$request->photo);
+        }
 
-        $request->image->move(public_path('assets/admin/images/users'), $photoName->getClientOriginalName());
+       $user= User::create($request->except('_token','photo'));
 
+       $user->photo=$photo_name;
+        
         if($user->save()){
             return redirect()->route('admin.users')->with(['success'=>'The Section has been created']);
         }

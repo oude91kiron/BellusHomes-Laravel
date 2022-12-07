@@ -76,7 +76,12 @@ return [
             'visibility' => 'public',
         ],
     
-
+        'users' => [
+            'driver' => 'local',
+            'root' => public_path('assets/admin/images/users'),
+            'url' => env('APP_URL').'/public',
+            'visibility' => 'public',
+        ],
    
 
         
