@@ -26,7 +26,12 @@ class UserRequest extends FormRequest
         return [
             'name' => 'required',
             'email' => 'required|email',
-            'password' => 'required'
+            'position' => 'required'|'max:255',
+            'facebook' => 'required'|'max:255',
+            'instagram' => 'required'|'max:255',
+            'twitter' => 'required'|'max:255',
+            'whatsapp' => 'required'|'numeric'|'max:255',
+            'photo' => 'required'
         ];
     }
 

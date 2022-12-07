@@ -932,6 +932,14 @@ input[type=checkbox]:checked + label:before {
     background: #ec2f4d;
 }
 
+.whatsapp-bg {
+    background: #fb3958;
+}
+
+.whatsapp-bg:hover{
+    background: #ec2f4d;
+}
+
 /** MEGAMENU **/
 .megamenu-li {
     position: static;
@@ -4080,6 +4088,14 @@ a {
 
 .agent-2 .google-bg:hover {
     background: #dc4e41!important;
+}
+
+.agent-2 .instagram-bg:hover {
+    background: #a72e82!important;
+}
+
+.agent-2 .whatsapp-bg:hover {
+    background: #32a62b!important;
 }
 
 /** AGENT 3 STARTED **/

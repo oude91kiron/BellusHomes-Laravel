@@ -166,119 +166,6 @@
             </div>
             @endforeach
             @endisset
-
-
-            <!-- <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp delay-04s">
-                <div class="property-box-8">
-                    <div class="property-photo">
-                        <img src="https://via.placeholder.com/255x170" alt="property-8" class="img-fluid">
-                        <div class="tag-for">For Rent</div>
-                        <div class="price-ratings-box">
-                            <p class="price">
-                                $178,000
-                            </p>
-                            <div class="ratings">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <div class="heading">
-                            <h3>
-                                <a href="properties-details.html">Masons Villas</a>
-                            </h3>
-                            <div class="location">
-                                <a href="properties-details.html">
-                                    <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>123 Kathal St. Tampa City,
-                                </a>
-                            </div>
-                        </div>
-                        <div class="properties-listing">
-                            <span>3 Beds</span>
-                            <span>2 Baths</span>
-                            <span>980 sqft</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInUp delay-04s">
-                <div class="property-box-8">
-                    <div class="property-photo">
-                        <img src="https://via.placeholder.com/255x170" alt="property-8" class="img-fluid">
-                        <div class="tag-for">For Sale</div>
-                        <div class="price-ratings-box">
-                            <p class="price">
-                                $178,000
-                            </p>
-                            <div class="ratings">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <div class="heading">
-                            <h3>
-                                <a href="properties-details.html">Luxury Villa</a>
-                            </h3>
-                            <div class="location">
-                                <a href="properties-details.html">
-                                    <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>123 Kathal St. Tampa City,
-                                </a>
-                            </div>
-                        </div>
-                        <div class="properties-listing">
-                            <span>3 Beds</span>
-                            <span>2 Baths</span>
-                            <span>980 sqft</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-12 wow fadeInRight delay-04s">
-                <div class="property-box-8">
-                    <div class="property-photo">
-                        <img src="https://via.placeholder.com/255x170" alt="property-8" class="img-fluid">
-                        <div class="tag-for">For Rent</div>
-                        <div class="price-ratings-box">
-                            <p class="price">
-                                $178,000
-                            </p>
-                            <div class="ratings">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="detail">
-                        <div class="heading">
-                            <h3>
-                                <a href="properties-details.html">Park avenue</a>
-                            </h3>
-                            <div class="location">
-                                <a href="properties-details.html">
-                                    <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>123 Kathal St. Tampa City,
-                                </a>
-                            </div>
-                        </div>
-                        <div class="properties-listing">
-                            <span>3 Beds</span>
-                            <span>2 Baths</span>
-                            <span>980 sqft</span>
-                        </div>
-                    </div>
-                </div> 
-            </div> -->
         </div>
     </div>
 </div>
@@ -293,9 +180,8 @@
         </div>
         <div class="container">
             <div class="row">
-            @isset($cities)
-                    @foreach($cities as $city)
-                  
+                @isset($cities)
+                @foreach($cities as $city)
                 <div class="col-lg-4 col-md-12 col-sm-12 col-pad cp-3 wow fadeInUp delay-04s d-none-992">
                     <div class="overview aa overview-box">
                         <img src="https://via.placeholder.com/354x723" alt="popular-places" class="big-img">
@@ -311,7 +197,7 @@
                     </div>
                 </div>
                 @endforeach
-                        @endisset
+                @endisset
             </div>
         </div>
     </div>
@@ -323,26 +209,36 @@
     <div class="container">
         <div class="main-title">
             <h1>Meet Our Agents</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p>All our agents has long experience in the real estate field.</p>
         </div>
         <div class="row">
+            
+            @isset($users)
+            @foreach($users as $user)
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
                 <div class="agent-2">
                     <div class="agent-photo">
+                        <!-- recomanded photo size 255x285 -->
                         <img src="https://via.placeholder.com/255x285" alt="agent-grid-2" class="img-fluid">
                         <ul class="social-list clearfix">
-                            <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#" class="google-bg"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="http://{{$user -> facebook}}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="http://{{$user -> twitter}}" target="_blank" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="http://{{$user -> instagram}}" target="_blank" class="instagram-bg"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="mailto:{{$user -> email}}" target="_blank" class="google-bg"><i class="fa fa-google"></i></a></li>
+                            <li><a href="http://wa.me/{{$user -> whatsapp}}" target="_blank" class="whatsapp-bg"><i class="fa fa-whatsapp"></i></a></li>
                         </ul>
                     </div>
                     <div class="agent-details">
-                        <h5><a href="agent-detail.html">John Pitarshon</a></h5>
+                        <h5><a href="agent-detail.html"></a>{{$user -> name}}</h5>
                         <p>Creative Director</p>
                     </div>
                 </div>
             </div>
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
+            @endforeach
+            @endisset
+
+
+            <!-- <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
                 <div class="agent-2">
                     <div class="agent-photo">
                         <img src="https://via.placeholder.com/255x285" alt="agent-grid-2" class="img-fluid">
@@ -389,7 +285,7 @@
                         <p>Support Manager</p>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div >

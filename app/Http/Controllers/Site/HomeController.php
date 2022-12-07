@@ -8,6 +8,7 @@ use App\Models\Slider;
 use App\Models\City;
 use App\Models\Property;
 use App\Models\Category;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -17,7 +18,8 @@ class HomeController extends Controller
     $data ['sliders'] =Slider::get(['photo']);
     $data ['cities'] =City::get();
     $data ['properties'] =Property::get();
-    
+    $data ['users'] =User::get();
+
     $data['categories'] = Category::parent()->select('id','slug')->with(['childrens' => function($q){
         $q->select('id','parent_id','slug');
         $q->with(['childrens'=>function($qq){
