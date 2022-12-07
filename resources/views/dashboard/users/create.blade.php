@@ -36,6 +36,19 @@
 									@csrf
 
 
+
+									<div class="form-group">
+									    <label>Pictur of Agent</label>
+										<label class="form-label"  id="projectinput">
+											<input type="file"  id="file" name="photo">
+										</label>
+
+										@error("photo")
+												<span class="text-danger">{{$message}}</span>
+										@enderror
+									</div>
+
+
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Name <span class="required">*</span>
 											</label>
@@ -51,10 +64,23 @@
 											</div>
 										</div>
 
+										<!-- Position -->
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">position <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<input type="text" id="position"
+											class="form-control"
+											placeholder="  "
+											value="{{old('position')}}"
+											name="position">
+												@error("position")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
 
-							
-
-										
+										<!-- Email -->										
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Email <span class="required">*</span>
 											</label>
@@ -70,6 +96,66 @@
 											</div>
 										</div>
 
+										<!-- WhatsApp -->										
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="whatsapp">whatsapp <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<input type="text" id="whatsapp"
+											class="form-control"
+											placeholder="  "
+											value="{{old('whatsapp')}}"
+											name="whatsapp">
+												@error("whatsapp")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="facebook">Facebook <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<input type="text" id="facebook"
+											class="form-control"
+											placeholder="  "
+											value="{{old('facebook')}}"
+											name="facebook">
+												@error("facebook")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="twitter">Twitter <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<input type="twitter" id="twitter"
+											class="form-control"
+											placeholder="  "
+											value="{{old('twitter')}}"
+											name="twitter">
+												@error("twitter")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
+
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="instagram">Instagram <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<input type="text" id="instagram"
+											class="form-control"
+											placeholder="  "
+											value="{{old('instagram')}}"
+											name="instagram">
+												@error("instagram")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
 
 							
 
@@ -98,11 +184,8 @@
 											</div>
 										</div>
 
+									
 
-
-						
-								
-								
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
@@ -110,10 +193,7 @@
 												<button type="submit" class="btn btn-success">Submit</button>
 											</div>
 										</div>
-
 									</form>
-
-							
 								</div>
 							</div>
 						</div>

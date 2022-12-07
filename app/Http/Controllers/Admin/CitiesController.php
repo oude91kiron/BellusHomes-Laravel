@@ -24,7 +24,9 @@ class CitiesController extends Controller
      }
 
 
-
+    /**
+     * 
+     */
     public function store(CityRequest $request){
 
    try{
@@ -58,12 +60,12 @@ class CitiesController extends Controller
                 DB::rollback(); 
                 return redirect()->route('admin.cities')->with(['error'=>'there is Something wrong in Session']);
         }
-
-
-
     }
 
 
+        /**
+         * 
+         */
         public function edit($id){
 
             //get specific categories and its translations
