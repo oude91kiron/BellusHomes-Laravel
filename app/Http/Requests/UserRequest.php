@@ -24,9 +24,15 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'email' => 'required|email',
-            'password' => 'required'
+            'name' => 'required|string|max:100',
+            'email' => 'required|email|string|max:100',
+            'position' => 'required|string|max:100',
+            'facebook' => 'required|string|max:100',
+            'twitter' => 'required|string|max:100',
+            'whatsapp' => 'required|numeric',
+            'instagram' => 'required|string|max:100',
+            'photo' => 'required|mimes:jpg,png,jpeg,jfif|max:4000'
+
         ];
     }
 
@@ -37,7 +43,13 @@ class UserRequest extends FormRequest
          
             'email.required' => 'Email is Required',
             'email.email' => 'Invalid Imail',
-            'password.required' => 'Password is Required'
+            'position.required' => 'Enter a job position',
+            'facebook.required' => 'Enter your facebook account URL',
+            'twitter.required' => 'Enter your facebook twitter URL',
+            'whatsapp.required' => 'Enter your whatsapp number, only numbers accepted',
+            'instagram.required' => 'Enter your instagram account URL',
+            'photo.required' => 'Add a personal photo please!'
+
             ];
     }
 }

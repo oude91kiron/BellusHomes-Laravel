@@ -10,6 +10,9 @@ use  DB;
 
 class CitiesController extends Controller
 {
+    /**
+     * 
+     */
     public function index(){
 
        $cities= City::orderBy('id','DESC')->paginate(PAGINATION_COUNT);
@@ -17,6 +20,9 @@ class CitiesController extends Controller
     }
 
 
+    /**
+     * 
+     */
     public function create(){
 
         
@@ -25,7 +31,7 @@ class CitiesController extends Controller
 
 
     /**
-     * 
+     *
      */
     public function store(CityRequest $request){
 
@@ -57,7 +63,7 @@ class CitiesController extends Controller
        return redirect()->route('admin.cities')->with(['success' => 'The Session Successfully Created']);
     }catch(\Exception $ex){
 
-                DB::rollback(); 
+                DB::rollback();
                 return redirect()->route('admin.cities')->with(['error'=>'there is Something wrong in Session']);
         }
     }

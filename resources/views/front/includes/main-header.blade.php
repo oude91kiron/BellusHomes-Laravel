@@ -15,22 +15,22 @@
                         <ul class="navbar-nav justify-content-end ml-auto">
                     
                             <li class=" dropdown">
-                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Home</a>
+                                <a href="{{route('home')}}" type="button" class="btn btn-submit font-weight-bold">Home</a>
                             </li>
                             <li class=" dropdown">
-                                <a href="#" type="button" class="btn btn-submit font-weight-bold">About Us</a>
+                                <a href="{{route('aboutUs')}}" type="button" class="btn btn-submit font-weight-bold">About Us</a>
                             </li>
                             <li class=" dropdown">
                                 <a href="{{route('services')}}" type="button" class="btn btn-submit font-weight-bold">Service</a>
                             </li>
                             <li class=" dropdown">
-                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Properties Gried</a>
+                                <a href="{{route('properties')}}" type="button" class="btn btn-submit font-weight-bold">Properties Gried</a>
                             </li>
                             <li class=" dropdown">
-                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Our Blog</a>
+                                <a href="{{route('blog')}}" type="button" class="btn btn-submit font-weight-bold">Our Blog</a>
                             </li>
                             <li class=" dropdown">
-                                <a href="#" type="button" class="btn btn-submit font-weight-bold">Contact Us</a>
+                                <a href="{{route('contact')}}" type="button" class="btn btn-submit font-weight-bold">Contact Us</a>
                             </li>
                             <li class=" dropdown">
                                 <a href="fr" type="button" class="btn btn-submit font-weight-bold">

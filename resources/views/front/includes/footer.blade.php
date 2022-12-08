@@ -31,22 +31,22 @@
                     </h4>
                     <ul class="links">
                         <li>
-                            <a href="#"><i class="fa fa-angle-right"></i>Home</a>
+                            <a href="{{route('home')}}"><i class="fa fa-angle-right"></i>Home</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-angle-right"></i>About us</a>
+                            <a href="{{route('aboutUs')}}"><i class="fa fa-angle-right"></i>About us</a>
                         </li>
                         <li>
                             <a href="{{route('services')}}"><i class="fa fa-angle-right"></i>Service</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-angle-right"></i>Properties Grid</a>
+                            <a href="{{route('properties')}}"><i class="fa fa-angle-right"></i>Properties Grid</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-angle-right"></i>Our Blog</a>
+                            <a href="{{route('blog')}}"><i class="fa fa-angle-right"></i>Our Blog</a>
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-angle-right"></i>Contact Us</a>
+                            <a href="{{route('contact')}}"><i class="fa fa-angle-right"></i>Contact Us</a>
                         </li>
                     </ul>
                 </div>

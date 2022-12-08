@@ -38,7 +38,7 @@
 
 
 									<div class="form-group">
-									    <label>Pictur of Agent</label>
+									    <label>Pictur of Agent, Max 4MB</label>
 										<label class="form-label"  id="projectinput">
 											<input type="file"  id="photo" name="photo">
 										</label>
@@ -156,35 +156,6 @@
 												@enderror
 											</div>
 										</div>
-
-							
-
-										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Password <span class="required">*</span>
-											</label>
-											<div class="col-md-6 col-sm-6 ">
-											<input type="password" id="password"
-											class="form-control"
-											placeholder="  "
-											name="password">
-										
-											</div>
-										</div>
-
-
-										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Confirmation Password <span class="required">*</span>
-											</label>
-											<div class="col-md-6 col-sm-6 ">
-											<input type="password" id=""
-											class="form-control"
-											placeholder="  "
-											name="password_confirmation" >
-											
-											</div>
-										</div>
-
-									
 
 										<div class="ln_solid"></div>
 										<div class="item form-group">

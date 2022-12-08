@@ -38,7 +38,6 @@ class UsersController extends Controller
 
         $user->name = $request->name;
         $user->email = $request->email;
-        $user->password =bcrypt($request->password);
         $user->position = $request->position;
         $user->facebook = $request->facebook;
         $user->twitter = $request->twitter;

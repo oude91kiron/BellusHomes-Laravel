@@ -3877,7 +3877,7 @@ a {
 
 /** TESTIMONIAL STARTED **/
 .testimonial-4 .testimonial-inner{
-    max-width: 400px;
+    max-width: 350px;
     margin: auto;
 }
 
@@ -3949,19 +3949,19 @@ a {
 }
 
 .tml-4 .testimonial-inner .arrow-down {
-    border-top-color: #fff;
+    border-top-color: #000;
 }
 
 .tml-4 .testimonial-inner h5 {
-    color: #fff;
+    color: #000;
 }
 
 .tml-4 .testimonial-inner h6 {
-    color: #fff;
+    color: #000;
 }
 
 .tml-4 .main-title h1 {
-    color: #fff;
+    color: #000;
 }
 
 .tml-4 .main-title{

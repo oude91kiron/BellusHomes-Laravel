@@ -25,7 +25,22 @@ class CityRequest extends FormRequest
     {
         return [
             'name'=>'required|string|max:100',
-            'photo'=>'required_without:id|mimes:jpg,png,jpeg,jfif'
+            'photo'=>'required_without:id|mimes:jpg,png,jpeg,jfif|max:4000'
+        ];
+    }
+
+
+
+    /**
+     * 
+     */
+    public function messages()
+    {
+        return [
+
+            'name'=> 'Enter the name of the cite please',
+            'photo'=>'Upload a photo please'
+
         ];
     }
 }

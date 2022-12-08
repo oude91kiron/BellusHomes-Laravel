@@ -35,7 +35,6 @@
 									enctype="multipart/form-data">
 									@csrf
 
-
 									<div class="form-group">
 									<label>Pictur of City</label>
 										<label class="form-label"  id="projectinput">
