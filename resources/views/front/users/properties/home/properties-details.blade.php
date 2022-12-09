@@ -8,7 +8,7 @@
             <h1>Property Detail</h1>
             <ul class="breadcrumbs">
          
-                
+
                 <li><a href="index.html">Home</a></li>
                 <li class="active">Property Detail</li>
             </ul>
@@ -89,6 +89,8 @@
                 </div>
             </div>
         </div>
+
+        
         <div class="row">
             <div class="col-lg-8 col-md-12 slider">
         

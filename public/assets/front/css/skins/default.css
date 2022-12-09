@@ -26,7 +26,7 @@
     color: #2339d6;
 }
 
-.tag-2{
+.tag-2{.property-box .detail .title a
     background: #2339d6;
 }
 
@@ -35,7 +35,7 @@
 }
 
 .plan-price{
-    color: #2339d6;
+    color: #000;
 }
 
 .contact-2 .contact-info i{
@@ -334,7 +334,7 @@ blockquote footer{
 }
 
 .property-box .detail .title a{
-    color: #2339d6;
+    color: #360d4c;
 }
 
 .property-box-2 .detail h4{

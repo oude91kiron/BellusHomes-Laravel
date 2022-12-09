@@ -16,14 +16,12 @@
                 <div class="property-box">
                     <a href="{{route('property.details',$property->id)}}" class="property-img">
                         <div class="property-thumbnail">
-                                <div class="listing-badges">
-                                    <span class="featured">Featured</span>
-                                </div>
-                                <div class="tag-for">For Sale</div>
-                                <img src="{{$property -> images[0] -> photo ?? '' }}" 
-                                     alt="property-box" 
-                                     class="img-fluid" 
-                                     style="height: 280px;">
+                            
+                            <div class="tag-for">For Sale</div>
+                            <img src="{{$property -> images[0] -> photo ?? '' }}" 
+                                 alt="property-box" 
+                                 class="img-fluid" 
+                                 style="height: 280px;">
                         </div>
                     </a>
 
@@ -54,14 +52,10 @@
                     </div>
                 </div>
             </div>
+
             @endforeach
             @endisset
-            <div class="slick-prev slick-arrow-buton">
-                <i class="fa fa-angle-left"></i>
-            </div>
-            <div class="slick-next slick-arrow-buton">
-                <i class="fa fa-angle-right"></i>
-            </div>
+            
         </div>
     </div>
 </div>
