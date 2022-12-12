@@ -110,7 +110,7 @@
 <!-- services 3 end -->
 
 <!-- Recent Properties start -->
-<div class="recent-properties content-area-2">
+<!-- <div class="recent-properties content-area-2">
     <div class="container">
         <div class="main-title">
             <h1>Recent Properties</h1>
@@ -162,7 +162,7 @@
             @endisset
         </div>
     </div>
-</div>
+</div> -->
 <!-- Recent Properties end -->
 
 <!-- Most popular places start -->
@@ -199,7 +199,7 @@
 <!-- Most popular places end -->
 
 <!-- Agent start -->
-<div class="agent content-area">
+<!-- <div class="agent content-area">
     <div class="container">
         <div class="main-title">
             <h1>Meet Our Agents</h1>
@@ -212,7 +212,7 @@
             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 wow fadeInLeft delay-04s">
                 <div class="agent-2">
                     <div class="agent-photo">
-                        <!-- recomanded photo size 255x285 -->
+                        ???????? recomanded photo size 255x285 ????????? 
                         <img src="{{asset('assets/admin/images/users/'. $user->photo )}}" alt="agent-grid-2" class="img-fluid">
                         <ul class="social-list clearfix">
                             <li><a href="http://{{$user -> facebook}}" target="_blank" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
@@ -233,7 +233,7 @@
 
         </div>
     </div>
-</div >
+</div > -->
 <!-- Agent end -->
 
 <!-- Testimonial 4 start -->

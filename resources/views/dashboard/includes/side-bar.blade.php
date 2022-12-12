@@ -73,6 +73,16 @@
         </li>
       </ul>
 
+      <ul class="nav side-menu">
+        <li>
+          <a><i class="fa fa-user"></i>Postes<span class="fa fa-chevron-down"></span></a>
+              <ul class="nav child_menu">
+                  <li><a href="{{route('post.create')}}">Create New Post</a></li>
+                    
+                </ul>
+        </li>
+      </ul>
+
 
 
 
@@ -89,7 +99,7 @@
   <a data-toggle="tooltip" data-placement="top" title="FullScreen">
     <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
   </a>
-  <a data-toggle="tooltip" data-placement="top" title="Lock">
+  <a data-toggle="tooltip" data-placement="top" title="Lock" >
     <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
   </a>
   <a data-toggle="tooltip" data-placement="top" title="Logout" href="{{route('admin.logout')}}">

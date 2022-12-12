@@ -8,6 +8,7 @@ use App\Models\City;
 use App\Models\Property;
 use App\Models\Category;
 use App\Models\User;
+use App\Models\Post;
 
 
 
@@ -36,7 +37,9 @@ class PagesController extends Controller
     //
     public function blog() {
 
-        return view('front.pages.ourBlog');
+        $post = Post::get()->first();
+
+        return view('front.pages.ourBlog', compact('post'));
     }
 
     //
