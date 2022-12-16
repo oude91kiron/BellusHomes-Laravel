@@ -12,36 +12,7 @@
             <!-- Post Content -->
             <p>dssadsadad dssadsadad dssadsadad dssadsadad </p>
         </div>
-    </div>
-
-    <!-- Side bar starting -->
-    <div class="col-lg-12 col-md-12 text-center mt-3">
-            <!-- Social list start -->
-            <div class="social-list widget clearfix">
-                <h5 class="center">Contact Us</h5>
-                <form action="" class="">
-                    <label for="">
-                        <input type="text">
-                    </label>
-                    <label for="">
-                        <input type="text">
-                    </label>
-                    <label for="">
-                        <input type="text">
-                    </label>
-                    <label for="">
-                        <input type="text">
-                    </label>
-                    <label for="">
-                        <input type="text">
-                    </label>
-                </form>
-            </div>
-        </div>
-    </div>
-
-
-    
+    </div>    
 </div>
 
 @endsection

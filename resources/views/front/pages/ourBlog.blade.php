@@ -1,31 +1,44 @@
 @extends('layouts.front.login-site')
 @section('content')
 
-<div class="container p-3 my-3 ">
-    <div>
-         <h1 class="mt-4">{{$post->title}}</h1>
-        
-        <p class="lead">
-          by
-          <a href="#"><i>{{$post->user->name}}</i></a>
-        </p>
-        
-        <p>Posted on <i>{{$post->created_at->diffForHumans()}}</i></p>
-    </div>
-
-    <div class="row">
-        <div class="col-md-7">
-            <!-- Preview Image -->
-            <img class="img-fluid rounded" src="https://via.placeholder.com/590x520" alt="">  <!--  {{$post->post_image}} -->
+<div class="container">
+    <div class="row ">
+         
+        <div class="card mx-3" style="width: 15rem;">
+          <img src="https://via.placeholder.com/250x300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
         </div>
-        
-        <div class="col-md-5">
-            <!-- Post Content -->
-            <p>{{$post->body}}</p>
+
+        <div class="card mx-3" style="width: 15rem;">
+          <img src="https://via.placeholder.com/250x300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card mx-3" style="width: 15rem;">
+          <img src="https://via.placeholder.com/250x300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+
+        <div class="card mx-3" style="width: 15rem;">
+          <img src="https://via.placeholder.com/250x300" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
         </div>
     </div>
 </div>
-
-
-       
 @endsection

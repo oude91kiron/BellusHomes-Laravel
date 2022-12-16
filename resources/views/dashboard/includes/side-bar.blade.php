@@ -77,9 +77,10 @@
         <li>
           <a><i class="fa fa-user"></i>Postes<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
+                <li><a href="{{route('post.index')}}">All Post</a></li>
                   <li><a href="{{route('post.create')}}">Create New Post</a></li>
                     
-                </ul>
+              </ul>
         </li>
       </ul>
 

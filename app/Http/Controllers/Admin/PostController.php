@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\site;
+namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Post;
+
 
 class PostController extends Controller
 {
@@ -12,11 +15,11 @@ class PostController extends Controller
      */
     public function index() {
 
-        //$posts = Post::all();
+        $posts = Post::all();
 
-        $posts = auth()->user()->posts()->paginate(6);
+        //dd($posts);
 
-        return view('dashbord.posts.index', ['posts'=>$posts]);
+        return view('index', compact('posts'));
     }
     //----------------------------------------------------------------------
 
@@ -35,7 +38,7 @@ class PostController extends Controller
      */
     public function create() {
 
-        return view('dashbord.posts.create');
+        return view('create');
     }
     //----------------------------------------------------------------------
 

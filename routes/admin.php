@@ -90,19 +90,19 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin','prefix'=>'a
 
   ################################## Post route start    #######################################
 
-Route::group(['namespace' => 'Site', 'middleware' => 'guest:admin','prefix'=>'admin'], function () {
+Route::group(['namespace' => 'Admin','prefix'=>'posts'], function () {
 
-Route::get('/posts/create', 'PostController@index')->name('post.index');
+Route::get('index', 'PostController@index')->name('post.index');
 
-Route::get('/posts/create', 'PostController@create')->name('post.create');
+Route::get('create', 'PostController@create')->name('post.create');
 
-Route::post('/posts', 'PostController@store')->name('post.store');
+Route::post('posts', 'PostController@store')->name('post.store');
 
-Route::get('/posts/{post}/edit', 'PostController@edit')->name('post.edit');
+Route::get('{post}/edit', 'PostController@edit')->name('post.edit');
 
-Route::DELETE('/posts/{post}/destroy', 'PostController@destroy')->name('post.destroy');
+Route::DELETE('{post}/destroy', 'PostController@destroy')->name('post.destroy');
 
-Route::patch('/posts/{post}/update', 'PostController@update')->name('post.update');
+Route::patch('{post}/update', 'PostController@update')->name('post.update');
 
 });
 
