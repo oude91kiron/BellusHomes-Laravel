@@ -4,15 +4,16 @@
 
 <!-- Featured projects start -->
 <div class="featured-properties content-area-7">
-    <div class="container-fluid">
+    <div class="container">
         <div class="main-title">
             <h1>Featured Projects</h1>
             <p><i>Check our best projects and the opportunities we are providing</i></p>
         </div>
-        <div class="row slick-fullwidth wow fadeInUp delay-04s">
-            @isset($properties)
-            @foreach($properties as $property)
-            <div class="slick-slide-item">
+
+        <div class="row">
+        @isset($properties)
+        @foreach($properties as $property)
+            <div class="col-md-4">
                 <div class="property-box">
                     <a href="{{route('property.details',$property->id)}}" class="property-img">
                         <div class="property-thumbnail">
@@ -52,9 +53,12 @@
                     </div>
                 </div>
             </div>
-
+            @break($loop->index == 2)
             @endforeach
             @endisset
+            <div class="col-lg-12 text-center">
+                <a data-animation="animated fadeInUp delay-10s" href="{{route('properties')}}" class="btn btn-lg btn-theme">More Projects</a>
+            </div>
             
         </div>
     </div>

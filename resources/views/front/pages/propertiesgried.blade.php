@@ -8,10 +8,10 @@
             <h1>Projects Grid</h1>
             <p><i>Check our best projects and the opportunities we are providing</i></p>
         </div>
-        <div class="row slick-fullwidth wow fadeInUp delay-04s">
+        <div class="row">
             @isset($properties)
             @foreach($properties as $property)
-            <div class="slick-slide-item">
+            <div class="col-md-4">
                 <div class="property-box">
                     <a href="{{route('property.details',$property->id)}}" class="property-img">
                         <div class="property-thumbnail">
