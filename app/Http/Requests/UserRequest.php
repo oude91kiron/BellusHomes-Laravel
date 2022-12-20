@@ -29,7 +29,7 @@ class UserRequest extends FormRequest
             'position' => 'required|string|max:100',
             'facebook' => 'required|string|max:100',
             'twitter' => 'required|string|max:100',
-            'whatsapp' => 'required|numeric',
+            'whatsapp' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'instagram' => 'required|string|max:100',
             'photo' => 'required|mimes:jpg,png,jpeg,jfif|max:4000'
 

@@ -37,9 +37,9 @@ class PagesController extends Controller
     //
     public function blog() {
 
-        $post = Post::get()->first();
+        $posts = Post::all();
 
-        return view('front.pages.ourBlog', compact('post'));
+        return view('front.pages.ourBlog', compact('posts'));
     }
 
     //

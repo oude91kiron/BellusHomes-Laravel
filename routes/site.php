@@ -20,8 +20,8 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
         Route::get('services', 'PagesController@services')->name('services');
         Route::get('aboutUs', 'PagesController@aboutUs')->name('aboutUs');
         Route::get('properties', 'PagesController@properties')->name('properties');
-        Route::get('blog', 'PagesController@blog')->name('blog');
         Route::get('contact', 'PagesController@contact')->name('contact');
+        Route::get('blog', 'PagesController@blog')->name('blog');
 
     }); 
 });

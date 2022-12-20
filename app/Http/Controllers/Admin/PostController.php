@@ -19,7 +19,7 @@ class PostController extends Controller
 
         //dd($posts);
 
-        return view('index', compact('posts'));
+        return view('dashboard.posts.index', compact('posts'));
     }
     //----------------------------------------------------------------------
 
