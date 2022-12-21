@@ -23,6 +23,7 @@ class PagesController extends Controller
     //
     public function aboutUs() {
 
+
         return view('front.pages.aboutUs');
     }
 
