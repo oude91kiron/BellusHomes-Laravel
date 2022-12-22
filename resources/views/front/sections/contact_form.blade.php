@@ -79,14 +79,20 @@
                     </li>
                 </ul>
             
-                <ul>
-                    <p class="h3-responsive font-weight-bold mx-4 my-4">Follow Us:</p>
-                    <ul class="contact-info">
-                    <li><i class="fa fa-whatsapp mx-4 my-2"></i><a href=""></a></li>
-                    <li><i class="fa fa-facebook mx-4 my-2"></i><a href=""></a></li>
-                    <li><i class="fa fa-instagram mx-4 my-2"></i><a href=""></a></li>
-                    <li><i class="fa fa-twitter mx-4 my-2"></i><a href=""></a></li>
-                </ul>
+                 <!-- Social list start -->
+                <div class="sidebar mbl">
+                    <div class="social-list widget clearfix">
+                        <h5 class="sidebar-title">Follow Us</h5>
+                        <ul>
+                            <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#" class="instagram-bg"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#" class="whatsapp-bg"><i class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                    
             </div>
         </div>
     </div>

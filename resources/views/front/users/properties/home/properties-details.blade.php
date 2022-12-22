@@ -2,19 +2,17 @@
 @section('content')
 
 <!-- Sub banner start -->
-<!-- <div class="sub-banner">
+<div class="sub-banner">
     <div class="container">
         <div class="breadcrumb-area">
-            <h1>Property Detail</h1>
+            <h1>Project Detail</h1>
             <ul class="breadcrumbs">
-         
-
                 <li><a href="index.html">Home</a></li>
-                <li class="active">Property Detail</li>
+                <li class="active">Project Detailss</li>
             </ul>
         </div>
     </div>
-</div> -->
+</div>
 <!-- Sub banner end -->
 
 <!-- Properties details page start -->
@@ -27,14 +25,13 @@
                        <div class="row">
                            <div class="col-lg-12">
                                <div class="informeson">
-                                   <h1>{{$property -> name}}<span>$ {{$property -> total_price}}</span></h1>
+                                   <h1>{{$property -> name}}<span>$ {{$property -> total_price}} ~ {{$property->total_price * 1.5}}</span></h1>
                                    <div>
                                        <div class="float-left">
                                            <ul class="clearfix">
                                                <li><i class="flaticon-bed"></i> {{$property -> rooms}} Rooms </li>
                                                <li><i class="flaticon-bath"></i> {{$property -> bedrooms}} Bedrooms </li>
                                                <li><i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property ->area}} Metter</li>
-                                        
                                            </ul>
                                        </div>
                                        <div class="float-right">
@@ -85,7 +82,6 @@
                        @endforeach
                        @endisset 
                     </ul>
-                    
                 </div>
             </div>
         </div>
@@ -93,22 +89,20 @@
         
         <div class="row">
             <div class="col-lg-8 col-md-12 slider">
-        
-             
                 <!-- Property description start -->
                 <div class="property-description mb-60">
-                    <h3 class="heading-3">Property Description</h3>
+                    <h3 class="heading-3">Project Description</h3>
                     <p>{{$property -> description}} </p>
                 </div>
 
                 <!-- Property details start -->
                 <div class="property-details mb-45">
-                    <h3 class="heading-3">Property Details</h3>
+                    <h3 class="heading-3">Project Details</h3>
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
                             <ul>
                                 <li>
-                                    <strong>Property ID: </strong>{{100 + $property->id}}
+                                    <strong>Project ID: </strong>{{100 + $property->id}}
                                 </li>
                                 <li>
                                     <strong>Year Built:</strong>{{date('Y') - $property->building_age}}
@@ -118,7 +112,7 @@
                         <div class="col-md-4 col-sm-6">
                             <ul>
                                 <li>
-                                    <strong>Price:</strong>{{$property->total_price}}
+                                    <strong>Price:</strong>{{$property->total_price}} ~ {{$property->total_price * 1.5}}
                                 </li>
                                 <li>
                                     <strong>Category:</strong>
@@ -175,13 +169,45 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Property vedio start -->
+                <div class="property-video mb-60">
+                    <h3 class="heading-3">Project Vedio</h3>
+                    <iframe src="https://www.youtube.com/embed/m5_AKjDdqaU"></iframe>
+                </div>
+
+                <!-- Floor plans start -->
+                <div class="floor-plans mb-60">
+                    <h3 class="heading-3">Floor Plans</h3>
+                    <table>
+                        <tbody><tr>
+                            <td><strong>Area</strong></td>
+                            <td><strong>Rooms</strong></td>
+                            <td><strong>Bathrooms</strong></td>
+                        </tr>
+                        <tr>
+                            <td>{{$property->area}}</td>
+                            <td>{{$property->rooms}}</td>
+                            <td>{{$property->bathrooms}}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Location Section start -->
+                <!-- <div class="section-location mb-60">
+                    <h3 class="heading-3">Property Location</h3>
+                    <div class="map">
+                        <div id="contactMap" class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12042.09030311691!2d28.9412191!3d41.01382175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caba31709c1721%3A0x3627fc1bcdc7337f!2sSeyyid%20%C3%96mer%2C%20%C5%9Eair%20Mehmet%20Emin%20Sk.%20No%3A37%2C%2034098%20Fatih%2F%C4%B0stanbul!5e0!3m2!1sen!2str!4v1669421392390!5m2!1sen!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                    </div>
+                </div> -->
+
                 <!-- Features start -->
                 <div class="features-opions af mb-45">
                     <h3 class="heading-3">Features</h3>
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
                             <ul>
-                                
                                 <li>
                                     @if($property->central_heating)
                                     <i class="flaticon-draw-check-mark"></i>
@@ -246,133 +272,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- Floor plans start -->
-                <div class="floor-plans mb-60">
-                    <h3 class="heading-3">Floor Plans</h3>
-                    <table>
-                        <tbody><tr>
-                            <td><strong>Area</strong></td>
-                            <td><strong>Rooms</strong></td>
-                            <td><strong>Bathrooms</strong></td>
-                        </tr>
-                        <tr>
-                            <td>{{$property->area}}</td>
-                            <td>{{$property->rooms}}</td>
-                            <td>{{$property->bathrooms}}</td>
-                        </tr>
-                        </tbody>
-                    </table>
-                    <img src="https://via.placeholder.com/760x370" alt="floor-plans" class="img-fluid">
-                </div>
-                <!-- Property vedio start -->
-                <div class="property-video mb-60">
-                    <h3 class="heading-3">Property Vedio</h3>
-                    <iframe src="https://www.youtube.com/embed/m5_AKjDdqaU"></iframe>
-                </div>
-
-
-                <!-- Location Section start -->
-                <div class="section-location mb-60">
-                    <h3 class="heading-3">Property Location</h3>
-                    <div class="map">
-                        <div id="contactMap" class="contact-map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12042.09030311691!2d28.9412191!3d41.01382175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14caba31709c1721%3A0x3627fc1bcdc7337f!2sSeyyid%20%C3%96mer%2C%20%C5%9Eair%20Mehmet%20Emin%20Sk.%20No%3A37%2C%2034098%20Fatih%2F%C4%B0stanbul!5e0!3m2!1sen!2str!4v1669421392390!5m2!1sen!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-                    </div>
-                </div>
-
-                <!-- Related properties start -->
-                <!-- <div class="related-properties hedin-mb-30">
-                    <h3 class="heading-3">Related Properties</h3>
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="property-box-7">
-                                <div class="property-thumbnail">
-                                    <a href="properties-details.html" class="property-img">
-                                        <div class="tag-2">For Rent</div>
-                                        <div class="price-box"><span>$850.00</span> Per night</div>
-                                        <img src="https://via.placeholder.com/350x233" alt="property" class="img-fluid">
-                                    </a>
-                                </div>
-                                <div class="detail">
-                                    <h1 class="title">
-                                        <a href="properties-details.html">Real Luxury Villa</a>
-                                    </h1>
-                                    <div class="location">
-                                        <a href="properties-details.html">
-                                            <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>123 Kathal St. Tampa City,
-                                        </a>
-                                    </div>
-                                </div>
-                                <ul class="facilities-list clearfix">
-                                    <li>
-                                        <span>Area</span>3600 Sqft
-                                    </li>
-                                    <li>
-                                        <span>Beds</span> 3
-                                    </li>
-                                    <li>
-                                        <span>Baths</span> 2
-                                    </li>
-                                    <li>
-                                        <span>Garage</span> 1
-                                    </li>
-                                </ul>
-                                <div class="footer clearfix">
-                                    <div class="pull-left days">
-                                        <p><i class="fa fa-user"></i> Jhon Doe</p>
-                                    </div>
-                                    <ul class="pull-right">
-                                        <li><a href="#"><i class="flaticon-heart-shape-outline"></i></a></li>
-                                        <li><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="property-box-7">
-                                <div class="property-thumbnail">
-                                    <a href="properties-details.html" class="property-img">
-                                        <div class="tag-2">For Sale</div>
-                                        <div class="price-box"><span>$850.00</span> Per night</div>
-                                        <img src="https://via.placeholder.com/350x233" alt="property" class="img-fluid">
-                                    </a>
-                                </div>
-                                <div class="detail">
-                                    <h1 class="title">
-                                        <a href="properties-details.html">Beautiful Single Home</a>
-                                    </h1>
-                                    <div class="location">
-                                        <a href="properties-details.html">
-                                            <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>123 Kathal St. Tampa City,
-                                        </a>
-                                    </div>
-                                </div>
-                                <ul class="facilities-list clearfix">
-                                    <li>
-                                        <span>Area</span>3600 Sqft
-                                    </li>
-                                    <li>
-                                        <span>Beds</span> 3
-                                    </li>
-                                    <li>
-                                        <span>Baths</span> 2
-                                    </li>
-                                    <li>
-                                        <span>Garage</span> 1
-                                    </li>
-                                </ul>
-                                <div class="footer clearfix">
-                                    <div class="pull-left days">
-                                        <p><i class="fa fa-user"></i> Jhon Doe</p>
-                                    </div>
-                                    <ul class="pull-right">
-                                        <li><a href="#"><i class="flaticon-heart-shape-outline"></i></a></li>
-                                        <li><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
             </div>
 
             <!-- Side bar starting -->
@@ -462,6 +361,7 @@
                             </div>
                         </div>
                     </div> -->
+
                     <!-- Categories start -->
                     <div class="widget categories">
                         <h5 class="sidebar-title">Categories</h5>
@@ -473,7 +373,7 @@
                     </div>
                     <!-- Recent posts start -->
                     <div class="widget recent-posts">
-                        <h5 class="sidebar-title">Recent Properties</h5>
+                        <h5 class="sidebar-title">Recent Projects</h5>
                         <div class="media mb-4">
                             <a href="properties-details.html">
                                 <img src="https://via.placeholder.com/60x60" alt="sub-property">
@@ -528,9 +428,12 @@
                     </div> -->
                 </div>
             </div>
+
+            <!-- Related properties start -->
+            <div class="col-lg-12 col-md-12">
+                @include('front/sections/recent_project')
+            </div>
         </div>
     </div>
 </div>
-<!-- Properties details page start -->
-
 @endsection

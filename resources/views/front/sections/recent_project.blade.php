@@ -1,8 +1,8 @@
 <div class="recent-properties content-area-2">
     <div class="container">
         <div class="main-title">
-            <h1>Recent Properties</h1>
-            <p>Most popular properties that get our customer attention.</p>
+            <h1>Recent Projects</h1>
+            <p>Most popular projects that get our customer attention.</p>
         </div>
 
         <div class="row">
@@ -34,14 +34,9 @@
                             </h3>
                             <div class="location">
                                 <a href="{{route('property.details',$property->id)}}">
-                                    <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>{{$property -> locaation}}
+                                    <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i> {{$property -> location}}
                                 </a>
                             </div>
-                        </div>
-                        <div class="properties-listing">
-                            <span>{{$property -> bedrooms}} Beds</span>
-                            <span>{{$property -> bathrooms}} Baths</span>
-                            <span>{{$property -> area}} sqMeter</span>
                         </div>
                     </div>
                 </div>
