@@ -25,19 +25,19 @@
                        <div class="row">
                            <div class="col-lg-12">
                                <div class="informeson">
-                                   <h1>{{$property -> name}}<span>$ {{$property -> total_price}} ~ {{$property->total_price * 1.5}}</span></h1>
-                                   <div>
-                                       <div class="float-left">
-                                           <ul class="clearfix">
-                                               <li><i class="flaticon-bed"></i> {{$property -> rooms}} Rooms </li>
-                                               <li><i class="flaticon-bath"></i> {{$property -> bedrooms}} Bedrooms </li>
-                                               <li><i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property ->area}} Metter</li>
-                                           </ul>
-                                       </div>
-                                       <div class="float-right">
-                                           <p>$ {{$property -> price_meter}} / metre</p>
-                                       </div>
-                                   </div>
+                                   <h1>{{$property -> name}}<span>$ {{$property -> total_price}}</span></h1>
+                                    <div>
+                                        <div class="float-left">
+                                            <ul class="clearfix">
+                                                <li><i class="flaticon-bed"></i> {{$property -> rooms}} Rooms </li>
+                                                <li><i class="flaticon-bath"></i> {{$property -> bedrooms}} Bedrooms </li>
+                                                <li><i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property ->area}} Metter</li>
+                                            </ul>
+                                        </div>
+                                        <div class="float-right">
+                                            <p>$ {{$property -> price_meter}} / metre</p>
+                                        </div>
+                                    </div>
                                </div>
                            </div>
                        </div>

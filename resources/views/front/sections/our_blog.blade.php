@@ -5,6 +5,7 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="row">
+            @foreach ($posts as $post)
             <div class="col-lg-6 col-md-6 wow fadeInLeft delay-04s">
                 <div class="row blog-3">
                     <div class="col-lg-5 col-md-12 col-pad ">
@@ -38,7 +39,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-6 col-md-6 wow fadeInRight delay-04s">
+            @endforeach
+            
+            {{-- <div class="col-lg-6 col-md-6 wow fadeInRight delay-04s">
                 <div class="row blog-3">
                     <div class="col-lg-5 col-md-12 col-pad ">
                         <div class="photo">
@@ -70,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
