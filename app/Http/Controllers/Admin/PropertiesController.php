@@ -32,19 +32,18 @@ class PropertiesController extends Controller
 
    public function store(GeneralPropertyRequest $request){
 
-
-
       //validation 
       DB::beginTransaction();
 
    
+      // name ="is_active"
       if(!$request ->has('is_active'))
 
       $request->request->add(['is_active'=>0]);
       else 
       $request->request->add(['is_active'=>1]);
 
-      $property= Property::create([
+      $property = Property::create([
          'slug'=>$request ->slug,
          'city_id'=>$request ->city_id,
          'is_active'=>$request ->is_active,

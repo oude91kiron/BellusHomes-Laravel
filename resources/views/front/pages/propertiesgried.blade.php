@@ -3,26 +3,25 @@
 
 <!-- Featured projects start -->
 <div class="featured-properties content-area-7">
-    <div class="container-fluid">
+    <div class="container">
         <div class="main-title">
-            <h1>Projects Grid</h1>
+            <h1>Featured Projects</h1>
             <p><i>Check our best projects and the opportunities we are providing</i></p>
         </div>
+
         <div class="row">
-            @isset($properties)
-            @foreach($properties as $property)
+        @isset($properties)
+        @foreach($properties as $property)
             <div class="col-md-4">
                 <div class="property-box">
                     <a href="{{route('property.details',$property->id)}}" class="property-img">
                         <div class="property-thumbnail">
-                                <div class="listing-badges">
-                                    <span class="featured">Featured</span>
-                                </div>
-                                <div class="tag-for">For Sale</div>
-                                <img src="{{$property -> images[0] -> photo ?? '' }}" 
-                                     alt="property-box" 
-                                     class="img-fluid" 
-                                     style="height: 280px;">
+                            
+                            <div class="tag-for">For Sale</div>
+                            <img src="{{$property -> images[0] -> photo ?? '' }}" 
+                                 alt="property-box" 
+                                 class="img-fluid" 
+                                 style="height: 280px;">
                         </div>
                     </a>
 
@@ -53,13 +52,11 @@
                     </div>
                 </div>
             </div>
+            @break($loop->index == 5)
             @endforeach
             @endisset
-            <div class="slick-prev slick-arrow-buton">
-                <i class="fa fa-angle-left"></i>
-            </div>
-            <div class="slick-next slick-arrow-buton">
-                <i class="fa fa-angle-right"></i>
+            <div class="col-lg-12 text-center">
+                <a data-animation="animated fadeInUp delay-10s" href="{{route('properties')}}" class="btn btn-lg btn-theme">More Projects</a>
             </div>
         </div>
     </div>

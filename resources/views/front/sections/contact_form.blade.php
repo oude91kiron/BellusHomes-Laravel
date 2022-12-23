@@ -1,4 +1,4 @@
-<div class="container content-area-7 border">
+<div class="container content-area-5 border">
     <div class="row">    
         <div class="col-md-8 mb-md-0 mb-5">
             <div class="col-lg-8 col-sm-12">

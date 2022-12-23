@@ -925,19 +925,19 @@ input[type=checkbox]:checked + label:before {
 }
 
 .instagram-bg {
-    background: #fb3958;
+    background: #c6047f;
 }
 
 .instagram-bg:hover{
-    background: #ec2f4d;
+    background: #72005d;
 }
 
 .whatsapp-bg {
-    background: #fb3958;
+    background: #009405;
 }
 
 .whatsapp-bg:hover{
-    background: #ec2f4d;
+    background: #0f7000;
 }
 
 /** MEGAMENU **/
@@ -5947,7 +5947,7 @@ footer.footer:before {
 }
 
 .sidebar {
-    background: #fff;
+    background: #F8F8FF;
     box-shadow: 0 0 35px rgba(0, 0, 0, 0.1);
 }
 

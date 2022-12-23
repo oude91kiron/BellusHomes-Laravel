@@ -2,6 +2,19 @@
 @section('content')
 
 <div class="container">
+      <!-- Sub banner start -->
+<div class="sub-banner mb-5">
+  <div class="container">
+      <div class="breadcrumb-area">
+          <h1>Our Blog</h1>
+          <ul class="breadcrumbs">
+              <li><a href="index.html">Home</a></li>
+              <li class="active">Read More..</li>
+          </ul>
+      </div>
+  </div>
+</div>
+<!-- Sub banner end -->
     <div class="row ">
         @foreach($posts as $post) 
         <div class="card mx-3" style="width: 15rem;">
