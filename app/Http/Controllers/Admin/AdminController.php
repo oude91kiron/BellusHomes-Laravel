@@ -5,34 +5,33 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Admin;
+use App\Models\SiteData;
 
 class AdminController extends Controller
 {
-    //
 
+  ################################## Admin route start    #######################################
 
-    public function index(){
+    public function index() {
 
         $admin = Admin::get();
 
-        return view('dashboard/admin', compact('admin'));
+        $data = SiteData::first();
+
+       //dd($data);
+
+        return view('dashboard/admin', compact('admin', 'data'));
     }
 
 
+  ################################## User CRUD Methods    #######################################
 
    public function create(){
     return view('dashboard.users.create');
     }
 
-
-
-    /**
-     * 
-     * 
-     */
     public function store(UserRequest $request){
-
-       
+ 
         $user = new User();
 
         $user->name = $request->name;
@@ -42,9 +41,7 @@ class AdminController extends Controller
         $user->twitter = $request->twitter;
         $user->whatsapp = $request->whatsapp;
         $user->instagram = $request->instagram;
-
-        
-       
+  
         $photo_name = "";
         if($request->has('photo')){
         $photo_name= uploadImage('users',$request->photo);
@@ -60,11 +57,6 @@ class AdminController extends Controller
         return redirect()->route('admin.users')->with(['error'=>'Something went wrong']);
     }
 
-
-
-    /**
-     * 
-     */
     public function delete($id){
         try{
            $user =User::orderBy('id','DESC')->find($id);
@@ -83,9 +75,7 @@ class AdminController extends Controller
         }
     }
 
-
-
-
+  ################################## site_data route start    #######################################
 
 
 }

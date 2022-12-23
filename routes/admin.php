@@ -73,42 +73,30 @@ Route::group(
         Route::post('images/db', 'SliderController@saveSliderImagesDB')->name('admin.sliders.images.store.db');
 
     });
-    ################################## end sliders    #######################################
-
-
-
-});
+  });
 
 
 
 Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin','prefix'=>'admin'], function () {
     Route::get('login','LoginController@getLogin')-> name('get.admin.login');
     Route::post('login','LoginController@login')->name('admin.login');
+  });
 
-});
 
-
-  ################################## Post route start    #######################################
+  ################################## Post route start #######################################
 
 Route::group(['namespace' => 'Admin','prefix'=>'posts'], function () {
 
-Route::get('index', 'PostController@index')->name('post.index');
-
-Route::get('create', 'PostController@create')->name('post.create');
-
-Route::post('posts', 'PostController@store')->name('post.store');
-
-Route::get('{post}/edit', 'PostController@edit')->name('post.edit');
-
-Route::DELETE('{post}/destroy', 'PostController@destroy')->name('post.destroy');
-
-Route::patch('{post}/update', 'PostController@update')->name('post.update');
-
-});
-
-    ################################## Post route end    #######################################
+  Route::get('index', 'PostController@index')->name('post.index');
+  Route::get('create', 'PostController@create')->name('post.create');
+  Route::post('posts', 'PostController@store')->name('post.store');
+  Route::get('{post}/edit', 'PostController@edit')->name('post.edit');
+  Route::DELETE('{post}/destroy', 'PostController@destroy')->name('post.destroy');
+  Route::patch('{post}/update', 'PostController@update')->name('post.update');
+  });
 
 
+  ################################## site_data route start    #######################################
 
 
 });
