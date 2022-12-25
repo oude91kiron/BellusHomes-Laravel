@@ -8,6 +8,6 @@ class SiteData extends Model
 {
     //
     protected $fillable = [
-        'company_name', 'email', 'facebook', 'instagram', 'twitter', 'whatsapp', 'photo'
+        'id', 'company_name', 'email', 'facebook', 'instagram', 'twitter', 'whatsapp', 'photo'
     ];
 }

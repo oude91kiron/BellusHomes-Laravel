@@ -13,7 +13,7 @@ use Illuminate\Http\Request;
 class SliderController extends Controller
 {
     public function addImages(){
-        $images = Slider::get(['photo']);
+        $images = Slider::get();
         return view('dashboard.sliders.create',compact('images'));
     }
 
@@ -45,5 +45,30 @@ class SliderController extends Controller
             return redirect()->back()->with(['success'=>'SuccessFully Created']);
         }
  
+    }
+
+
+
+    /**
+     * @param $id
+     * 
+     * Delete Slider
+     */
+    public function deleteSliderImages($id){
+        try{
+           $slider = Slider::find($id);
+    
+           if(!$slider){
+              return redirect()->route('admin.sliders.create')->with(['error'=>'This Slide does not exist']);
+           }
+
+           $slider ->delete();
+    
+           return redirect()->route('admin.sliders.create')->with(['success'=>'The section was deleted successfully']);
+    
+        }catch(\Exception $ex){
+           DB::rollback();
+           return redirect()->route('admin.sliders.create')->with(['error' => 'There is Something Wrong In Session']);
+        }
     }
 }

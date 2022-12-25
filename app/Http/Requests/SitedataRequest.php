@@ -13,7 +13,7 @@ class SitedataRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,13 +25,14 @@ class SitedataRequest extends FormRequest
     {
         return [
             //
+            'id' => 'integer',
             'company_name' => 'required|string|max:100',
             'email' => 'required|email|string|max:100',
             'facebook' => 'required|string|max:100',
             'twitter' => 'required|string|max:100',
             'whatsapp' => 'required|regex:/^([0-9\s\-\+\(\)]*)$/|min:10',
             'instagram' => 'required|string|max:100',
-            'photo' => 'required|mimes:jpg,png,jpeg,jfif|max:4000'
+            'logo' => 'required|mimes:jpg,png,jpeg,jfif|max:4000'
         ];
     }
 }

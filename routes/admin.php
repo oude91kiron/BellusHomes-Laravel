@@ -69,7 +69,7 @@ Route::group(
         Route::get('/', 'SliderController@addImages')->name('admin.sliders.create');
         Route::post('images', 'SliderController@saveSliderImages')->name('admin.sliders.images.store');
         Route::post('images/db', 'SliderController@saveSliderImagesDB')->name('admin.sliders.images.store.db');
-
+        Route::get('delete/{id}', 'SliderController@deleteSliderImages')->name('admin.sliders.images.delete');
     });
 
 
@@ -85,7 +85,7 @@ Route::group(
     Route::group(['prefix'=>'auth'], function () {
 
       Route::get('edit', 'SitedataController@edit')->name('sitedata.edit');
-      Route::Post('update', 'SitedataController@update')->name('sitedata.update');
+      Route::Post('update/', 'SitedataController@update')->name('sitedata.update');
     
       });
     

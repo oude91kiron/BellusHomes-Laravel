@@ -45,7 +45,7 @@
             </thead>
             <tbody>
               <td>
-                <img src="https://via.placeholder.com/80x60" alt="">
+                <img width="70" height="50" src="{{asset('assets/admin/images/sliders/'. $data->logo )}}" alt="">
               </td>
               <td>{{$data->company_name}}</td>
               <td>{{$data->email}}</td>

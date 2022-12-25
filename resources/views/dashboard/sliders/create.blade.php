@@ -2,17 +2,16 @@
 @extends('layouts.dashboard.admin')
 @section('content')
 
-		<!-- page content -->
-		<div class="right_col" role="main">
-				<div class="">
-					<div class="page-title">
+	<!-- page content -->
+	<div class="right_col" role="main">
+		<div class="">
+				<div class="page-title">
 						<div class="title_left">
 							<h3>Sliders</h3>
 						</div>
-
-					
 					</div>
-					<div class="clearfix"></div>
+
+				<div class="clearfix"></div>
 					<div class="row">
 						<div class="col-md-12 col-sm-12 ">
 							<div class="x_panel">
@@ -21,37 +20,31 @@
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
-							
-										<li><a class="close-link"><i class="fa fa-close"></i></a>
-										</li>
 									</ul>
-									<div class="clearfix"></div>
-								</div>
+								<div class="clearfix"></div>
+							</div>
            
-								<form class="form" action="{{route('admin.sliders.images.store.db')}}"
+							<form class="form" action="{{route('admin.sliders.images.store.db')}}"
                                 method="POST"
                                 enctype="multipart/form-data">
                               @csrf
-     
-                                  <div  class="dropzone" id="dpz-multiple-files">
-                                      <div class="dz-message">Drop Files Here To Upload</div>
-                                  </div>
-                               
-                      <br><br>
-                              <div class="form">
-                                  <button type="button" class="btn btn-warning mr-1"
-                                          onclick="history.back();">
-                                      <i class="ft-x"></i> Back
-                                  </button>
-                                  <button type="submit" class="btn btn-primary">
-                                      <i class="la la-check-square-o"></i> Submit
-                                  </button>
-                              </div>
+                <div  class="dropzone" id="dpz-multiple-files">
+                    <div class="dz-message">Drop Files Here To Upload</div>
+                </div>
 
-                   </form>
+                <br><br>
 
-                          
-								</div>
+                <div class="form">
+                    <button type="button" class="btn btn-warning mr-1"
+                            onclick="history.back();">
+                        <i class="ft-x"></i> Back
+                    </button>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="la la-check-square-o"></i> Submit
+                    </button>
+                </div>
+              </form>
+            </div>
 
                 <section id="basic-form-layouts">
                   <div class="row match-height">
@@ -72,6 +65,17 @@
                               @forelse($images as $image )
                                   <figure class="col-lg-3 col-md-6 col-12" itemprop="associatedMedia" itemscope=""
                                           itemtype="http://schema.org/ImageObject">
+
+                                        <form class="form" action="{{route('admin.sliders.images.delete', $image->id)}}"
+                                          method="get"
+                                          enctype="multipart/form-data">
+                                        @csrf
+                                            <div class="img-wrap">
+                                              <span class="close">
+                                                <input type="submit" value="&times">
+                                              </span>
+                                          </form>
+                                          
                                       <a href="{{$image -> photo}}" itemprop="contentUrl"
                                         data-size="480x360">
                                           <img class="img-thumbnail img-fluid"

@@ -33,16 +33,17 @@
 									@csrf
 
 
-									<div>
-										<img src="{{asset($site_data->photo)}}" alt="">
-									</div>
 									<div class="form-group">
 									    <label>Logo Picture, Max 4MB</label>
 										<label class="form-label"  id="projectinput">
-											<input type="file"  id="photo" name="photo" >
+											<input type="file"  id="logo" name="logo" >
 										</label>
+									
+										<div class="my-4">
+											<img width="120" height="80" src="{{asset('assets/admin/images/sliders/'. $site_data->logo )}}" alt="">
+										</div>
 
-										@error("photo")
+										@error("logo")
 												<span class="text-danger">{{$message}}</span>
 										@enderror
 									</div>
