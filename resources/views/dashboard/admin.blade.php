@@ -32,9 +32,6 @@
         </div>
 
         <div class="row">
-          <div>
-            <a href="" class="btn btn-primary mt-5"> Edite Site Data</a>
-          </div>
           <table class="table table-striped table-bordered " style="width:100%">
             <thead>
               <td>Logo</td>
@@ -56,7 +53,7 @@
               <td><a href="https://facebook.com/{{$data->facebook}}">{{$data->facebook}}</a></td>
               <td><a href="https://twitter.com/">{{$data->twitter}}</a></td>
               <td><a href="https://instagram.com/">{{$data->instagram}}</a></td>
-              <td><a href="{{route('')}}" class="btn btn-success">Edite</a></td>
+              <td><a href="{{route('sitedata.edit')}}" class="btn btn-success">Edite</a></td>
             </tbody>
           </table>
         </div>

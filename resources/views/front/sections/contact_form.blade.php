@@ -1,10 +1,12 @@
 <div class="container content-area-5 border">
+    
+    <div class="text-center mt-5">
+        <h2 class="h2-responsive font-weight-bold text-center my-4">Contact Us</h2>
+    </div>
     <div class="row">    
         <div class="col-md-8 mb-md-0 mb-5">
             <div class="col-lg-8 col-sm-12">
-                <h2 class="h2-responsive font-weight-bold text-center my-4">Contact us</h2>
-                <p class="h5 text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. 
-                Get a free consultante about real state market in Istanbul.</p>
+                <h2 class="h2-responsive font-weight-bold text-center my-4">Send Us Email</h2>
                 <form action="" method="post" action="{{ route('contact') }}">
                     @csrf
                     <div class="form-group">
@@ -58,6 +60,8 @@
             <!--Grid column-->
             <div class="col-lg-4 col-sm-12">
                 <p class="h3-responsive font-weight-bold mx-4 my-4">Contact Us:</p>
+                <p class="h5 w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. 
+                    Get a free consultante about real state market in Istanbul.</p>
                 <div class="row">
                     
                 </div>

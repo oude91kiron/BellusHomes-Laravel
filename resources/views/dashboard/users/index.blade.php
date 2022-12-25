@@ -42,34 +42,26 @@
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-
-                            <th>Name </th> 
-                            <th >Email</th>
-                            <th >Edit</th>
-                        
+                          <th>Name </th> 
+                          <th >Email</th>
+                          <th >Edit</th>
                         </tr>
                       </thead>
-
-
                       <tbody>
-                      @isset($users)
-                            @foreach ($users as $user)
-                                <tr>
-                                    <td>{{$user ->name}}</td>
-                    
-                                    <td>{{$user ->email}}</td>
-                                        <td>
-                                            <div class="btn-group" role="group"
-                                                    aria-label="Basic example">
-                
-                                                    <a href="{{route('admin.users.delete',$user -> id)}}"
-                                                        class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
-                                            </div>
-                                        </td>
-                                </tr>
-                            @endforeach
-                          @endisset
-                     
+                        @isset($users)
+                        @foreach ($users as $user)
+                        <tr>
+                            <td>{{$user ->name}}</td>
+                            <td>{{$user ->email}}</td>
+                            <td>
+                                <div class="btn-group" role="group"aria-label="Basic example">
+                                  <a href="{{route('admin.users.delete',$user -> id)}}"
+                                            class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
+                        @endisset
                       </tbody>
                     </table>
                   </div>
