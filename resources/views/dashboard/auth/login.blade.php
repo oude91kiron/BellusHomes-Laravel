@@ -46,8 +46,8 @@
                 <br />
 
                 <div>
-                  <h1>Ecozone</h1>
-                  <p>©2021 All Rights Reserved. Privacy and Terms</p>
+                  <h1>Mash Media</h1>
+                  <p>©2022 All Rights Reserved. Privacy and Terms</p>
                 </div>
               </div>
             </form>

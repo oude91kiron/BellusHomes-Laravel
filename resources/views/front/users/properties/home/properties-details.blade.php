@@ -43,8 +43,6 @@
                        </div>
                     </div>
 
-                    
-
                     <!-- main slider carousel items -->
                     <div class="carousel-inner">
                         @isset($property->images)

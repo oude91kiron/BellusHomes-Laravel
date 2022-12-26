@@ -6,18 +6,18 @@
 <div class="container testimonial-4 tml-4 content-area-5">
 
     <!-- Sub banner start -->
-<div class="sub-banner mb-5">
-    <div class="container">
-        <div class="breadcrumb-area">
-            <h1>About Us</h1>
-            <ul class="breadcrumbs">
-                <li><a href="index.html">Home</a></li>
-                <li class="active">Project Detailss</li>
-            </ul>
+    <div class="sub-banner mb-5">
+        <div class="container">
+            <div class="breadcrumb-area">
+                <h1>About Us</h1>
+                <ul class="breadcrumbs">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="active">Project Detailss</li>
+                </ul>
+            </div>
         </div>
     </div>
-</div>
-<!-- Sub banner end -->
+    <!-- Sub banner end -->
     <div class="row">
         <div class="col-md-6">
             <!-- Post Content -->
@@ -117,6 +117,4 @@
                         </div>
                     </div>
                 </div>
-    
-
 @endsection

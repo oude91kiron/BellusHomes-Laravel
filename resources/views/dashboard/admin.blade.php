@@ -32,9 +32,6 @@
         </div>
 
         <div class="row">
-          <div>
-            <a href="" class="btn btn-primary mt-5"> Edite Site Data</a>
-          </div>
           <table class="table table-striped table-bordered " style="width:100%">
             <thead>
               <td>Logo</td>

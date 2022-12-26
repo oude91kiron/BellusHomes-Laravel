@@ -4,25 +4,29 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\admin;
+use App\Models\user;
 use Illuminate\Support\Facades\Storage;
-use App\Http\Requests\adminRequest;
+use App\Http\Requests\userRequest;
 use Validator;
+use  DB;
 
 
-class adminsController extends Controller
+
+
+class usersController extends Controller
 {
     /**
      * 
      * 
      */
+     
    public function index(){
-       $admins = admin::orderBy('id','DESC')->paginate(PAGINATION_COUNT);
-       return view('dashboard.admins.index',compact('admins'));
+       $users = user::orderBy('id','DESC')->paginate(PAGINATION_COUNT);
+       return view('dashboard.users.index',compact('users'));
    }
 
    public function create(){
-    return view('dashboard.admins.create');
+    return view('dashboard.users.create');
     }
 
 
@@ -31,34 +35,34 @@ class adminsController extends Controller
      * 
      * 
      */
-    public function store(adminRequest $request){
+    public function store(userRequest $request){
 
        
-        $admin = new admin();
+        $user = new user();
 
-        $admin->name = $request->name;
-        $admin->email = $request->email;
-        $admin->position = $request->position;
-        $admin->facebook = $request->facebook;
-        $admin->twitter = $request->twitter;
-        $admin->whatsapp = $request->whatsapp;
-        $admin->instagram = $request->instagram;
+        $user->name = $request->name;
+        $user->email = $request->email;
+        $user->position = $request->position;
+        $user->facebook = $request->facebook;
+        $user->twitter = $request->twitter;
+        $user->whatsapp = $request->whatsapp;
+        $user->instagram = $request->instagram;
 
         
        
         $photo_name = "";
         if($request->has('photo')){
-        $photo_name= uploadImage('admins',$request->photo);
+        $photo_name= uploadImage('users',$request->photo);
         }
 
-       $admin= admin::create($request->except('_token','photo'));
+       $user= user::create($request->except('_token','photo'));
 
-       $admin->photo=$photo_name;
+       $user->photo=$photo_name;
         
-        if($admin->save()){
-            return redirect()->route('admin.admins')->with(['success'=>'The Section has been created']);
+        if($user->save()){
+            return redirect()->route('user.users')->with(['success'=>'The Section has been created']);
         }
-        return redirect()->route('admin.admins')->with(['error'=>'Something went wrong']);
+        return redirect()->route('user.users')->with(['error'=>'Something went wrong']);
     }
 
 
@@ -68,19 +72,19 @@ class adminsController extends Controller
      */
     public function delete($id){
         try{
-           $admin = Admin::find($id);
+           $user = user::find($id);
     
-           if(!$admin){
-              return redirect()->route('admin.admins')->with(['error'=>'This section does not exist']);
+           if(!$user){
+              return redirect()->route('admin.users')->with(['error'=>'This section does not exist']);
            }
 
-           $admin ->delete();
+           $user ->delete();
     
-           return redirect()->route('admin.admins')->with(['success'=>'The section was deleted successfully']);
+           return redirect()->route('admin.users')->with(['success'=>'The section was deleted successfully']);
     
         }catch(\Exception $ex){
            DB::rollback();
-           return redirect()->route('admin.admins')->with(['error' => 'There is Something Wrong In Session']);
+           return redirect()->route('admin.users')->with(['error' => 'There is Something Wrong In Session']);
         }
     }
 }

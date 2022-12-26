@@ -309,8 +309,10 @@ $(function () {
         centerMode: true,
         centerPadding: '15%',
         slidesToShow: 3,
+        slidesToScroll:1,
+        speed:300,
         dots: true,
-        arrows: false,
+        arrows: true,
         responsive: [
             {
                 breakpoint: 1441,

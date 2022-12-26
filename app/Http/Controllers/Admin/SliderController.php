@@ -71,4 +71,8 @@ class SliderController extends Controller
            return redirect()->route('admin.sliders.create')->with(['error' => 'There is Something Wrong In Session']);
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8d54404b8d69e68f4ec63955c5077bd4b9d50088

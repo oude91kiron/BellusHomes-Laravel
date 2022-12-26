@@ -151,6 +151,12 @@
 						</div>
 					</div>
 				</div>
+<<<<<<< HEAD
+=======
+
+				
+					
+>>>>>>> 8d54404b8d69e68f4ec63955c5077bd4b9d50088
 			</div>
 		</div>
 	<!-- /page content -->

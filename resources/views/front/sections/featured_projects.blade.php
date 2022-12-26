@@ -5,7 +5,7 @@
             <p><i>Check our best projects and the opportunities we are providing</i></p>
         </div>
 
-        <div class="row">
+        <div class="row slick-slider-area fadeInUp delay-04s">
         @isset($properties)
         @foreach($properties as $property)
             <div class="col-md-4">

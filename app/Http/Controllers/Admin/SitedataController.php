@@ -24,7 +24,11 @@ class SitedataController extends Controller
 
         //dd($site_data);
 
+<<<<<<< HEAD
         return view('dashboard.auth.sitedata', compact('site_data'));
+=======
+        return view('dashboard/auth/sitedata', compact('site_data'));
+>>>>>>> 8d54404b8d69e68f4ec63955c5077bd4b9d50088
 
     }
 
