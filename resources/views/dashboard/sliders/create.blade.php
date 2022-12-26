@@ -72,6 +72,17 @@
                               @forelse($images as $image )
                                   <figure class="col-lg-3 col-md-6 col-12" itemprop="associatedMedia" itemscope=""
                                           itemtype="http://schema.org/ImageObject">
+
+                                          <form class="form" action="{{route('admin.sliders.images.delete', $image->id)}}"
+                                            method="get"
+                                            enctype="multipart/form-data">
+                                          @csrf
+                                              <div class="img-wrap">
+                                                <span class="close">
+                                                  <input type="submit" value="&times">
+                                                </span>
+                                            </form>
+                                            
                                       <a href="{{$image -> photo}}" itemprop="contentUrl"
                                         data-size="480x360">
                                           <img class="img-thumbnail img-fluid"
