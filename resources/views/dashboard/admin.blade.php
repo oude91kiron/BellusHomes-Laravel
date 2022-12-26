@@ -48,7 +48,7 @@
             </thead>
             <tbody>
               <td>
-                <img src="https://via.placeholder.com/80x60" alt="">
+                <img width="70" height="50" src="{{asset('assets/admin/images/sliders/'. $data->logo )}}" alt="">
               </td>
               <td>{{$data->company_name}}</td>
               <td>{{$data->email}}</td>
@@ -56,7 +56,7 @@
               <td><a href="https://facebook.com/{{$data->facebook}}">{{$data->facebook}}</a></td>
               <td><a href="https://twitter.com/">{{$data->twitter}}</a></td>
               <td><a href="https://instagram.com/">{{$data->instagram}}</a></td>
-              <td><a href="{{route('')}}" class="btn btn-success">Edite</a></td>
+              <td><a href="{{route('sitedata.edit')}}" class="btn btn-success">Edite</a></td>
             </tbody>
           </table>
         </div>

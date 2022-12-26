@@ -11,7 +11,6 @@ Route::group(
 
 
   Route::group(['namespace' => 'Admin', 'middleware' => 'auth:admin','prefix'=>'admin'], function () { 
-
     Route::get('/','AdminController@index')->name('admin.dashboard');
     Route::get('logout','LoginController@logout')->name('admin.logout');
 
@@ -36,7 +35,7 @@ Route::group(
 
 
     
-    Route::group(['prefix'=>'users'],function(){ 
+    Route::group([ 'prefix'=>'users'],function(){ 
       Route::get('/','UsersController@index')->name('admin.users');
       Route::get('create','UsersController@create')->name('admin.users.create');
       Route::post('store','UsersController@store')->name('admin.users.store');
@@ -66,13 +65,30 @@ Route::group(
     });
 
     
-       ################################## sliders ######################################
-       Route::group(['prefix' => 'sliders'], function () {
+    Route::group(['prefix' => 'sliders'], function () {
         Route::get('/', 'SliderController@addImages')->name('admin.sliders.create');
         Route::post('images', 'SliderController@saveSliderImages')->name('admin.sliders.images.store');
         Route::post('images/db', 'SliderController@saveSliderImagesDB')->name('admin.sliders.images.store.db');
-
+        Route::get('delete/{id}', 'SliderController@deleteSliderImages')->name('admin.sliders.images.delete');
     });
+
+
+    Route::group(['prefix' => 'posts'], function () {
+      Route::get('index', 'PostController@index')->name('post.index');
+      Route::get('create', 'PostController@create')->name('post.create');
+      Route::post('posts', 'PostController@store')->name('post.store');
+      Route::get('{post}/edit', 'PostController@edit')->name('post.edit');
+      Route::DELETE('{post}/destroy', 'PostController@destroy')->name('post.destroy');
+      Route::patch('{post}/update', 'PostController@update')->name('post.update');
+    });
+
+    Route::group(['prefix'=>'auth'], function () {
+
+      Route::get('edit', 'SitedataController@edit')->name('sitedata.edit');
+      Route::Post('update/', 'SitedataController@update')->name('sitedata.update');
+    
+      });
+    
   });
 
 
@@ -81,22 +97,5 @@ Route::group(['namespace' => 'Admin', 'middleware' => 'guest:admin','prefix'=>'a
     Route::get('login','LoginController@getLogin')-> name('get.admin.login');
     Route::post('login','LoginController@login')->name('admin.login');
   });
-
-
-  ################################## Post route start #######################################
-
-Route::group(['namespace' => 'Admin','prefix'=>'posts'], function () {
-
-  Route::get('index', 'PostController@index')->name('post.index');
-  Route::get('create', 'PostController@create')->name('post.create');
-  Route::post('posts', 'PostController@store')->name('post.store');
-  Route::get('{post}/edit', 'PostController@edit')->name('post.edit');
-  Route::DELETE('{post}/destroy', 'PostController@destroy')->name('post.destroy');
-  Route::patch('{post}/update', 'PostController@update')->name('post.update');
-  });
-
-
-  ################################## site_data route start    #######################################
-
 
 });
