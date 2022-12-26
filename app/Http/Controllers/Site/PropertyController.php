@@ -9,6 +9,7 @@ use App\Models\Category;
 use App\Models\Image;
 use App\Models\CityTranslation;
 use Illuminate\Http\Request;
+use App\Models\SiteData;
 
 class PropertyController extends Controller
 {
@@ -19,7 +20,8 @@ class PropertyController extends Controller
         $data['cities']  =City::where('id',$id)->get();
         $data['city']  =CityTranslation::first();
         $data['images'] = Image::where('id',$id)->get(); //improve select only required fields
-    
+        $data ['sitedata'] = SiteData::first();
+
         $data['property'] -> id ;
         $data['property'] -> categories ->pluck('id'); 
     

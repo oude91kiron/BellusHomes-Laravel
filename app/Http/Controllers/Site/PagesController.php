@@ -9,6 +9,7 @@ use App\Models\Property;
 use App\Models\Category;
 use App\Models\User;
 use App\Models\Post;
+use App\Models\SiteData;
 
 
 
@@ -17,35 +18,42 @@ class PagesController extends Controller
     //
     public function services() {
 
-        return view('front.pages.services');
+        $sitedata = SiteData::first();
+
+        return view('front.pages.services', compact('sitedata'));
     }
 
     //
     public function aboutUs() {
 
+        $sitedata = SiteData::first();
 
-        return view('front.pages.aboutUs');
+        return view('front.pages.aboutUs', compact('sitedata'));
     }
 
     //
     public function properties() {
 
         $properties = Property::all();
+        $sitedata = SiteData::first();
 
-        return view('front.pages.propertiesGried', compact('properties'));
+        return view('front.pages.propertiesGried', compact('properties', 'sitedata'));
     }
 
     //
     public function blog() {
 
         $posts = Post::all();
+        $sitedata = SiteData::first();
 
-        return view('front.pages.ourBlog', compact('posts'));
+        return view('front.pages.ourBlog', compact('posts', 'sitedata'));
     }
 
     //
     public function contact() {
 
-        return view('front.pages.contactUs');
+        $sitedata = SiteData::first();
+
+        return view('front.pages.contactUs', compact('sitedata'));
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\PostRequest;
 use App\Models\Post;
 
 
@@ -46,52 +47,28 @@ class PostController extends Controller
     /**
      * 
      */
-    public function store(Request $request) {
-
-        // Check that user autherized.
-        //Auth()->user();
-
-
-        /** S30/V195:
-         * check the all data that come from the request.
-         * note _token needed when submit ajax.
-         */
-
-        //dd(request()->all());
-
-        /**
-         * S30/V209 Using policy method authorize()
-         * 
-         * this will not authorize the store method if the create
-         * method in the policy class empty or return false value.         
-         */
-        $this->authorize('create', Post::class);
-
-        /**S30/V196:
-         * 1. validat the data using validate function.  
-         * */ 
+    public function store(PostRequest $request, Post $post) {
         
-        $inputs = request()->validate([
+        $post->title = $request->title;
+        $post->headline = $request->headline;
+        $post->body = $request->body;
+        $post->categories = $request->categories;
+        $post->tags = $request->tags;
+        //$post->user_id = 1;
 
-            'title'=> 'required | min:6 | max:255',
-            // Read the document for file type restriction.
-            'post_image' => 'file',
-            'body'=> 'required'
-        ]);
-
-        // 2. save the image path."
-        if(request('post_image')){
-            
-            $inputs['post_image'] = request('post_image')->store('images');
+        // Post Image
+        $post_image = "";
+        if($request->has('post_image')){
+        $post_image = uploadImage('posts', $request->post_image);
         }
-        // if user auth create the data and sotre it to the database.
-        auth()->user()->posts()->create($inputs);
 
-        // we can use the class Session::flash() or the helper function session() 
-        //  or the $request object.
-        session()->flash('success', 'Your Post Was Successfuly Created');
+       $post->post_image = $post_image;
         
-        return redirect()->route('post.index');
+        if($post->save()){
+            return redirect()->route('post.create')->with(['success'=>'The data has been Saved']);
+        }
+        return redirect()->route('post.create')->with(['error'=>'Something went wrong']);
+
 
     }
     //----------------------------------------------------------------------

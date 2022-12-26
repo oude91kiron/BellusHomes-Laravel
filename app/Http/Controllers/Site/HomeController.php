@@ -10,6 +10,7 @@ use App\Models\Property;
 use App\Models\Category;
 use App\Models\User;
 use App\Models\Post;
+use App\Models\SiteData;
 
 class HomeController extends Controller
 {
@@ -21,6 +22,7 @@ class HomeController extends Controller
     $data ['properties'] =Property::get();
     $data ['users'] =User::get();
     $data ['posts'] =Post::get();
+    $data ['sitedata'] = SiteData::first();
 
     $data['categories'] = Category::parent()->select('id','slug')->with(['childrens' => function($q){
         $q->select('id','parent_id','slug');

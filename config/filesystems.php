@@ -82,6 +82,13 @@ return [
             'url' => env('APP_URL').'/public',
             'visibility' => 'public',
         ],
+
+        'posts' => [
+            'driver' => 'local',
+            'root' => public_path('assets/admin/images/posts'),
+            'url' => env('APP_URL').'/public',
+            'visibility' => 'public',
+        ],
    
 
         

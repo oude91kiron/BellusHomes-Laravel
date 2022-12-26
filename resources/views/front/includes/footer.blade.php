@@ -7,19 +7,19 @@
                     <h4>Contact Us</h4>
                     <ul class="contact-info">
                         <li>
-                            <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>20/F Green Road, Dhanmondi, Dhaka
+                            <i class="flaticon-facebook-placeholder-for-locate-places-on-maps"></i>Istanbul Turkey
                         </li>
                         <li>
-                            <i class="fa fa-envelope"></i><a href="mailto:sales@hotelempire.com">info@themevessel.com</a>
+                            <i class="fa fa-envelope"></i><a href="mailto:{{$sitedata->email}}">{{$sitedata->email}}</a>
                         </li>
                         <li>
-                            <i class="fa fa-phone"></i><a href="tel:+55-417-634-7071">+0477 85X6 552</a>
+                            <i class="fa fa-phone"></i><a href="tel:{{$sitedata->whatsapp}}">{{$sitedata->whatsapp}}</a>
                         </li>
                         <li>
-                            <i class="fa fa-fax"></i>+0487 85X6 224
+                            <i class="fa fa-whatsapp"></i><a href="https://wa.me/{{$sitedata->whatsapp}}">{{$sitedata->whatsapp}}</a>
                         </li>
                         <li>
-                            <i class="fa fa-skype"></i><a href="mailto:info@green.com">info@green.com</a>
+                            <i class="fa fa-skype"></i><a href="mailto:info@green.com">{{$sitedata->email}}</a>
                         </li>
                     </ul>
                 </div>
@@ -117,10 +117,10 @@
                 </div>
                 <div class="col-lg-4 col-md-12">
                     <ul class="social-list clearfix">
-                        <li><a href="#" class="facebook-bg"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#" class="twitter-bg"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#" class="google-bg"><i class="fa fa-google-plus"></i></a></li>
-                        <li><a href="#" class="linkedin-bg"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://facebook.com/{{$sitedata->facebook}}" class="facebook-bg" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://twitter.com/{{$sitedata->twitter}}" class="twitter-bg" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://instagram.com/{{$sitedata->instagram}}" class="instagram-bg" target="_blank"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="https://wa.me/{{$sitedata->whatsapp}}" class="whatsapp-bg" target="_blank"><i class="fa fa-whatsapp"></i></a></li>
                     </ul>
                 </div>
             </div>
