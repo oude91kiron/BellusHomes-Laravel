@@ -56,4 +56,16 @@ class PagesController extends Controller
 
         return view('front.pages.contactUs', compact('sitedata'));
     }
+
+
+    /**
+     * 
+     */
+    public function singlePost(Post $post) {
+
+        $sitedata = SiteData::first();
+
+        return view('front.pages.post',compact('sitedata', 'post'));
+      }
+    //----------------------------------------------------------------------
 }

@@ -41,8 +41,8 @@ class User extends Authenticatable
     /**
      * User has many posts
      */
-    // public function posts() {
+    public function posts() {
 
-    //     $this->hasMany(Post::class);
-    // }
+        $this->hasMany(Post::class);
+    }
 }

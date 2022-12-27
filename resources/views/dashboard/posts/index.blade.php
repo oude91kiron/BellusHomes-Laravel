@@ -22,12 +22,11 @@
                                     <th>#</th> 
                                     <th>Title</th>
                                     <th>Headline</th>
-                                    <th>Photo</th>
                                     <th>Summery</th>
                                     <th>Category</th>
                                     <th>Tags</th>
+                                    <th>Photo</th>
                                     <th >Setings</th>
-
                                 </tr>
                             </thead>
                             <tbody>
@@ -37,11 +36,23 @@
                                     <td>{{$post ->id}}</td>
                                     <td>{{$post ->title}}</td>
                                     <td>{{$post ->headline}}</td>
-                                    <td>{{$post ->post_image}}</td>
                                     <td>{{substr($post->body,0,100)}}...</td>
                                     <td>{{$post ->categories}}</td>
                                     <td>{{$post ->tags}}</td>
-                                    <td></td>
+                                    <td>
+                                        <img height="60" width="60" src="{{url('assets/admin/images/posts', $post ->post_image)}}" alt="">
+                                    </td>
+                                    <td>
+                                        <div class="btn-group" role="group"
+                                                    aria-label="Basic example">
+                                                    <a href="{{route('post.edit', $post)}}"
+                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Edit</a>
+                
+                
+                                                    <a href="{{route('post.destroy',$post)}}"
+                                                        class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
+                                        </div>
+                                    </td>
                                 </tr>
                                 @endforeach
                                 @endisset

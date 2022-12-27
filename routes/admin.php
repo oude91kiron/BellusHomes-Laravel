@@ -78,8 +78,9 @@ Route::group(
       Route::get('create', 'PostController@create')->name('post.create');
       Route::post('posts', 'PostController@store')->name('post.store');
       Route::get('{post}/edit', 'PostController@edit')->name('post.edit');
-      Route::DELETE('{post}/destroy', 'PostController@destroy')->name('post.destroy');
-      Route::patch('{post}/update', 'PostController@update')->name('post.update');
+      Route::get('{post}/destroy', 'PostController@destroy')->name('post.destroy');
+      Route::post('{post}/update', 'PostController@update')->name('post.update');
+
     });
 
     Route::group(['prefix'=>'auth'], function () {

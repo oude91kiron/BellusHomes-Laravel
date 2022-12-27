@@ -51,7 +51,6 @@
                       <div class="col-md-12">
                           <div class="card">
     
-                  {{-- ///////////////// --}}
             <div class="card-content collapse show">
               <div class="card-body">
                   <div class="card-text">
@@ -66,7 +65,6 @@
                                   <figure class="col-lg-3 col-md-6 col-12" itemprop="associatedMedia" itemscope=""
                                           itemtype="http://schema.org/ImageObject">
 
-<<<<<<< HEAD
                                           <form class="form" action="{{route('admin.sliders.images.delete', $image->id)}}"
                                             method="get"
                                             enctype="multipart/form-data">
@@ -77,18 +75,6 @@
                                                 </span>
                                             </form>
                                             
-=======
-                                        <form class="form" action="{{route('admin.sliders.images.delete', $image->id)}}"
-                                          method="get"
-                                          enctype="multipart/form-data">
-                                        @csrf
-                                            <div class="img-wrap">
-                                              <span class="close">
-                                                <input type="submit" value="&times">
-                                              </span>
-                                          </form>
-                                          
->>>>>>> 8d54404b8d69e68f4ec63955c5077bd4b9d50088
                                       <a href="{{$image -> photo}}" itemprop="contentUrl"
                                         data-size="480x360">
                                           <img class="img-thumbnail img-fluid"

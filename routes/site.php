@@ -22,6 +22,7 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
         Route::get('properties', 'PagesController@properties')->name('properties');
         Route::get('contact', 'PagesController@contact')->name('contact');
         Route::get('blog', 'PagesController@blog')->name('blog');
+        Route::get('{post}/post', 'PagesController@singlePost')->name('single.post');
 
     }); 
 });
