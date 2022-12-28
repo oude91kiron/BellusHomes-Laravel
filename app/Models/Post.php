@@ -7,9 +7,16 @@ use App\Models\User;
 
 class post extends Model
 {
-        // Avoid misassignment
-        protected $guarded = [];    
-    
+        /**
+        * The attributes that are mass assignable.
+        *
+        * @var array
+        */
+        protected $fillable = [
+
+            'post_image'
+
+    ];
 
         // Create relationship
         public function user() {

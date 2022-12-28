@@ -9,13 +9,6 @@ class PropertyTranslation extends Model
     protected $fillable = [       
         'name',
         'building_age',
-        'parking',
-        'cooling',
-        'heating',
-        'sewer',
-        'water',
-        'torage_room',
-        'exercise_room',
         'description',
     ];
 
