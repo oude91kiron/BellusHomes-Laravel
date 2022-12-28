@@ -41,7 +41,7 @@
 
       <ul class="nav side-menu">
         <li>
-          <a><i class="fa fa-user"></i>Users<span class="fa fa-chevron-down"></span></a>
+          <a><i class="fa fa-user"></i>{{__('admin/sidebar.users')}}<span class="fa fa-chevron-down"></span></a>
               <ul class="nav child_menu">
                     <li><a href="{{route('admin.users')}}">All Costumers</a></li>
                     <li><a href="{{route('admin.users.create')}}">Add New Costumer</a></li>

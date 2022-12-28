@@ -31,12 +31,10 @@
                                             <ul class="clearfix">
                                                 <li><i class="flaticon-bed"></i> {{$property -> rooms}} Rooms </li>
                                                 <li><i class="flaticon-bath"></i> {{$property -> bedrooms}} Bedrooms </li>
-                                                <li><i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property ->area}} Metter</li>
+                                                <li><i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property ->area}} Metter</li>                                            
                                             </ul>
                                         </div>
-                                        <div class="float-right">
-                                            <p>$ {{$property -> price_meter}} / metre</p>
-                                        </div>
+                                        
                                     </div>
                                </div>
                            </div>
@@ -103,7 +101,7 @@
                                     <strong>Project ID: </strong>{{100 + $property->id}}
                                 </li>
                                 <li>
-                                    <strong>Year Built:</strong>{{date('Y') - $property->building_age}}
+                                    <strong>Delivery Year:</strong>{{$property->building_age}}
                                 </li>
                             </ul>
                         </div>
@@ -131,7 +129,7 @@
                     </div>
                 </div>
                 <!-- Amenities box start -->
-                <div class="amenities-box af mb-45">
+                <div class="amenities-box af mb-45 ">
                     <h3 class="heading-3">Condition</h3>
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
@@ -166,6 +164,58 @@
                             </ul>
                         </div>
                     </div>
+                </div>
+
+
+
+                <div class="mb-5" >
+                    <table class="table text-center">
+                        <thead>
+                          <tr>
+                            <th scope="col">Rooms</th>
+                            <th scope="col">Min Price</th>
+                            <th scope="col">Min Price</th>
+                            <th scope="col">Min m²</th>
+                            <th scope="col">Max m²</th>
+                            <th scope="col">Bathrooms</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>1+1</td>
+                            <td>100,000$</td>
+                            <td>134,000$</td>
+                            <td>73,44</td>
+                            <td>113,73</td>
+                            <td>1</td>
+                          </tr>
+                          <tr>
+                            <td>2+1</td>
+                            <td>207,000$</td>
+                            <td>305,000$</td>
+                            <td>116,24</td>
+                            <td>298,88</td>
+                            <td>2</td>
+                          </tr>
+                          <tr>
+                            <td>3+1</td>
+                            <td>378,000$</td>
+                            <td>799,000$</td>
+                            <td>172,24</td>
+                            <td>297,73</td>
+                            <td>2-3</td>
+                          </tr>
+                          <tr>
+                            <td>4+1</td>
+                            <td>542,000$</td>
+                            <td>646,000$</td>
+                            <td>240,76</td>
+                            <td>246,83</td>
+                            <td>2</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                      
                 </div>
 
                 <!-- Property vedio start -->

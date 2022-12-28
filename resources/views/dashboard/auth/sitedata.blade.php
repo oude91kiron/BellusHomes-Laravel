@@ -9,7 +9,6 @@
 						<div class="title_left">
 							<h3>Site Data</h3>
 						</div>
-
 					
 					</div>
 					<div class="clearfix"></div>
@@ -17,7 +16,7 @@
 						<div class="col-md-12 col-sm-12 ">
 							<div class="x_panel">
 								<div class="x_title">
-									<h2>Add Data</h2>
+									<h2>Edite The Website Data</h2>
 									<ul class="nav navbar-right panel_toolbox">
 										<li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
 										</li>
@@ -151,12 +150,6 @@
 						</div>
 					</div>
 				</div>
-<<<<<<< HEAD
-=======
-
-				
-					
->>>>>>> 8d54404b8d69e68f4ec63955c5077bd4b9d50088
 			</div>
 		</div>
 	<!-- /page content -->
