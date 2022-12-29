@@ -29,6 +29,15 @@ class PropertyFeatureRequest extends FormRequest
           'rooms'=>'required|min:0|numeric',
           'bedrooms'=>'required|min:0|numeric',
           'bathrooms'=>'required|min:0|numeric',
+          'parking' => 'boolean',
+          'swimming_pool' => 'boolean',
+          'gym' => 'boolean',
+          'central_heating' => 'boolean',
+          'alarm' => 'boolean',
+          'internet' => 'boolean',
+          
+          
+          
         ];
     }
 }

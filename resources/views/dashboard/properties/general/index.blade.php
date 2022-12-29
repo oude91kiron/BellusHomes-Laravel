@@ -64,8 +64,10 @@
                                          class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">price</a>
                                       <a href="{{route('admin.properties.images',$property -> id)}}"
                                          class="btn btn-outline-info btn-min-width box-shadow-3 mr-1 mb-1">Pictures</a>
-                                         <a href="{{route('admin.properties.features',$property -> id)}}"
+                                      <a href="{{route('admin.properties.features',$property -> id)}}"
                                           class="btn btn-outline-secondary btn-min-width box-shadow-3 mr-1 mb-1">Features</a>
+                                      <a href="{{route('admin.properties.delete',$property -> id)}}"
+                                            class="btn btn-outline-secondary btn-min-width btn-dangerww box-shadow-3 mr-1 mb-1">Delete</a>
                                   </div>
                               </td>
                           </tr>

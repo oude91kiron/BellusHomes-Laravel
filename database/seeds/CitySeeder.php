@@ -1,9 +1,9 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use App\Models\SiteData;
+use App\Models\City;
 
-class SiteDataSeeder extends Seeder
+class CitySeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -13,7 +13,7 @@ class SiteDataSeeder extends Seeder
     public function run()
     {
         //
-        factory(SiteData::class,1)->create();
+        factory(City::class,3)->create();
 
     }
 }

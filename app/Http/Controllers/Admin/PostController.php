@@ -48,7 +48,11 @@ class PostController extends Controller
             
             'title' => $request->title,
             'headline' => $request->headline,
-            'body' => $request->body,
+            'paragraph' => $request->paragraph,
+            'firstSubhead' => $request->firstSubhead,
+            'secondParagraph' => $request->secondParagraph,
+            'secondHeadline'=> $request->secondHeadline,
+            'thirdParagraph' => $request->thirdParagraph,
             'categories' => $request->categories,
             'tags' => $request->tags,
             'user_id' => $user->id,
@@ -84,8 +88,15 @@ class PostController extends Controller
         }
 
         $post->title = $request['title'];
-        $post->body = $request['body'];
-
+        $post->headline = $request['headline'];
+        $post->paragraph = $request['paragraph'];
+        $post->firstSubhead = $request['firstSubhead'];
+        $post->secondParagraph = $request['secondParagraph'];
+        $post->secondHeadline = $request['secondHeadline'];
+        $post->thirdParagraph = $request['thirdParagraph'];
+        $post->categories = $request['categories'];
+        $post->tags = $request['tags'];
+        
         $post->save();
 
         session()->flash('updated', 'Your Post Was Successfuly Updated');

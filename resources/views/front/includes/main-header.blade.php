@@ -6,7 +6,7 @@
             <div class="col-12">
                 <nav class="navbar navbar-expand-lg navbar-light rounded">
                     <a class="navbar-brand logo" href="{{route('home')}}">
-                        <img height="60" width="50" src="{{url('assets/admin/images/sliders', $sitedata->logo)}}" alt="logo">
+                        <img  src="{{url('assets/admin/images/sliders', $sitedata->logo)}}" alt="logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="fa fa-bars"></span>

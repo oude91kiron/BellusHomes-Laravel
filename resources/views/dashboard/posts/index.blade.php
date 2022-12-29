@@ -36,7 +36,7 @@
                                     <td>{{$post ->id}}</td>
                                     <td>{{$post ->title}}</td>
                                     <td>{{$post ->headline}}</td>
-                                    <td>{{substr($post->body,0,100)}}...</td>
+                                    <td>{{substr($post->paragraph,0,99)}}</td>
                                     <td>{{$post ->categories}}</td>
                                     <td>{{$post ->tags}}</td>
                                     <td>
@@ -47,7 +47,6 @@
                                                     aria-label="Basic example">
                                                     <a href="{{route('post.edit', $post)}}"
                                                     class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Edit</a>
-                
                 
                                                     <a href="{{route('post.destroy',$post)}}"
                                                         class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>

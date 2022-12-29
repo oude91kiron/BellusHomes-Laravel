@@ -160,5 +160,17 @@ class PropertiesController extends Controller
       }
   }
 
+
+  public function delete($id) {
+
+    $property = Property::find($id);
+
+    $property->deleted_at = now();
+
+    $property->save();
+
+    return redirect()->back();
+  }
+
 }
 

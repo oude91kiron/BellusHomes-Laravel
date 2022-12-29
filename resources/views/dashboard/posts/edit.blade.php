@@ -30,19 +30,20 @@
 									enctype="multipart/form-data">
 									@csrf
 
-									<div class="form-group">
-									    <label>Post Pictur, Max 4MB</label>
-										<label class="form-label"  id="projectinput">
-											<input type="file"  id="post_image" name="post_image">
-										</label>
-                                        <img height="150" width="200" src="{{url('assets/admin/images/posts', $post ->post_image)}}" alt="">
+                                        <!-- post_image -->										
+										<div class="form-group">
+										    <label>Post Pictur, Max 4MB</label>
+											<label class="form-label"  id="projectinput">
+												<input type="file"  id="post_image" name="post_image">
+											</label>
+                                    	    <img height="150" width="200" src="{{url('assets/admin/images/posts', $post ->post_image)}}" alt="">
 
-										@error("post_image")
-												<span class="text-danger">{{$message}}</span>
-										@enderror
-									</div>
+											@error("post_image")
+													<span class="text-danger">{{$message}}</span>
+											@enderror
+										</div>
 
-
+                                        <!-- title -->										
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Title: <span class="required">*</span>
 											</label>
@@ -74,24 +75,93 @@
 											</div>
 										</div>
 
-										<!-- Body -->
+										<!-- paragraph -->
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Body: <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Paragraph: <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-											<textarea type="text" id="body"
+											<textarea type="text" id="paragraph"
 											class="form-control"
-											value="{{old('body')}}"
-											name="body"
-                                            rows="12" 
-                                            cols="50"> {{$post->body}} </textarea>
-												@error("body")
+											placeholder="{{$post->paragraph}}"
+											value="{{old('paragraph')}}"
+											name="paragraph"
+                                            rows="6" 
+                                            cols="12"></textarea>
+												@error("paragraph")
 												<span class="text-danger">{{$message}}</span>
 												@enderror
 											</div>
 										</div>
 
+                                        <!-- firstSubhead -->										
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Sub Headline: <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<input type="text" id="firstSubhead"
+											class="form-control"
+											placeholder="{{$post->firstSubhead}}"
+											value="{{old('firstSubhead')}}"
+											name="firstSubhead">
+												@error("firstSubhead")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
 
+										<!-- secondParagraph -->
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Second Paragraph: <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<textarea type="text" id="secondParagraph"
+											class="form-control"
+											placeholder="{{$post->secondParagraph}}"
+											value="{{old('secondParagraph')}}"
+											name="secondParagraph"
+                                            rows="6" 
+                                            cols="12"></textarea>
+												@error("secondParagraph")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
+
+										<!-- secondHeadline -->										
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Second Sub Head: <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<input type="text" id="secondHeadline"
+											class="form-control"
+											placeholder="{{$post->secondHeadline}}"
+											value="{{old('secondHeadline')}}"
+											name="secondHeadline">
+												@error("secondHeadline")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
+
+										<!-- thirdParagraph -->
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Third Paragraph: <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<textarea type="text" id="thirdParagraph"
+											class="form-control"
+											placeholder="{{$post->thirdParagraph}}"
+											value="{{old('thirdParagraph')}}"
+											name="thirdParagraph"
+                                            rows="6" 
+                                            cols="12"></textarea>
+												@error("thirdParagraph")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
+
+										
 										<!-- categories -->										
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="whatsapp">Categories: <span class="required">*</span>
@@ -108,6 +178,7 @@
 											</div>
 										</div>
 
+										<!-- tags -->										
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="tags">Tags: <span class="required">*</span>
 											</label>
