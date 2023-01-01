@@ -1,8 +1,8 @@
 <div class="featured-properties content-area-7">
     <div class="container">
         <div class="main-title">
-            <h1>Featured Projects</h1>
-            <p><i>Check our best projects and the opportunities we are providing</i></p>
+            <h1>{{__('site/home.Featured Projects')}}</h1>
+            <p><i>{{__('site/home.Check our best projects and the opportunities we are providing')}}</i></p>
         </div>
 
         <div class="row slick-slider-area fadeInUp delay-04s">
@@ -52,7 +52,7 @@
             @endforeach
             @endisset
             <div class="col-lg-12 text-center">
-                <a data-animation="animated fadeInUp delay-10s" href="{{route('properties')}}" class="btn btn-lg btn-theme">More Projects</a>
+                <a data-animation="animated fadeInUp delay-10s" href="{{route('properties')}}" class="btn btn-lg btn-theme">{{__('site/home.More Projects')}}</a>
             </div>
         </div>
     </div>

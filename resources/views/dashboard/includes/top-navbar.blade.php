@@ -5,6 +5,11 @@
               </div>
               <nav class="nav navbar-nav">
               <ul class=" navbar-right">
+                <li class=" dropdown">
+                  <a href="@if(App()->getLocale() == 'en'){{ LaravelLocalization::getLocalizedURL('ar') }} @else {{ LaravelLocalization::getLocalizedURL('en') }}@endif " type="button" class="btn btn-submit font-weight-bold">
+                      <i class="fa fa-language" aria-hidden="true"></i>
+                  </a>
+              </li>
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
                     Admin

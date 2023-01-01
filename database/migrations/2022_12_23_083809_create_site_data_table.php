@@ -15,13 +15,13 @@ class CreateSiteDataTable extends Migration
     {
         Schema::create('site_data', function (Blueprint $table) {
             $table->id();
-            $table->string('company_name');
+            $table->string('company_name')->nullable();
             $table->string('email')->unique();
-            $table->string('facebook');
-            $table->string('instagram');
-            $table->string('twitter');
-            $table->string('whatsapp');
-            $table->string('logo');
+            $table->string('facebook')->nullable();
+            $table->string('instagram')->nullable();
+            $table->string('twitter')->nullable();
+            $table->string('whatsapp')->nullable();
+            $table->string('logo')->nullable();
             $table->timestamps();
         });
     }

@@ -12,7 +12,7 @@
                         <span class="fa fa-bars"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbar">
-                        <ul class="navbar-nav justify-content-end ml-auto">
+                        <ul class="navbar-nav justify-content-end ml-auto @if(App()->getLocale() == 'ar'){{ 'flex-row-reverse'}} @endif" >
                     
                             <li class=" dropdown">
                                 <a href="{{route('home')}}" type="button" class="btn btn-submit font-weight-bold">{{__('site/header.Home')}}</a>
@@ -33,7 +33,7 @@
                                 <a href="{{route('contact')}}" type="button" class="btn btn-submit font-weight-bold">{{__('site/header.Contact Us')}}</a>
                             </li>
                             <li class=" dropdown">
-                                <a href="ar" type="button" class="btn btn-submit font-weight-bold">
+                                <a href="@if(App()->getLocale() == 'en'){{ LaravelLocalization::getLocalizedURL('ar') }} @else {{ LaravelLocalization::getLocalizedURL('en') }}@endif " type="button" class="btn btn-submit font-weight-bold">
                                     <i class="fa fa-language" aria-hidden="true"></i>
                                 </a>
                             </li>

@@ -19,7 +19,7 @@ class CreatePropertyTranslationsTable extends Migration
             $table->string('name')->nullable();
             $table->string('building_age')->nullable();
             $table->string('locale');
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->unique(['property_id','locale']);
             $table->foreign('property_id')->references('id')->on('properties')->onDelete('cascade');
 

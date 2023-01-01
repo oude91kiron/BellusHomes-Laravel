@@ -3,7 +3,7 @@
     <div class="text-center mt-5">
         <h2 class="h2-responsive font-weight-bold text-center my-4">Contact Us</h2>
     </div>
-    <div class="row">    
+    <div class="row ">    
         <div class="col-md-8 mb-md-0 mb-5">
             <div class="col-lg-8 col-sm-12">
                 <h2 class="h2-responsive font-weight-bold text-center my-4">Send Us Email</h2>
@@ -59,12 +59,10 @@
 
             <!--Grid column-->
             <div class="col-lg-4 col-sm-12">
-                <p class="h3-responsive font-weight-bold mx-4 my-4">Contact Us:</p>
-                <p class="h5 w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. 
+                <p class="h3-responsive font-weight-bold mx-4 my-4 text-center">Contact Us:</p>
+                <p class="h5 w-responsive mx-auto mb-5 ">Do you have any questions? Please do not hesitate to contact us directly. 
                     Get a free consultante about real state market in Istanbul.</p>
-                <div class="row">
-                    
-                </div>
+
                 <ul class="contact-info">
                     <li >
                         <i class="flaticon-facebook-placeholder-for-locate-places-on-maps mx-4 mx-2"></i>Istanbul 34097, Turkey

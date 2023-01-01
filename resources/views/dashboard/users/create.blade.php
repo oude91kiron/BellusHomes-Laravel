@@ -36,7 +36,6 @@
 									@csrf
 
 
-
 									<div class="form-group">
 									    <label>Pictur of Agent, Max 4MB</label>
 										<label class="form-label"  id="projectinput">

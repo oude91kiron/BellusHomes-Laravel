@@ -17,7 +17,7 @@ class CreateCityTranslationsTable extends Migration
             $table->increments('id');
             $table->integer('city_id');
             $table->string('locale');
-            $table->string('name');
+            $table->string('name')->nullable();
             $table->unique(['city_id','locale']);
         });
     }

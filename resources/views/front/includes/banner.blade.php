@@ -11,9 +11,9 @@
                 <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                     <div class="carousel-content container b1-inner">
                         <div class="tab-search-section">
-                            <h1>Find Your Dream Home</h1>
+                            <h1>{{__('site/banner.Find Your Home in Istanbul')}}</h1>
                             <div id="typed-strings">
-                                <p>Find new & featured property located in istanbul city.</p>
+                                <p>{{__('site/banner.We Provide The best projects in Istanbul city')}}</p>
                             </div>
                         </div>
                     </div>
@@ -25,9 +25,9 @@
                 <div class="carousel-caption banner-slider-inner d-flex h-100 text-center">
                     <div class="carousel-content container b1-inner">
                         <div class="tab-search-section">
-                            <h1>Find Your Dream Home</h1>
+                            <h1>{{__('site/banner.Real estate investment in Istanbul')}}</h1>
                             <div id="typed-strings">
-                                <p>Find new & featured property located in istanbul city.</p>
+                                <p>{{__('site/banner.Get a free consultation to answer your questions')}}</p>
                             </div>
                         </div>
                     </div>

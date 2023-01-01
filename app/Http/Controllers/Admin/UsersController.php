@@ -60,9 +60,9 @@ class usersController extends Controller
        $user->photo=$photo_name;
         
         if($user->save()){
-            return redirect()->route('user.users')->with(['success'=>'The Section has been created']);
+            return redirect()->route('admin.users')->with(['success'=>'The Section has been created']);
         }
-        return redirect()->route('user.users')->with(['error'=>'Something went wrong']);
+        return redirect()->route('admin.users')->with(['error'=>'Something went wrong']);
     }
 
 

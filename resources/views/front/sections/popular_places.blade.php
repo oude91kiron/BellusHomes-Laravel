@@ -10,7 +10,7 @@
                 @foreach($cities as $city)
                 <div class="col-lg-4 col-md-12 col-sm-12 col-pad cp-3 wow fadeInUp delay-04s d-none-992">
                     <div class="overview aa overview-box">
-                        <img src="https://via.placeholder.com/354x723" alt="popular-places" class="big-img">
+                        <img src="{{asset($city->photo )}}" alt="popular-places" class="big-img">
                         <div class="mask">
                             <div class="info-2">
                                 <div class="ds">

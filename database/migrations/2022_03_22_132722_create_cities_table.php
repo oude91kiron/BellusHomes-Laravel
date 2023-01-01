@@ -15,7 +15,7 @@ class CreateCitiesTable extends Migration
     {
         Schema::create('cities', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('photo');
+            $table->string('photo')->nullable();
             $table->boolean('is_active');
             $table->timestamps();
         });

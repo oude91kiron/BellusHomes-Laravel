@@ -48,25 +48,25 @@ class CitiesController extends Controller
 
         $fileName = "";
         if($request->has('photo')){
-        $fileName= uploadImage('cities',$request->photo);
+        $fileName = uploadImage('cities',$request->photo);
         }
 
        $city= City::create($request->except('_token','photo'));
 
        //save translation
-       $city->name=$request->name;
-       $city->photo=$fileName;
+       $city->name = $request->name;
+       $city->photo = $fileName;
 
 
        $city->save();
 
        DB::commit();
-       return redirect()->route('admin.cities')->with(['success' => 'The Session Successfully Created']);
-    }catch(\Exception $ex){
-
-                DB::rollback();
-                return redirect()->route('admin.cities')->with(['error'=>'there is Something wrong in Session']);
-        }
+       return redirect()->route('admin.cities')->with(['success' => 'The Session Successfully Updated']);
+      }catch(\Exception $ex){
+          
+          DB::rollback();  // return error if any field not nullable
+          return redirect()->route('admin.cities')->with(['error'=>'there is Something wrong in Session']);
+      }
     }
 
 
@@ -75,9 +75,8 @@ class CitiesController extends Controller
          */
         public function edit($id){
 
-            //get specific categories and its translations
+            $city = City::find($id);
 
-            $city=City::find($id);
             if(!$city){
                 return redirect()->route('admin.cities')->with(['error'=>'Not Exist']);
             }
@@ -89,10 +88,8 @@ class CitiesController extends Controller
         public function update($id,CityRequest $request){
 
        try{
-             //validation
-
              //update DB
-             $city=City::find($id);
+             $city = City::find($id);
              if(!$city){
                 return redirect()->route('admin.cities')->with(['error'=>'Not Exist']);
             }
@@ -116,7 +113,8 @@ class CitiesController extends Controller
             //save translation
             $city->name=$request->name;
             $city->save();
-         DB::commit();
+         
+            DB::commit();
          return redirect()->route('admin.cities')->with(['success' => 'The Session Successfully Updated']);
         }catch(\Exception $ex){
             

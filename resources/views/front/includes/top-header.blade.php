@@ -1,7 +1,7 @@
 <!-- Top header start -->
 <header class="top-header th-bg" id="top-header-2">
     <div class="container">
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-9 col-md-9 col-sm-7">
                 <div class="list-inline">
                     <a href="tel:{{$sitedata->whatsapp}}"><i class="fa fa-phone"></i>7/24 support</a>
