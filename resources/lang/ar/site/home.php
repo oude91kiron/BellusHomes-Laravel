@@ -14,7 +14,7 @@ return [
     'Single House' => 'منزل مستقل',
     'Family homes are designed to be used as a single-dwelling unit, no shared walls, and its own only by you' => 'تم تصميم المنازل العائلية لتستخدم كوحدة سكنية واحدة ، بدون جدران مشتركة ، ومخصصة لك وحدك',
     'Laxury Villa' => 'فيلا دبلكس',
-    'A carefully selected group of distinguished villas in the most prestigious neighborhoods of Istanbul.' => 'مجموعة منتقاة بعناية من الفلل المميزة في ارقى احياء مدينة اسطنبول',
+    'A carefully selected group of distinguished villas in the most prestigious neighborhoods of Istanbul.' => 'مجموعة منتقاة بعناية من الفلل المميزة في ارقى احياء مدينة اسطنبول مع اطلالات بحرية ساحرة',
     'Turkey Cetizinship' => 'الجنسية التركية',
     'Investing in Turkey is a way to get the Turkey citizenship where Turkey one of the greatest economies in the world' => 'الاستثمار في تركيا وسيلة للحصول على الجنسية التركية حيث تعد تركيا من اقوى الاقتصادات ',
     'Read more...' => 'قراءة المزيد...',

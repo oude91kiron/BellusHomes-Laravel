@@ -17,8 +17,8 @@ class CreatePropertiesTable extends Migration
             // Property Details
             $table->increments('id');
             $table->string('slug')->unique()->nullable();
-            $table->decimal('total_price',18,4)->unsigned()->default();
-            $table->decimal('price_meter',18,1)->unsigned()->nullable();
+            $table->decimal('total_price',18,0)->unsigned()->default();
+            $table->decimal('price_meter',18,0)->unsigned()->nullable();
             $table->string('location')->nullable();
             $table->string('area')->nullable();
             $table->integer('rooms')->nullable();
