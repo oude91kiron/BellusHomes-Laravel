@@ -3,13 +3,13 @@
 <div class="container">
 
     <!-- Sub banner start -->
-  <div class="sub-banner mb-5">
+  <div class="sub-banner2 mb-5">
     <div class="container">
       <div class="breadcrumb-area">
-        <h1>Services</h1>
+        <h1>{{__('site/services.Services')}}</h1>
         <ul class="breadcrumbs">
-            <li><a href="index.html">Home</a></li>
-            <li class="active">Check What We Provide</li>
+            <li><a href="index.html">{{__('site/services.home')}}</a></li>
+            <li class="active">{{__('site/services.Check What We Provide')}}</li>
         </ul>
       </div>
     </div>
@@ -26,24 +26,24 @@
     <!-- Wrapper for slides -->
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
-        <img src="https://via.placeholder.com/1200x400?text=Turkish Cetizenship" alt="Image">
+        <img width="1200px" height="400px" src="{{asset('assets/front/img/services/turkishcitizinship.jpg')}}" alt="Image">
         <div class="carousel-caption">
-          <h3>Sell $</h3>
-          <p>Money Money.</p>
+          <h3>{{__('site/services.s1')}}</h3>
+          <p>{{__('site/services.s1p')}}</p>
         </div>      
       </div>
       <div class="carousel-item">
-        <img src="https://via.placeholder.com/1200x400?text=preoperty Managment" alt="Image">
+        <img src="https://via.placeholder.com/1200x400?text=Project tour" alt="Image">
         <div class="carousel-caption">
-          <h3>More Sell $</h3>
-          <p>Lorem ipsum...</p>
+          <h3>{{__('site/services.s2')}}</h3>
+          <p>{{__('site/services.s2p')}}</p>
         </div>      
       </div>
       <div class="carousel-item">
-        <img src="https://via.placeholder.com/1200x400?text=New Managment" alt="Image">
+        <img src="https://via.placeholder.com/1200x400?text=Property Managment" alt="Image">
         <div class="carousel-caption">
-          <h3>More Sell $</h3>
-          <p>Lorem ipsum...</p>
+          <h3>{{__('site/services.s3')}}</h3>
+          <p>{{__('site/services.s3p')}}</p>
         </div>      
       </div>
     </div>
@@ -59,34 +59,34 @@
   </div>
 
   <div class="container text-center mt-5">    
-    <h3>Aditional Services</h3><br>
+    <h3>{{__('site/services.s4')}}</h3><br>
     <div class="row">
       <div class="col-sm-4">
-        <img src="https://via.placeholder.com/150x80?text=IMAGE" class="img-responsive " style="width:100%" alt="Image">
-        <p>Current Project</p>
+        <img src="{{asset('assets/front/img/services/s5.jpg')}}" class="img-responsive " style="width:100%" alt="Image">
+        <p>{{__('site/services.s5')}}</p>
       </div>
       <div class="col-sm-4"> 
-        <img src="https://via.placeholder.com/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        <p>Project 2</p>    
+        <img src="{{asset('assets/front/img/services/s6.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+        <p>{{__('site/services.s6')}}</p>    
       </div>
       <div class="col-sm-4"> 
-        <img src="https://via.placeholder.com/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        <p>Project 2</p>    
+        <img src="{{asset('assets/front/img/services/s7.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+        <p>{{__('site/services.s7')}}</p>    
       </div>
     </div>
 
     <div class="row">
       <div class="col-sm-4">
-        <img src="https://via.placeholder.com/150x80?text=IMAGE" class="img-responsive " style="width:100%" alt="Image">
-        <p>Current Project</p>
+        <img src="{{asset('assets/front/img/services/s8.jpg')}}" class="img-responsive " style="width:100%" alt="Image">
+        <p>{{__('site/services.s8')}}</p>
       </div>
       <div class="col-sm-4"> 
-        <img src="https://via.placeholder.com/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        <p>Project 2</p>    
+        <img src="{{asset('assets/front/img/services/s9.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+        <p>{{__('site/services.s9')}}</p>    
       </div>
       <div class="col-sm-4"> 
-        <img src="https://via.placeholder.com/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image">
-        <p>Project 2</p>    
+        <img src="{{asset('assets/front/img/services/s10.jpg')}}" class="img-responsive" style="width:100%" alt="Image">
+        <p>{{__('site/services.s10')}}</p>    
       </div>
     </div>
   </div>

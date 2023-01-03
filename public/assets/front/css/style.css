@@ -1574,9 +1574,9 @@ a {
     opacity: 1;
 }
 
-/** SUB BANNER **/
-.sub-banner {
-    background: rgba(0, 0, 0, 0.04) url(../../front/img/benner/55.jpg) top left repeat;
+/**1 SUB BANNER about us **/
+.sub-banner1 {
+    background: rgba(0, 0, 0, 0.04) url(../../front/img/benner/0_0004_aboutus.jpg) top left repeat;
     background-size: cover;
     height: 400px;
     background-position: center center;
@@ -1585,16 +1585,16 @@ a {
     background-color: rgba(36, 42, 53, 0.7);
 }
 
-.sub-banner .breadcrumb-area h1 {
+.sub-banner1 .breadcrumb-area h1 {
     margin: 0 0 5px;
     font-weight: 500;
     text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
-    color: #fff;
+    color: rgb(0, 0, 0);
     font-size: 27px;
 }
 
-.sub-banner .breadcrumb-area {
+.sub-banner1 .breadcrumb-area {
     letter-spacing: 1px;
     text-align: center;
     width: 100%;
@@ -1605,22 +1605,77 @@ a {
     padding: 0 15px;
 }
 
-.sub-banner .breadcrumbs li {
+.sub-banner1 .breadcrumbs li {
     display: inline-block;
     list-style: none;
     font-size: 16px;
 }
 
-.sub-banner .breadcrumbs li a {
-    color: #fff;
+.sub-banner1 .breadcrumbs li a {
+    color: rgb(0, 0, 0);
 }
 
-.sub-banner .breadcrumbs .active {
+.sub-banner1 .breadcrumbs .active {
     margin-left: 2px;
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
-.sub-banner .breadcrumbs .active:before {
+.sub-banner1 .breadcrumbs .active:before {
+    content: "/";
+    font-family: "FontAwesome";
+    font-size: 16px;
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+
+/** SUB BANNER servics **/
+.sub-banner2 {
+    background: rgba(0, 0, 0, 0.04) url(../../front/img/benner/0_0001_SERVICE.jpg) top left repeat;
+    background-size: cover;
+    height: 400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: rgba(36, 42, 53, 0.7);
+}
+
+.sub-banner2 .breadcrumb-area h1 {
+    margin: 0 0 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 27px;
+}
+
+.sub-banner2 .breadcrumb-area {
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 52%;
+    right: 0;
+    left: 0;
+    padding: 0 15px;
+}
+
+.sub-banner2 .breadcrumbs li {
+    display: inline-block;
+    list-style: none;
+    font-size: 16px;
+}
+
+.sub-banner2 .breadcrumbs li a {
+    color: rgb(0, 0, 0);
+}
+
+.sub-banner2 .breadcrumbs .active {
+    margin-left: 2px;
+    color: rgb(0, 0, 0);
+}
+
+.sub-banner2 .breadcrumbs .active:before {
     content: "/";
     font-family: "FontAwesome";
     font-size: 16px;
@@ -1663,6 +1718,168 @@ a {
     color: #fff;
     margin-bottom: 20px;
     opacity: 0.9;
+}
+
+/**3 SUB BANNER projects **/
+.sub-banner3 {
+    background: rgba(0, 0, 0, 0.04) url(../../front/img/benner/0_0003_Projects.jpg) top left repeat;
+    background-size: cover;
+    height: 400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: rgba(36, 42, 53, 0.7);
+}
+
+.sub-banner3 .breadcrumb-area h1 {
+    margin: 0 0 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 27px;
+}
+
+.sub-banner3 .breadcrumb-area {
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 52%;
+    right: 0;
+    left: 0;
+    padding: 0 15px;
+}
+
+.sub-banner3 .breadcrumbs li {
+    display: inline-block;
+    list-style: none;
+    font-size: 16px;
+}
+
+.sub-banner3 .breadcrumbs li a {
+    color: rgb(0, 0, 0);
+}
+
+.sub-banner3 .breadcrumbs .active {
+    margin-left: 2px;
+    color: rgb(0, 0, 0);
+}
+
+.sub-banner3 .breadcrumbs .active:before {
+    content: "/";
+    font-family: "FontAwesome";
+    font-size: 16px;
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+/**4 SUB BANNER blog **/
+.sub-banner4 {
+    background: rgba(0, 0, 0, 0.04) url(../../front/img/benner/0_0000_BLOG.jpg) top left repeat;
+    background-size: cover;
+    height: 400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: rgba(36, 42, 53, 0.7);
+}
+
+.sub-banner4 .breadcrumb-area h1 {
+    margin: 0 0 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+}
+
+.sub-banner4 .breadcrumb-area {
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 52%;
+    right: 0;
+    left: 0;
+    padding: 0 15px;
+}
+
+.sub-banner4 .breadcrumbs li {
+    display: inline-block;
+    list-style: none;
+    font-size: 16px;
+}
+
+.sub-banner4 .breadcrumbs li a {
+    color: rgb(255, 255, 255);
+}
+
+.sub-banner4 .breadcrumbs .active {
+    margin-left: 2px;
+    color: rgb(255, 255, 255);
+}
+
+.sub-banner4 .breadcrumbs .active:before {
+    content: "/";
+    font-family: "FontAwesome";
+    font-size: 16px;
+    margin-right: 5px;
+    font-weight: 700;
+}
+
+/**5 SUB BANNER contact **/
+.sub-banner5 {
+    background: rgba(0, 0, 0, 0.04) url(../../front/img/benner/0_0002_ContactUS.jpg) top left repeat;
+    background-size: cover;
+    height: 400px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    position: relative;
+    background-color: rgba(36, 42, 53, 0.7);
+}
+
+.sub-banner5 .breadcrumb-area h1 {
+    margin: 0 0 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(0, 0, 0);
+    font-size: 27px;
+}
+
+.sub-banner5 .breadcrumb-area {
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 52%;
+    right: 0;
+    left: 0;
+    padding: 0 15px;
+}
+
+.sub-banner5 .breadcrumbs li {
+    display: inline-block;
+    list-style: none;
+    font-size: 16px;
+}
+
+.sub-banner5 .breadcrumbs li a {
+    color: rgb(0, 0, 0);
+}
+
+.sub-banner5 .breadcrumbs .active {
+    margin-left: 2px;
+    color: rgb(0, 0, 0);
+}
+
+.sub-banner5 .breadcrumbs .active:before {
+    content: "/";
+    font-family: "FontAwesome";
+    font-size: 16px;
+    margin-right: 5px;
+    font-weight: 700;
 }
 
 /** OPTION BAR **/

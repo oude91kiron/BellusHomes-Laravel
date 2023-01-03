@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="main-title">
-                    <h1>Our Testimonial</h1>
+                    <h1>{{__('site/home.Our Testimonial')}}</h1>
                 </div>
             </div>
         </div>
@@ -14,16 +14,16 @@
                 <div class="slick-slide-item wow">
                     <div class="testimonial-inner">
                         <div class="content-box">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+                            <p>{{__('site/home.They provide best service and valuable consultant, thank you bellus Homes')}}</p>
                         </div>
                         <div class="arrow-down"></div>
                         <div class="media user">
                             <a href="#">
-                                <img src="https://via.placeholder.com/60x60 " alt="testimonial-4" class="img-fluid">
+                                <img src="{{asset('assets/front/img/benner/BH_MAN1.jpg')}}" alt="testimonial-4" class="img-fluid">
                             </a>
                             <div class="media-body align-self-center">
-                                <h5>Maria Blank</h5>
-                                <h6>Web Developer</h6>
+                                <h5>{{__('site/home.Omer Furkan')}}</h5>
+                                <h6>{{__('site/home.Web Developer')}}</h6>
                             </div>
                         </div>
                     </div>
@@ -33,16 +33,16 @@
                 <div class="slick-slide-item wow">
                     <div class="testimonial-inner">
                         <div class="content-box">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+                            <p>{{__('site/home.They help me to find my dream house in istanbul city thanks for Mr Abdullah')}}</p>
                         </div>
                         <div class="arrow-down"></div>
                         <div class="media user">
                             <a href="#">
-                                <img src="https://via.placeholder.com/60x60 " alt="testimonial-4" class="img-fluid">
+                                <img src="{{asset('assets/front/img/benner/BH_WOMAN.jpg')}}" alt="testimonial-4" class="img-fluid">
                             </a>
                             <div class="media-body align-self-center">
-                                <h5>Karen Paran</h5>
-                                <h6>Support Manager</h6>
+                                <h5>{{__('site/home.Mari Rose')}}</h5>
+                                <h6>{{__('site/home.Support Manager')}}</h6>
                             </div>
                         </div>
                     </div>
@@ -51,16 +51,16 @@
                 <div class="slick-slide-item wow">
                     <div class="testimonial-inner">
                         <div class="content-box">
-                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever</p>
+                            <p>{{__('site/home.I bought a villa for vacation it was great experience with Bellus Homes, thanks')}}</p>
                         </div>
                         <div class="arrow-down"></div>
                         <div class="media user">
                             <a href="#">
-                                <img src="https://via.placeholder.com/60x60 " alt="testimonial-4" class="img-fluid">
+                                <img src="{{asset('assets/front/img/benner/BH_MAN2.jpg')}}" alt="testimonial-4" class="img-fluid">
                             </a>
                             <div class="media-body align-self-center">
-                                <h5>Karen Paran</h5>
-                                <h6>Support Manager</h6>
+                                <h5>{{__('site/home.Ahmed Yassin')}}</h5>
+                                <h6>{{__('site/home.Sales Manager')}}</h6>
                             </div>
                         </div>
                     </div>

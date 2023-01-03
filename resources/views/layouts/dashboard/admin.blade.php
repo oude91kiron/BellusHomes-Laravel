@@ -35,6 +35,8 @@
 
        <!-- Custom Theme Style -->
        <link href="{{asset('assets/admin/build/css/style.css')}}" rel="stylesheet">
+
+       
   </head>
 
   <body class="nav-md">

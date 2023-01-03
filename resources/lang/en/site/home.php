@@ -20,7 +20,47 @@ return [
     'MORE DETAILES' => 'MORE DETAILES',
 
 
-
+   
+    'Most Popular Places' => 'Most Popular Places',
+    'The location of our most featured projects in Istanbul' => 'The location of our most featured projects in Istanbul',
+    'Our Testimonial' => 'Our Testimonial',
+    
+    'They provide best service and valuable consultant, thank you bellus Homes' => 'They provide best service and valuable consultant, thank you bellus Homes',
+    'Omer Furkan' => 'Omer Furkan',
+    'Web Developer'=> 'Web Developer',
+    
+    'They help me to find my dream house in istanbul city thanks for Mr Abdullah' => 'They help me to find my dream house in istanbul city thanks for Mr Abdullah',
+    'Mari Rose' => ' Mari Rose',
+    'Support Manager' => 'Support Manager',
+    
+    'I bought a villa for vacation it was great experience with Bellus Homes, thanks' => 'I bought a villa for vacation it was great experience with Bellus Homes, thanks',
+    'Ahmed Yassin' => 'Ahmed Yassin',
+    'Sales Manager' => 'Sales Manager',
+    
+    'Contact Us' => 'Contact Us',
+    'Send Us Email' => 'Send Us Email',
+    'Contact Us:' => 'Contact Us:',
+    'Do you have any questions' => 'Do you have any questions? Please do not hesitate to contact us directly. 
+    Get a free consultante about real state market in Istanbul',
+    'name' => 'name',
+    'email' => 'email',
+    'phone' => ' phone',
+    'subject' => 'subject',
+    'message' => 'message',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
+    '' => '',
     '' => '',
     '' => '',
     '' => '',

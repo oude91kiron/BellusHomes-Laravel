@@ -34,7 +34,7 @@
                             </li>
                             <li class=" dropdown">
                                 <a href="@if(App()->getLocale() == 'en'){{ LaravelLocalization::getLocalizedURL('ar') }} @else {{ LaravelLocalization::getLocalizedURL('en') }}@endif " type="button" class="btn btn-submit font-weight-bold">
-                                    <i class="fa fa-language" aria-hidden="true"></i>
+                                    @if(App()->getLocale() == 'en')  Arabic @else  English @endif
                                 </a>
                             </li>
                         </ul>

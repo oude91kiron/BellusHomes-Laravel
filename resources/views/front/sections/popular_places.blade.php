@@ -1,8 +1,8 @@
 <div class="most-popular-places content-area-3">
     <div class="container">
         <div class="main-title">
-            <h1>Most Popular Places</h1>
-            <p>The location of our most featured projects in Turkey.</p>
+            <h1>{{__('site/home.Most Popular Places')}}</h1>
+            <p>{{__('site/home.The location of our most featured projects in Istanbul')}}</p>
         </div>
         <div class="container">
             <div class="row">
@@ -16,7 +16,7 @@
                                 <div class="ds">
                                     <h2>{{$city->name}}</h2>
                                    
-                                    <a href="properties-details.html" class="btn btn-border">Read more</a>
+                                    <a href="properties-details.html" class="btn btn-border">{{__('site/home.Read more...')}}</a>
                                 </div>
                             </div>
                         </div>

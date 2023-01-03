@@ -1,16 +1,16 @@
 <div class="container content-area-5 border">
     
     <div class="text-center mt-5">
-        <h2 class="h2-responsive font-weight-bold text-center my-4">Contact Us</h2>
+        <h2 class="h2-responsive font-weight-bold text-center my-4">{{__('site/home.Contact Us')}}</h2>
     </div>
     <div class="row ">    
         <div class="col-md-8 mb-md-0 mb-5">
             <div class="col-lg-8 col-sm-12">
-                <h2 class="h2-responsive font-weight-bold text-center my-4">Send Us Email</h2>
+                <h2 class="h2-responsive font-weight-bold text-center my-4">{{__('site/home.Send Us Email')}}</h2>
                 <form action="" method="post" action="{{ route('contact') }}">
                     @csrf
                     <div class="form-group">
-                        <input type="text" placeholder="Name" class="form-control {{ $errors->has('name') ? 'error' : '' }}" name="name" id="name">
+                        <input type="text" placeholder="{{__('site/home.name')}}" class="form-control {{ $errors->has('name') ? 'error' : '' }}" name="name" id="name">
                         <!-- Error -->
                         @if ($errors->has('name'))
                         <div class="error">
@@ -19,7 +19,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Email" class="form-control {{ $errors->has('email') ? 'error' : '' }}" name="email" id="email">
+                        <input type="email" placeholder="{{__('site/home.email')}}" class="form-control {{ $errors->has('email') ? 'error' : '' }}" name="email" id="email">
                         @if ($errors->has('email'))
                         <div class="error">
                             {{ $errors->first('email') }}
@@ -27,7 +27,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Phone" class="form-control {{ $errors->has('phone') ? 'error' : '' }}" name="phone" id="phone">
+                        <input type="text" placeholder="{{__('site/home.phone')}}" class="form-control {{ $errors->has('phone') ? 'error' : '' }}" name="phone" id="phone">
                         @if ($errors->has('phone'))
                         <div class="error">
                             {{ $errors->first('phone') }}
@@ -35,7 +35,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject" class="form-control {{ $errors->has('subject') ? 'error' : '' }}" name="subject"
+                        <input type="text" placeholder="{{__('site/home.subject')}}" class="form-control {{ $errors->has('subject') ? 'error' : '' }}" name="subject"
                             id="subject">
                         @if ($errors->has('subject'))
                         <div class="error">
@@ -44,7 +44,7 @@
                         @endif
                     </div>
                     <div class="form-group">
-                    <textarea placeholder="Message" class="form-control {{ $errors->has('message') ? 'error' : '' }}" name="message" id="message"
+                    <textarea placeholder="{{__('site/home.message')}}" class="form-control {{ $errors->has('message') ? 'error' : '' }}" name="message" id="message"
                     rows="4"></textarea>
                     @if ($errors->has('message'))
                     <div class="error">
@@ -52,16 +52,15 @@
                     </div>
                     @endif
                     </div>
-                    <input type="submit" name="send" value="Submit" class="btn btn-dark btn-block">
+                    <input type="submit" name="send" value="{{__('site/home.send')}}" class="btn btn-dark btn-block">
                 </form>
             </div>
             </div>
 
             <!--Grid column-->
             <div class="col-lg-4 col-sm-12">
-                <p class="h3-responsive font-weight-bold mx-4 my-4 text-center">Contact Us:</p>
-                <p class="h5 w-responsive mx-auto mb-5 ">Do you have any questions? Please do not hesitate to contact us directly. 
-                    Get a free consultante about real state market in Istanbul.</p>
+                <p class="h3-responsive font-weight-bold mx-4 my-4 text-center">{{__('site/home.Contact Us:')}}</p>
+                <p class="h5 w-responsive mx-auto mb-5 ">{{__('site/home.Do you have any questions')}}</p>
 
                 <ul class="contact-info">
                     <li >
