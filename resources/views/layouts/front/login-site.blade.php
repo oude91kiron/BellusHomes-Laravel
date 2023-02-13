@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="zxx">
 <head>
     <title>XERO - Real Estate HTML Template</title>
@@ -81,4 +81,4 @@
 
 
 </body>
-</html>
+</html> --}}

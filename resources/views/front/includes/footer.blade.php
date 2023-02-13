@@ -1,10 +1,9 @@
-	<!-- Our Footer -->
 	<section class="footer_one home5">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 pr0 pl0">
 					<div class="footer_about_widget home5">
-						<h4>About Site</h4>
+						<h4>About Our Company</h4>
 						<p>We’re reimagining how you buy, sell and rent. It’s now easier to get into a place you love. So let’s do this, together.</p>
 					</div>
 				</div>
@@ -12,11 +11,11 @@
 					<div class="footer_qlink_widget home5">
 						<h4>Quick Links</h4>
 						<ul class="list-unstyled">
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Terms & Conditions</a></li>
-							<li><a href="#">User’s Guide</a></li>
-							<li><a href="#">Support Center</a></li>
-							<li><a href="#">Press Info</a></li>
+							<li><a href="{{route('aboutUs')}}">About Us</a></li>
+							<li><a href="{{route('services')}}">Services</a></li>
+							<li><a href="{{route('properties')}}">Projects</a></li>
+							<li><a href="{{route('contact')}}">Support Center</a></li>
+							<li><a href="{{route('blog')}}">Blog</a></li>
 						</ul>
 					</div>
 				</div>
@@ -24,11 +23,11 @@
 					<div class="footer_contact_widget home5">
 						<h4>Contact Us</h4>
 						<ul class="list-unstyled">
-							<li><a href="#">info@findhouse.com</a></li>
-							<li><a href="#">Collins Street West, Victoria</a></li>
-							<li><a href="#">8007, Australia.</a></li>
-							<li><a href="#">+1 246-345-0699</a></li>
-							<li><a href="#">+1 246-345-0695</a></li>
+							<li><a href="mailto:{{$sitedata->email}}">{{$sitedata->email}}</a></li>
+							<li><a href="#">Mellet Street, No 90</a></li>
+							<li><a href="#">34097, istanbul.</a></li>
+							<li><a href="tel:{{$sitedata->whatsapp}}" target="__black">{{$sitedata->whatsapp}}</a></li>
+							<li><a href="https://wa.me/{{$sitedata->whatsapp}}" target="__black">{{$sitedata->whatsapp}}</a></li>
 						</ul>
 					</div>
 				</div>
@@ -36,12 +35,10 @@
 					<div class="footer_social_widget home5">
 						<h4>Follow us</h4>
 						<ul class="mb30">
-							<li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fa fa-instagram"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fa fa-dribbble"></i></a></li>
-							<li class="list-inline-item"><a href="#"><i class="fa fa-google"></i></a></li>
+							<li class="list-inline-item"><a href="https://facebook.com/{{$sitedata->facebook}}"><i class="fa fa-facebook"></i></a></li>
+							<li class="list-inline-item"><a href="https://instagram.com/{{$sitedata->instagram}}"><i class="fa fa-instagram"></i></a></li>
+							<li class="list-inline-item"><a href="https://wa.me/{{$sitedata->whatsapp}}"><i class="fa fa-whatsapp"></i></a></li>
+							<li class="list-inline-item"><a href="https://twitter.com/{{$sitedata->twitter}}"><i class="fa fa-twitter"></i></a></li>
 						</ul>
 						<h4>Subscribe</h4>
 						<form class="footer_mailchimp_form home5">
@@ -67,24 +64,23 @@
 				<div class="col-lg-6 col-xl-6">
 					<div class="footer_menu_widget home5">
 						<ul>
-							<li class="list-inline-item"><a href="#">Home</a></li>
-							<li class="list-inline-item"><a href="#">Listing</a></li>
-							<li class="list-inline-item"><a href="#">Property</a></li>
-							<li class="list-inline-item"><a href="#">Pages</a></li>
-							<li class="list-inline-item"><a href="#">Blog</a></li>
-							<li class="list-inline-item"><a href="#">Contact</a></li>
+							<li class="list-inline-item"><a href="{{route('home')}}">Home</a></li>
+							<li class="list-inline-item"><a href="{{route('aboutUs')}}">About Us</a></li>
+							<li class="list-inline-item"><a href="{{route('services')}}">Services</a></li>
+							<li class="list-inline-item"><a href="{{route('properties')}}">Projects</a></li>
+							<li class="list-inline-item"><a href="{{route('blog')}}">Blog</a></li>
+							<li class="list-inline-item"><a href="{{route('contact')}}">Contact</a></li>
 						</ul>
 					</div>
 				</div>
 				<div class="col-lg-6 col-xl-6">
 					<div class="copyright-widget home5 text-right">
-						<p>© 2020 Find House. Made with love.</p>
+						<p>© 2023 Mash Media. Made with love.</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-<a class="scrollToHome home7" href="#"><i class="flaticon-arrows"></i></a>
 </div>
 
 <!-- Wrapper End -->

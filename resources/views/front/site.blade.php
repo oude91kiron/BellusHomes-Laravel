@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Featured projects start -->
-    @include('front/sections/featured_projects')
+    @include('front/sections/featuredProjects')
 <!-- Featured projects end -->
 
 <!-- services 3 start -->
@@ -13,7 +13,7 @@
 <!-- Recent Properties start @ include('front/sections/recent_project') Recent Properties end -->
 
 <!-- Most popular places start -->
-    @include('front/sections/popular_places')
+    @include('front/sections/popularPlaces')
 <!-- Most popular places end -->
 
 <!-- Agent start 
@@ -25,11 +25,11 @@
 <!-- Testimonial 4 end -->
 
 <!-- Blog start -->
-    @include('front/sections/our_blog')
+    @include('front/sections/ourBlog')
 <!-- Blog end -->
 
 <!-- form start -->
-@include('front/sections/contact_form')
+@include('front/sections/contactUs')
 <!-- form end -->
 
 @endsection
