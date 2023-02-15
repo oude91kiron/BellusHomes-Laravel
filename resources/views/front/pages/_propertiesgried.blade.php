@@ -58,7 +58,6 @@
                             <li>
                                 <i class="flaticon-square-layouting-with-black-square-in-east-area"></i> {{$property -> area}}{{__('site/projects.Meter')}} 
                             </li>
-                           
                         </ul>
                     </div>
                     <div class="plan-price">

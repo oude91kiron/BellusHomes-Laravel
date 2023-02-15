@@ -3,8 +3,8 @@
       <div class="row">
         <div class="col-lg-6 offset-lg-3">
           <div class="main-title text-center">
-            <h2>Find Properties in These Cities</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h2>Popular Places</h2>
+            <p>We provide projects in the best areas in istanbul city.</p>
           </div>
         </div>
       </div>
@@ -18,7 +18,7 @@
             <div class="overlay">
               <div class="details">
                 <h4>{{$city->name}}</h4>
-                <p>24 Properties</p>
+                <p>9 Projects 108 Properties</p>
               </div>
             </div>
           </div>
@@ -31,7 +31,7 @@
               <div class="overlay">
                 <div class="details">
                   <h4>{{$city->name}}</h4>
-                  <p>24 Properties</p>
+                  <p>8 Projects 63 Properties</p>
                 </div>
               </div>
             </div>
@@ -45,7 +45,7 @@
               <div class="overlay">
                 <div class="details">
                   <h4>{{$city->name}}</h4>
-                  <p>24 Properties</p>
+                  <p>24 Projects 152 Properties</p>
                 </div>
               </div>
             </div>
@@ -59,7 +59,7 @@
               <div class="overlay">
                 <div class="details">
                   <h4>{{$city->name}}</h4>
-                  <p>24 Properties</p>
+                  <p>13 Projects 83 Properties</p>
                 </div>
               </div>
             </div>

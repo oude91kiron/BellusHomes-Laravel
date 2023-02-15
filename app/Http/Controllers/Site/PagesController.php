@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\site;
 use App\Http\Controllers\Controller;
+use Illuminate\Database\Eloquent; 
 use Illuminate\Http\Request;
 use App\Models\Slider;
 use App\Models\City;
@@ -34,19 +35,19 @@ class PagesController extends Controller
     //
     public function properties() {
 
-        $properties = Property::all();
+        $properties = Property::paginate(9);
         $sitedata = SiteData::first();
 
-        return view('front.pages.propertiesGried', compact('properties', 'sitedata'));
+        return view('front.pages.projects', compact('properties', 'sitedata'));
     }
 
     //
     public function blog() {
 
-        $posts = Post::all();
+        $posts = Post::paginate(9);
         $sitedata = SiteData::first();
 
-        return view('front.pages.ourBlog', compact('posts', 'sitedata'));
+        return view('front.pages.Blog', compact('posts', 'sitedata'));
     }
 
     //

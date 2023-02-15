@@ -14,7 +14,7 @@
             <div class="item">
               <div class="testimonial_grid">
                 <div class="thumb">
-                  <img src="{{asset('assets/front/images/testimonial/1.jpg')}}" alt="1.jpg">
+                  <img src="{{asset('assets/front/images/testimonial/2.jpg')}}" alt="1.jpg">
                 </div>
                 <div class="details">
                   <h4>Augusta Silva</h4>
@@ -26,7 +26,7 @@
             <div class="item">
               <div class="testimonial_grid">
                 <div class="thumb">
-                  <img src="{{asset('assets/front/images/testimonial/1.jpg')}}" alt="1.jpg">
+                  <img src="{{asset('assets/front/images/testimonial/3.jpg')}}" alt="1.jpg">
                 </div>
                 <div class="details">
                   <h4>Augusta Silva</h4>
@@ -38,7 +38,7 @@
             <div class="item">
               <div class="testimonial_grid">
                 <div class="thumb">
-                  <img src="{{asset('assets/front/images/testimonial/1.jpg')}}" alt="1.jpg">
+                  <img src="{{asset('assets/front/images/testimonial/4.jpg')}}" alt="1.jpg">
                 </div>
                 <div class="details">
                   <h4>Augusta Silva</h4>

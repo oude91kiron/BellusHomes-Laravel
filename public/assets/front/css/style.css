@@ -11375,7 +11375,7 @@ a.btn.btn_error{
   position: relative;
 }
 .grid_list_search_result .right_area.style2 ul li:first-child{
-  margin-right: 0;
+  margin-right: 25;
 }
 .grid_list_search_result .right_area.style2 ul li:first-child:before{
   display: none;
@@ -11402,7 +11402,7 @@ a.btn.btn_error{
   box-shadow: none;
   padding-left: 0;
   padding-right: 0;
-  width: 120px;
+  width: 155px;
 }
 .grid_list_search_result .right_area ul li:last-child .dropdown.bootstrap-select.show-tick,
 .grid_list_search_result .right_area ul li:last-child button.btn.dropdown-toggle{

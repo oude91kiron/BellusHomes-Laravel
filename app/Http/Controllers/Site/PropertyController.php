@@ -39,6 +39,6 @@ class PropertyController extends Controller
         return redirect()->route('home');
 
        }
-       return view('front.users.properties.home.properties-details',$data);
+       return view('front.users.properties.home.propertiesDetails',$data);
     }
 }

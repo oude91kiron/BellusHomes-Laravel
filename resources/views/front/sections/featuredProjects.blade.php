@@ -4,7 +4,7 @@
         <div class="col-lg-6 offset-lg-3">
           <div class="main-title text-center mb40">
             <h2>Featured Projects</h2>
-            <p>Handpicked properties by our team.</p>
+            <p>Projects by our team.</p>
           </div>
         </div>
         <div class="col-lg-12">
