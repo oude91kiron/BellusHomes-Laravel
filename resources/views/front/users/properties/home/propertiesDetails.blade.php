@@ -52,6 +52,7 @@
                         </div>
                     </div>
                     @endif
+                    @break($loop->index == 9)
                     @endforeach
                     @endisset 
                 </div>
@@ -66,23 +67,36 @@
         <div class="row">
             <div class="col-md-12 col-lg-8">
                 <div class="row">
+                    {{-- Description --}}
                     <div class="col-lg-12">
                         <div class="listing_single_description">
                             <div class="lsd_list">
                                 <ul class="mb0">
-                                    <li class="list-inline-item"><a href="#">Apartment</a></li>
-                                    <li class="list-inline-item"><a href="#">Beds: 4</a></li>
-                                    <li class="list-inline-item"><a href="#">Baths: 2</a></li>
-                                    <li class="list-inline-item"><a href="#">Sq Ft: 5280</a></li>
+                                    <li class="list-inline-item"><a href="#">{{$property->categories()->first()->name}}</a></li>
+                                    <li class="list-inline-item"><a href="#">Beds: {{$property->bedrooms}}</a></li>
+                                    <li class="list-inline-item"><a href="#">Baths: {{$property->bathrooms}}</a></li>
+                                    <li class="list-inline-item"><a href="#">Sq Mt: {{$property->area}}</a></li>
                                 </ul>
                             </div>
+
+                            <?php $arr = explode('.', $property -> description); 
+
+                                //print_r($arr );
+
+                                $arr1 = array_slice($arr, 0, 10);
+                                $arr2 = array_slice($arr, 10, 20);
+                                $arr3 = array_slice($arr, 20, count($arr)-1);
+
+                                $paragraph1 = implode(" ",$arr1);
+                                $paragraph2 = implode(" ",$arr2);
+                                $paragraph3 = implode(" ",$arr3);
+                            ?>
                             <h4 class="mb30">Description</h4>
-                            <p class="mb25">Evans Tower very high demand corner junior one bedroom plus a large balcony boasting full open NYC views. You need to see the views to believe them. Mint condition with new hardwood floors. Lots of closets plus washer and dryer.</p>
-                            <p class="gpara second_para white_goverlay mt10 mb10">Fully furnished. Elegantly appointed condominium unit situated on premier location. PS6. The wide entry hall leads to a large living room with dining area. This expansive 2 bedroom and 2 renovated marble bathroom apartment has great windows. Despite the interior views, the apartments Southern and Eastern exposures allow for lovely natural light to fill every room. The master suite is surrounded by handcrafted milkwork and features incredible walk-in closet and storage space.</p>
+                            <p class="mb25">{{$paragraph1 }}.</p>
                             <div class="collapse" id="collapseExample">
                                   <div class="card card-body">
-                                    <p class="mt10 mb10">Fully furnished. Elegantly appointed condominium unit situated on premier location. PS6. The wide entry hall leads to a large living room with dining area. This expansive 2 bedroom and 2 renovated marble bathroom apartment has great windows. Despite the interior views, the apartments Southern and Eastern exposures allow for lovely natural light to fill every room. The master suite is surrounded by handcrafted milkwork and features incredible walk-in closet and storage space.</p>
-                                    <p class="mt10 mb10">Fully furnished. Elegantly appointed condominium unit situated on premier location. PS6. The wide entry hall leads to a large living room with dining area. This expansive 2 bedroom and 2 renovated marble bathroom apartment has great windows. Despite the interior views, the apartments Southern and Eastern exposures allow for lovely natural light to fill every room. The master suite is surrounded by handcrafted milkwork and features incredible walk-in closet and storage space.</p>
+                                    <p class="mt10 mb10">{{$paragraph2 }}.</p>
+                                    <p class="mt10 mb10">{{$paragraph3 }}.</p>
                                   </div>
                             </div>
                             <p class="overlay_close">
@@ -92,47 +106,49 @@
                             </p>
                         </div>
                     </div>
+
+                    {{-- Project Details --}}
                     <div class="col-lg-12">
                         <div class="additional_details">
                             <div class="row">
                                 <div class="col-lg-12">
-                                    <h4 class="mb15">Property Details</h4>
+                                    <h4 class="mb15">Project Details</h4>
                                 </div>
                                 <div class="col-md-6 col-lg-6 col-xl-4">
                                     <ul class="list-inline-item">
-                                        <li><p>Property ID :</p></li>
-                                        <li><p>Price :</p></li>
-                                        <li><p>Property Size :</p></li>
-                                        <li><p>Year Built :</p></li>
+                                        <li><p>Project ID : </p></li>
+                                        <li><p>Starting Price: </p></li>
+                                        <li><p>Area : </p></li>
+                                        <li><p>Year Built : </p></li>
                                     </ul>
                                     <ul class="list-inline-item">
-                                        <li><p><span>HZ27</span></p></li>
-                                        <li><p><span>$130,000</span></p></li>
-                                        <li><p><span>1560 Sq Ft</span></p></li>
-                                        <li><p><span>2016-01-09</span></p></li>
+                                        <li><p><span>BE10{{$property -> id}}</span></p></li>
+                                        <li><p><span>{{number_format($property -> total_price, 0, ',')}} $</span></p></li>
+                                        <li><p><span>{{$property -> area}} Sq Mt</span></p></li>
+                                        <li><p><span>{{$property ->building_age}}</span></p></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6 col-lg-6 col-xl-4">
                                     <ul class="list-inline-item">
-                                        <li><p>Bedrooms :</p></li>
+                                        <li><p>Bedrooms : </p></li>
                                         <li><p>Bathrooms :</p></li>
                                         <li><p>Garage :</p></li>
                                         <li><p>Garage Size :</p></li>
                                     </ul>
                                     <ul class="list-inline-item">
-                                        <li><p><span>8</span></p></li>
-                                        <li><p><span>4</span></p></li>
-                                        <li><p><span>2</span></p></li>
-                                        <li><p><span>200 SqFt</span></p></li>
+                                        <li><p><span>{{$property -> bedrooms}}</span></p></li>
+                                        <li><p><span>{{$property -> bathrooms}}</span></p></li>
+                                        <li><p><span>Yes</span></p></li>
+                                        <li><p><span>60 SqMt</span></p></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-6 col-lg-6 col-xl-4">
                                     <ul class="list-inline-item">
-                                        <li><p>Property Type :</p></li>
-                                        <li><p>Property Status :</p></li>
+                                        <li><p>Project Type :</p></li>
+                                        <li><p>Project Status :</p></li>
                                     </ul>
                                     <ul class="list-inline-item">
-                                        <li><p><span>Apartment</span></p></li>
+                                        <li><p><span>{{$property->categories()->first()->name}}</span></p></li>
                                         <li><p><span>For Sale</span></p></li>
                                     </ul>
                                 </div>
@@ -140,6 +156,7 @@
                         </div>
                     </div>
                     
+                    {{-- Project Features  --}}
                     <div class="col-lg-12">
                         <div class="application_statics mt30">
                             <div class="row">
@@ -148,62 +165,109 @@
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-4">
                                     <ul class="order_list list-inline-item">
-                                        <li><a href="#"><span class="flaticon-tick"></span>Air Conditioning</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>Barbeque</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>Dryer</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>Gym</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>Laundry</a></li>
+                                        <li>
+                                            @if($property->central_heating)
+                                            <a><span class="flaticon-tick"></span>Central Heating</a>
+                                            @else
+                                            <a><span class="flaticon-close"></span>Central Heating</a>     
+                                            @endif
+                                        </li>
+
+                                        <li>
+                                            @if($property->internet)
+                                            <a><span class="flaticon-tick"></span>Internet</a>
+                                            @else
+                                            <a><span class="flaticon-close"></span>Internet</a>     
+                                            @endif
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-4">
                                     <ul class="order_list list-inline-item">
-                                        <li><a href="#"><span class="flaticon-tick"></span>Lawn</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>Microwave</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>Outdoor Shower</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>Refrigerator</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>Sauna</a></li>
+                                        <li>
+                                            @if($property->parking)
+                                            <a><span class="flaticon-tick"></span>Park</a>
+                                            @else
+                                            <a><span class="flaticon-close"></span>Park</a>     
+                                            @endif
+                                        </li>
+
+                                        <li>
+                                            @if($property->alarm)
+                                            <a><span class="flaticon-tick"></span>Alarm</a>
+                                            @else
+                                            <a><span class="flaticon-close"></span>Alarm</a>     
+                                            @endif
+                                        </li>
                                     </ul>
                                 </div>
                                 <div class="col-sm-6 col-md-6 col-lg-4">
                                     <ul class="order_list list-inline-item">
-                                        <li><a href="#"><span class="flaticon-tick"></span>Swimming Pool</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>TV Cable</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>Washer</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>WiFi</a></li>
-                                        <li><a href="#"><span class="flaticon-tick"></span>Window Coverings</a></li>
+                                        <li>
+                                            @if($property->gym)
+                                            <a href=""><span class="flaticon-tick"></span>Gym</a>
+                                            @else
+                                            <a href=""><span class="flaticon-close"></span>Gym</a>     
+                                            @endif
+                                        </li>
+
+                                        <li>
+                                            @if($property->swimming_pool)
+                                            <a href=""><span class="flaticon-tick"></span>Swimming Pool</a>
+                                            @else
+                                            <a href=""><span class="flaticon-close"></span>Swimming Pool</a>     
+                                            @endif
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </div>
                     
+                    {{-- What nearby --}}
+                    <div class="col-lg-12">
+                        <div class="whats_nearby mt30 text-center">
+                            <h4 class="mb10">What's Nearby</h4> 
+                            <ul class="order_list list-inline-item text-left">
+                                <div class="education_distance mb15">
+                                    <h5><span class="flaticon-college-graduation"></span> Education</h5>
+                                </div>
+                                <div class="education_distance mb15 style2">
+                                    <h5><span class="flaticon-heartbeat"></span> Health & Medical</h5>
+                                </div>
+                                <div class="education_distance style3">
+                                    <h5><span class="flaticon-front-of-bus"></span> Transportation</h5>
+                                </div>
+                            </ul>
+                            <ul class="order_list list-inline-item text-left">
+                                <div class="education_distance mb15">
+                                    <h5><span class="flaticon-money-bag"></span> Banks </h5>
+                                </div>
+                                <div class="education_distance mb15 style2">
+                                    <h5><span><img src="{{asset('assets/front/images/icons/airport.png')}}" alt=""> </span> Airport</h5>
+                                </div>
+                                <div class="education_distance style3">
+                                    <h5><span><img src="{{asset('assets/front/images/icons/mall.png')}}" alt=""></span> Shopping Center</h5>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+
+                    {{-- Project Video --}}
                     <div class="col-lg-12">
                         <div class="shop_single_tab_content style2 mt30">
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Property video</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" id="listing-tab" data-toggle="tab" href="#listing" role="tab" aria-controls="listing" aria-selected="false">Virtual Tour</a>
+                                    <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab" aria-controls="description" aria-selected="true">Project video</a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="myTabContent2">
                                 <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
                                     <div class="property_video">
                                         <div class="thumb">
-                                            <img class="pro_img img-fluid w100" src="images/background/7.jpg" alt="7.jpg">
+                                            <img class="pro_img img-fluid w100" src="{{asset('assets/front/images/background/7.jpg')}}" alt="7.jpg">
                                             <div class="overlay_icon">
-                                                <a class="video_popup_btn red popup-youtube" href="https://www.youtube.com/watch?v=oqNZOOWF8qM"><span class="flaticon-play"></span></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade row pl15 pl0-1199 pr15 pr0-1199" id="listing" role="tabpanel" aria-labelledby="listing-tab">
-                                    <div class="property_video">
-                                        <div class="thumb">
-                                            <img class="pro_img img-fluid w100" src="images/background/7.jpg" alt="7.jpg">
-                                            <div class="overlay_icon">
-                                                <a class="video_popup_btn red popup-youtube" href="https://www.youtube.com/watch?v=oqNZOOWF8qM"><span class="flaticon-play"></span></a>
+                                                <a class="video_popup_btn red popup-youtube" href=" https://www.youtube.com/watch?v=oqNZOOWF8qM"><span class="flaticon-play"></span></a>
                                             </div>
                                         </div>
                                     </div>
@@ -212,120 +276,7 @@
                         </div>
                     </div>
                     
-                    <div class="col-lg-12">
-                        <div class="whats_nearby mt30">
-                            <h4 class="mb10">What's Nearby</h4>
-                            <div class="education_distance mb15">
-                                <h5><span class="flaticon-college-graduation"></span> Education</h5>
-                                <div class="single_line">
-                                    <p class="para">Eladia's Kids <span>(3.13 miles)</span></p>
-                                    <ul class="review">
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><span class="total_rive_count">8895 reviews</span></li>
-                                    </ul>
-                                </div>
-                                <div class="single_line">
-                                    <p class="para">Gear Up With ACLS <span>(4.66 miles)</span></p>
-                                    <ul class="review">
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><span class="total_rive_count">7475 reviews</span></li>
-                                    </ul>
-                                </div>
-                                <div class="single_line">
-                                    <p class="para">Brooklyn Brainery <span>(3.31 miles)</span></p>
-                                    <ul class="review">
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><span class="total_rive_count">3579 reviews</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="education_distance mb15 style2">
-                                <h5><span class="flaticon-heartbeat"></span> Health & Medical</h5>
-                                <div class="single_line">
-                                    <p class="para">Eladia's Kids <span>(3.13 miles)</span></p>
-                                    <ul class="review">
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><span class="total_rive_count">8895 reviews</span></li>
-                                    </ul>
-                                </div>
-                                <div class="single_line">
-                                    <p class="para">Gear Up With ACLS <span>(4.66 miles)</span></p>
-                                    <ul class="review">
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><span class="total_rive_count">7475 reviews</span></li>
-                                    </ul>
-                                </div>
-                                <div class="single_line">
-                                    <p class="para">Brooklyn Brainery <span>(3.31 miles)</span></p>
-                                    <ul class="review">
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><span class="total_rive_count">3579 reviews</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="education_distance style3">
-                                <h5><span class="flaticon-front-of-bus"></span> Transportation</h5>
-                                <div class="single_line">
-                                    <p class="para">Eladia's Kids <span>(3.13 miles)</span></p>
-                                    <ul class="review">
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><span class="total_rive_count">8895 reviews</span></li>
-                                    </ul>
-                                </div>
-                                <div class="single_line">
-                                    <p class="para">Gear Up With ACLS <span>(4.66 miles)</span></p>
-                                    <ul class="review">
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><span class="total_rive_count">7475 reviews</span></li>
-                                    </ul>
-                                </div>
-                                <div class="single_line">
-                                    <p class="para">Brooklyn Brainery <span>(3.31 miles)</span></p>
-                                    <ul class="review">
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>
-                                        <li class="list-inline-item"><span class="total_rive_count">3579 reviews</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
+                    {{-- Two Reviews --}}
                     <div class="col-lg-12">
                         <div class="product_single_content">
                             <div class="mbp_pagination_comments mt30">
@@ -344,7 +295,7 @@
                                     <li class="list-inline-item write_review">Write a Review</li>
                                 </ul>
                                 <div class="mbp_first media">
-                                    <img src="images/testimonial/1.png" class="mr-3" alt="1.png">
+                                    <img src="{{asset('assets/front/images/testimonial/1.png')}}" class="mr-3" alt="1.png">
                                     <div class="media-body">
                                         <h4 class="sub_title mt-0">Diana Cooper
                                             <div class="sspd_review dif">
@@ -359,12 +310,12 @@
                                             </div>
                                         </h4>
                                         <a class="sspd_postdate fz14" href="#">December 28, 2020</a>
-                                        <p class="mt10">Beautiful home, very picturesque and close to everything in jtree! A little warm for a hot weekend, but would love to come back during the cooler seasons!</p>
+                                        <p class="mt10">Thank you BellusHomes I'm really happy that I bought my appartment in istanbul by your help.</p>
                                     </div>
                                 </div>
                                 <div class="custom_hr"></div>
                                 <div class="mbp_first media">
-                                    <img src="images/testimonial/2.png" class="mr-3" alt="2.png">
+                                    <img src="{{asset('assets/front/images/testimonial/2.png')}}" class="mr-3" alt="2.png">
                                     <div class="media-body">
                                         <h4 class="sub_title mt-0">Ali Tufan
                                             <div class="sspd_review dif">
@@ -378,8 +329,8 @@
                                                 </ul>
                                             </div>
                                         </h4>
-                                        <a class="sspd_postdate fz14" href="#">December 28, 2020</a>
-                                        <p class="mt10">Beautiful home, very picturesque and close to everything in jtree! A little warm for a hot weekend, but would love to come back during the cooler seasons!</p>
+                                        <a class="sspd_postdate fz14" href="#">December 28, 2022</a>
+                                        <p class="mt10">I invested in realestate by the advices of BellusHomes, they help my to put my invesment in the right place with all the benift of the financial services they provid.</p>
                                     </div>
                                 </div>
                             </div>
@@ -419,7 +370,7 @@
                     </div> --}}
 
                     <div class="col-lg-12">
-                        <h4 class="mt30 mb30">Similar Properties</h4>
+                        <h4 class="mt30 mb30">Similar Projects</h4>
                     </div>
 
                     @isset($properties)
@@ -427,35 +378,35 @@
                     <div class="col-lg-6">
                         <div class="feat_property">
                             <div class="thumb">
-                                <img class="img-whp" src="images/property/fp1.jpg" alt="fp1.jpg">
+                                <img class="img-whp" src="{{$property->images[0]->photo}}" alt="fp1.jpg">
                                 <div class="thmb_cntnt">
                                     <ul class="tag mb0">
-                                        <li class="list-inline-item"><a href="#">Featured</a></li>
+                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">Featured</a></li>
                                     </ul>
                                     <ul class="icon mb0">
-                                        <li class="list-inline-item"><a href="#"><span class="flaticon-transfer-1"></span></a></li>
-                                        <li class="list-inline-item"><a href="#"><span class="flaticon-heart"></span></a></li>
+                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}"><span class="flaticon-transfer-1"></span></a></li>
+                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}"><span class="flaticon-heart"></span></a></li>
                                     </ul>
-                                    <a class="fp_price" href="#">$13,000<small>/mo</small></a>
+                                    <a class="fp_price" href="{{route('property.details', $property->id)}}">{{number_format($property->price, 0, ',')}} $</a>
                                 </div>
                             </div>
                             <div class="details">
                                 <div class="tc_content">
-                                    <p class="text-thm">Apartment</p>
-                                    <h4>Renovated Apartment</h4>
-                                    <p><span class="flaticon-placeholder"></span> 1421 San Pedro St, Los Angeles, CA 90015</p>
+                                    <p class="text-thm">{{$property->categories()->first()->name}}</p>
+                                    <h4>{{$property->title}}</h4>
+                                    <p><span class="flaticon-placeholder"></span> {{$property->location}}</p>
                                     <ul class="prop_details mb0">
-                                        <li class="list-inline-item"><a href="#">Beds: 4</a></li>
-                                        <li class="list-inline-item"><a href="#">Baths: 2</a></li>
-                                        <li class="list-inline-item"><a href="#">Sq Ft: 5280</a></li>
+                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">Bedrooms: {{$property->bedrooms}}</a></li>
+                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">Bathrooms: {{$property->bathrooms}}</a></li>
+                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">Sq M: {{$property->area}}</a></li>
                                     </ul>
                                 </div>
                                 <div class="fp_footer">
                                     <ul class="fp_meta float-left mb0">
-                                        <li class="list-inline-item"><a href="#"><img src="images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                        <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
+                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}"><img src="{{asset('assets/front/images/header-logo.png')}}" alt="pposter1.png"></a></li>
+                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">BellusHomes</a></li>
                                     </ul>
-                                    <div class="fp_pdate float-right">4 years ago</div>
+                                    <div class="fp_pdate float-right">{{$property->created_at}}</div>
                                 </div>
                             </div>
                         </div>
@@ -465,51 +416,56 @@
                 </div>
             </div>
 
-            {{-- sidebar_listing_list --}}
+            {{-- sidebar Tools --}}
             <div class="col-lg-4 col-xl-4">
                 <div class="sidebar_listing_list">
                     <div class="sidebar_advanced_search_widget">
                         <div class="sl_creator">
                             <h4 class="mb25">Listed By</h4>
                             <div class="media">
-                                <img class="mr-3" src="images/team/lc1.png" alt="lc1.png">
+                                <img class="my-2 mx-2" src="{{url('assets/admin/images/sliders', $sitedata->logo)}}" alt="lc1.png">
                                 <div class="media-body">
-                                    <h5 class="mt-0 mb0">Samul Williams</h5>
-                                    <p class="mb0">(123)456-7890</p>
-                                    <p class="mb0">info@findhouse.com</p>
-                                    <a class="text-thm" href="#">View My Listing</a>
-                                  </div>
+                                    <h5 class="mb-2">{{$sitedata->company_name}}</h5>
+                                    <p class="mb-2"><a href="https://wa.me/{{$sitedata->whatsapp}}">{{$sitedata->whatsapp}}</a></p>
+                                    <a class="text-thm" href="mailto:{{$sitedata->email}}">{{$sitedata->email}}</a>
+                                </div>
                             </div>
                         </div>
-                        <ul class="sasw_list mb0">
-                            <li class="search_area">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="exampleInputName1" placeholder="Your Name">
-                                </div>
-                            </li>
-                            <li class="search_area">
-                                <div class="form-group">
-                                    <input type="number" class="form-control" id="exampleInputName2" placeholder="Phone">
-                                </div>
-                            </li>
-                            <li class="search_area">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
-                                </div>
-                            </li>
-                            <li class="search_area">
-                                <div class="form-group">
-                                    <textarea id="form_message" name="form_message" class="form-control required" rows="5" required="required" placeholder="I'm interest in [ Listing Single ]"></textarea>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="search_option_button">
-                                    <button type="submit" class="btn btn-block btn-thm">Search</button>
-                                </div>
-                            </li>
-                        </ul>
+
+                        {{-- #1- form 2 --}}
+                        <form action="">
+                            <ul class="sasw_list mb0">
+                                <li class="search_area">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Your Name">
+                                    </div>
+                                </li>
+                                <li class="search_area">
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" id="exampleInputName2" placeholder="Phone">
+                                    </div>
+                                </li>
+                                <li class="search_area">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control" id="exampleInputEmail" placeholder="Email">
+                                    </div>
+                                </li>
+                                <li class="search_area">
+                                    <div class="form-group">
+                                        <textarea id="form_message" name="form_message" class="form-control required" rows="5" required="required" placeholder="Send us you query.."></textarea>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="search_option_button">
+                                        <button type="submit" class="btn btn-block btn-thm">Send</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
                     </div>
                 </div>
+
+                {{-- #2- filter Tool  --}}
                 <div class="sidebar_listing_list">
                     <div class="sidebar_advanced_search_widget">
                         <ul class="sasw_list mb0">
@@ -557,18 +513,18 @@
                             </li>
                             <li>
                                 <div class="small_dropdown2">
-                                    <div id="prncgs2" class="btn dd_btn">
+                                    <div id="prncgs" class="btn dd_btn">
                                         <span>Price</span>
                                         <label for="exampleInputEmail2"><span class="fa fa-angle-down"></span></label>
                                     </div>
-                                      <div class="dd_content2">
+                                      <div class="dd_content2 w100">
                                         <div class="pricing_acontent">
+                                            <input type="text" class="amount" placeholder="$60,000"> 
+                                            <input type="text" class="amount2" placeholder="$10,000,000">
+                                            <div class="slider-range"></div>
                                             <span id="slider-range-value1"></span>
                                             <span class="mt0" id="slider-range-value2"></span>
                                             <div id="slider"></div>
-                                            <!-- <input type="text" class="amount" placeholder="$52,239"> 
-                                            <input type="text" class="amount2" placeholder="$985,14">
-                                            <div class="slider-range"></div> -->
                                         </div>
                                       </div>
                                 </div>
@@ -620,14 +576,9 @@
                                     <div class="candidate_revew_select">
                                         <select class="selectpicker w100 show-tick">
                                             <option>Year built</option>
-                                            <option>2013</option>
-                                            <option>2014</option>
-                                            <option>2015</option>
-                                            <option>2016</option>
-                                            <option>2017</option>
-                                            <option>2018</option>
-                                            <option>2019</option>
-                                            <option>2020</option>
+                                            @for ($i = 2010; $i <= date('Y'); $i++ )
+                                            <option>{{$i}}</option>
+                                            @endfor
                                         </select>
                                     </div>
                                 </div>
@@ -761,135 +712,47 @@
                         </ul>
                     </div>
                 </div>
+
+                {{-- #3- Projects --}}
                 <div class="terms_condition_widget">
-                    <h4 class="title">Featured Properties</h4>
+                    <h4 class="title">Featured Projects</h4>
                     <div class="sidebar_feature_property_slider">
+                        @isset($properties)
+                        @foreach($properties as $property)
                         <div class="item">
                             <div class="feat_property home7 agent">
                                 <div class="thumb">
-                                    <img class="img-whp" src="images/property/fp1.jpg" alt="fp1.jpg">
+                                    <img class="img-whp" src="{{$property->images[0]->photo}}" alt="fp1.jpg">
                                     <div class="thmb_cntnt">
                                         <ul class="tag mb0">
-                                            <li class="list-inline-item"><a href="#">For Rent</a></li>
-                                            <li class="list-inline-item"><a href="#">Featured</a></li>
+                                            <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">Featured</a></li>
                                         </ul>
-                                        <a class="fp_price" href="#">$13,000<small>/mo</small></a>
-                                        <h4 class="posr color-white">Renovated Apartment</h4>
+                                        <a class="fp_price" href="{{route('property.details', $property->id)}}">{{number_format($property -> total_price, 0, ',')}} $</a>
+                                        <h4 class="posr color-white">{{$property ->title }}</h4>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
-                            <div class="feat_property home7 agent">
-                                <div class="thumb">
-                                    <img class="img-whp" src="images/property/fp2.jpg" alt="fp2.jpg">
-                                    <div class="thmb_cntnt">
-                                        <ul class="tag mb0">
-                                            <li class="list-inline-item"><a href="#">For Rent</a></li>
-                                            <li class="list-inline-item"><a href="#">Featured</a></li>
-                                        </ul>
-                                        <a class="fp_price" href="#">$13,000<small>/mo</small></a>
-                                        <h4 class="posr color-white">Renovated Apartment</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="feat_property home7 agent">
-                                <div class="thumb">
-                                    <img class="img-whp" src="images/property/fp3.jpg" alt="fp3.jpg">
-                                    <div class="thmb_cntnt">
-                                        <ul class="tag mb0">
-                                            <li class="list-inline-item"><a href="#">For Rent</a></li>
-                                            <li class="list-inline-item"><a href="#">Featured</a></li>
-                                        </ul>
-                                        <a class="fp_price" href="#">$13,000<small>/mo</small></a>
-                                        <h4 class="posr color-white">Renovated Apartment</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="feat_property home7 agent">
-                                <div class="thumb">
-                                    <img class="img-whp" src="images/property/fp4.jpg" alt="fp4.jpg">
-                                    <div class="thmb_cntnt">
-                                        <ul class="tag mb0">
-                                            <li class="list-inline-item"><a href="#">For Rent</a></li>
-                                            <li class="list-inline-item"><a href="#">Featured</a></li>
-                                        </ul>
-                                        <a class="fp_price" href="#">$13,000<small>/mo</small></a>
-                                        <h4 class="posr color-white">Renovated Apartment</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="feat_property home7 agent">
-                                <div class="thumb">
-                                    <img class="img-whp" src="images/property/fp5.jpg" alt="fp5.jpg">
-                                    <div class="thmb_cntnt">
-                                        <ul class="tag mb0">
-                                            <li class="list-inline-item"><a href="#">For Rent</a></li>
-                                            <li class="list-inline-item"><a href="#">Featured</a></li>
-                                        </ul>
-                                        <a class="fp_price" href="#">$13,000<small>/mo</small></a>
-                                        <h4 class="posr color-white">Renovated Apartment</h4>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
+                        @endisset
                     </div>
                 </div>
+
+                {{-- #4- Category --}}
                 <div class="terms_condition_widget">
                     <h4 class="title">Categories Property</h4>
                     <div class="widget_list">
                         <ul class="list_details">
-                            <li><a href="#"><i class="fa fa-caret-right mr10"></i>Apartment <span class="float-right">6 properties</span></a></li>
-                            <li><a href="#"><i class="fa fa-caret-right mr10"></i>Condo <span class="float-right">12 properties</span></a></li>
-                            <li><a href="#"><i class="fa fa-caret-right mr10"></i>Family House <span class="float-right">8 properties</span></a></li>
-                            <li><a href="#"><i class="fa fa-caret-right mr10"></i>Modern Villa <span class="float-right">26 properties</span></a></li>
-                            <li><a href="#"><i class="fa fa-caret-right mr10"></i>Town House <span class="float-right">89 properties</span></a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="sidebar_feature_listing">
-                    <h4 class="title">Recently Viewed</h4>
-                    <div class="media">
-                        <img class="align-self-start mr-3" src="images/blog/fls1.jpg" alt="fls1.jpg">
-                        <div class="media-body">
-                            <h5 class="mt-0 post_title">Nice Room With View</h5>
-                            <a href="#">$13,000/<small>/mo</small></a>
-                            <ul class="mb0">
-                                <li class="list-inline-item">Beds: 4</li>
-                                <li class="list-inline-item">Baths: 2</li>
-                                <li class="list-inline-item">Sq Ft: 5280</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <img class="align-self-start mr-3" src="images/blog/fls2.jpg" alt="fls2.jpg">
-                        <div class="media-body">
-                            <h5 class="mt-0 post_title">Villa called Archangel</h5>
-                            <a href="#">$13,000<small>/mo</small></a>
-                            <ul class="mb0">
-                                <li class="list-inline-item">Beds: 4</li>
-                                <li class="list-inline-item">Baths: 2</li>
-                                <li class="list-inline-item">Sq Ft: 5280</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <img class="align-self-start mr-3" src="images/blog/fls3.jpg" alt="fls3.jpg">
-                        <div class="media-body">
-                            <h5 class="mt-0 post_title">Sunset Studio</h5>
-                            <a href="#">$13,000<small>/mo</small></a>
-                            <ul class="mb0">
-                                <li class="list-inline-item">Beds: 4</li>
-                                <li class="list-inline-item">Baths: 2</li>
-                                <li class="list-inline-item">Sq Ft: 5280</li>
-                            </ul>
-                        </div>
+                            @isset($categories)
+                            @foreach($categories as $category)
+                            <li><a href="#"><i class="fa fa-caret-right mr10"></i>{{$category->name}} <span class="float-right">{{rand(15, 45)}} projects</span></a></li>
+                            @endforeach
+                            @endisset
+                            {{-- <li><a href="#"><i class="fa fa-caret-right mr10"></i>Condo <span class="float-right">12 projects</span></a></li>
+                            <li><a href="#"><i class="fa fa-caret-right mr10"></i>Family House <span class="float-right">8 projects</span></a></li>
+                            <li><a href="#"><i class="fa fa-caret-right mr10"></i>Modern Villa <span class="float-right">26 projects</span></a></li>
+                            <li><a href="#"><i class="fa fa-caret-right mr10"></i>Town House <span class="float-right">89 projects</span></a></li>
+                        </ul> --}}
                     </div>
                 </div>
             </div>
