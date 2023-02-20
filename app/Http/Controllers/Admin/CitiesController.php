@@ -39,8 +39,8 @@ class CitiesController extends Controller
    try{
 
     DB::beginTransaction();
+        
         //validation
-   
         if (!$request->has('is_active'))
         $request->request->add(['is_active' => 0]);
         else
@@ -85,6 +85,11 @@ class CitiesController extends Controller
 
         }
 
+
+
+        /**
+         * 
+         */
         public function update($id,CityRequest $request){
 
        try{

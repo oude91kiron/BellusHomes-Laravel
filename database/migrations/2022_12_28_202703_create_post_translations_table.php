@@ -23,6 +23,8 @@ class CreatePostTranslationsTable extends Migration
             $table->text('secondParagraph')->nullable();
             $table->string('secondHeadline')->nullable();
             $table->text('thirdParagraph')->nullable();
+            $table->text('paragraph4')->nullable();
+            $table->text('paragraph5')->nullable();
             $table->string('categories')->nullable();
             $table->string('tags')->nullable();
             $table->string('locale');

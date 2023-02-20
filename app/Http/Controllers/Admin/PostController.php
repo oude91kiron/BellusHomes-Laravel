@@ -53,6 +53,8 @@ class PostController extends Controller
             'secondParagraph' => $request->secondParagraph,
             'secondHeadline'=> $request->secondHeadline,
             'thirdParagraph' => $request->thirdParagraph,
+            'paragraph4' => $request->paragraph4,
+            'paragraph5' => $request->paragraph5,
             'categories' => $request->categories,
             'tags' => $request->tags,
             'user_id' => $user->id,
@@ -87,13 +89,21 @@ class PostController extends Controller
             Post::where('id',$post->id)->update(['post_image'=> $fileName]);
         }
 
+
         $post->title = $request['title'];
-        $post->headline = $request['headline'];
         $post->paragraph = $request['paragraph'];
-        $post->firstSubhead = $request['firstSubhead'];
+
+        $post->headline = $request['headline'];
         $post->secondParagraph = $request['secondParagraph'];
+
+        // Quote
+        $post->firstSubhead = $request['firstSubhead'];
         $post->secondHeadline = $request['secondHeadline'];
         $post->thirdParagraph = $request['thirdParagraph'];
+
+        // Conclusion
+        $post->paragraph4 = $request['paragraph4'];
+        $post->paragraph5 = $request['paragraph5'];
         $post->categories = $request['categories'];
         $post->tags = $request['tags'];
         

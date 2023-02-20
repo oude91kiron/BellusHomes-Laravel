@@ -48,7 +48,7 @@
 										</div>
 
 
-										<div class="item form-group">
+										{{-- <div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Slug<span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
@@ -61,7 +61,7 @@
                                               <span class="text-danger">{{$message}}</span>
                                               @enderror
 											</div>
-										</div>
+										</div> --}}
 										
 
 

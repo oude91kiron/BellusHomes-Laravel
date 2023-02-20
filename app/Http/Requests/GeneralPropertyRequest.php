@@ -25,14 +25,11 @@ class GeneralPropertyRequest extends FormRequest
     {
         return [
             
-           
-            'building_age' => 'nullable|max:100',
-            'name' => 'nullable|max:100',
+            'name' => 'required|max:100',
+            'building_age' => 'required|max:100',
             'parking' => 'nullable|max:100',
-            'slug' => 'nullable|unique:properties,slug',
-            'description' => 'required|max:1000',
-            'tags' => 'nullable',
-            'location' => 'nullable|max:100',
+            'description' => 'required|max:2000',
+            'location' => 'required|max:100',
             'city_id'=>'required|exists:cities,id'
           
         

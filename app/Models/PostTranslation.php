@@ -14,15 +14,20 @@ class PostTranslation extends Model
     protected $fillable = [
 
             'post_id',
-            'title',
-            'headline',
-            'paragraph',
-            'firstSubhead',
-            'secondParagraph',
-            'secondHeadline',
-            'thirdParagraph',
-            'categories',
-            'tags',
+            'title', 
+            'paragraph', 
+    
+            'headline', 
+            'secondParagraph', 
+    
+            'firstSubhead', 
+            'secondHeadline', 
+            'thirdParagraph', 
+            
+            'paragraph4',
+            'paragraph5',
+            'categories', 
+            'tags'
 
     ];
 }

@@ -36,13 +36,19 @@ class post extends Model
     ];
 
     public $translatedAttributes =[
+
         'title', 
-        'headline', 
         'paragraph', 
-        'firstSubhead', 
+
+        'headline', 
         'secondParagraph', 
+
+        'firstSubhead', 
         'secondHeadline', 
         'thirdParagraph', 
+        
+        'paragraph4',
+        'paragraph5',
         'categories', 
         'tags'
     ];

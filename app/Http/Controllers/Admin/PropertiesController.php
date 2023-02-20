@@ -19,7 +19,7 @@ class PropertiesController extends Controller
 {
    public function index(){
 
-      $properties = Property::select('id','slug','total_price','created_at')->paginate(PAGINATION_COUNT);
+      $properties = Property::select('id','total_price','created_at')->paginate(PAGINATION_COUNT);
       return view ('dashboard.properties.general.index',compact('properties'));
    }
 
@@ -44,7 +44,6 @@ class PropertiesController extends Controller
       $request->request->add(['is_active'=>1]);
 
       $property = Property::create([
-         'slug'=>$request ->slug,
          'city_id'=>$request ->city_id,
          'is_active'=>$request ->is_active,
       ]);
@@ -160,7 +159,9 @@ class PropertiesController extends Controller
       }
   }
 
-
+  /**
+   * 
+   */
   public function delete($id) {
 
     $property = Property::find($id);
@@ -171,6 +172,54 @@ class PropertiesController extends Controller
 
     return redirect()->back();
   }
+
+
+
+
+
+  public function getProjectGeneral(Property $property){
+
+
+       $cities=City::active()->select('id')->get();
+       $categories=Category::active()->select('id')->get();
+
+       //dump($cities ,  $categories);
+
+
+   if(!$property)
+   return redirect()->route('admin.properties')->with(['error'=>'This section does not exist']);
+
+   return view('dashboard.properties.general.edit', compact('property', 'cities', 'categories'));
+
+}
+
+
+
+  /**
+   * 
+   */
+  public function update(GeneralPropertyRequest $request, Property $property){
+
+
+   $property->building_age = $request['building_age'];
+   $property->name = $request['name'];
+   $property->description = $request['description'];
+   $property->location = $request['location'];
+   $property->city_id = $request['city_id'];
+   $property->is_active = $request['is_active'];
+   
+   $property->save();
+
+   //save property categories
+   $property ->categories()->attach($request['categories']);
+
+   session()->flash('updated', 'Your Property Was Successfuly Updated');
+        
+   return redirect()->route('admin.properties');
+
+
+}
+  
 
 }
 

@@ -281,7 +281,7 @@
                         <div class="product_single_content">
                             <div class="mbp_pagination_comments mt30">
                                 <ul class="total_reivew_view">
-                                    <li class="list-inline-item sub_titles">896 Reviews</li>
+                                    <li class="list-inline-item sub_titles">{{rand(10, 30)}} Reviews</li>
                                     <li class="list-inline-item">
                                         <ul class="star_list">
                                             <li class="list-inline-item"><a href="#"><i class="fa fa-star"></i></a></li>

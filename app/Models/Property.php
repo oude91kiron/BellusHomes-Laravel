@@ -27,7 +27,6 @@ protected $with = ['translations'];
  */
 protected $fillable = [
     'city_id',
-    'slug',
     'total_price',
     'price_meter',
     'location',

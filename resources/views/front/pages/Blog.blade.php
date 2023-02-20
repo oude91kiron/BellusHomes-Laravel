@@ -16,182 +16,53 @@
                 </div>
             </div>
         </div>
+
+        {{-- looping posts --}}
         <div class="row">
             <div class="col-lg-8">
                 <div class="row">
+                    @isset($posts)
+                    @foreach ($posts as $post)
                     <div class="col-lg-6">
                         <div class="for_blog feat_property">
                             <div class="thumb">
-                                <img class="img-whp" src="images/blog/1.jpg" alt="1.jpg">
-                                <div class="blog_tag">Construction</div>
+                                <img class="img-whp" src="{{url('assets/admin/images/posts', $post->post_image)}}" alt="1.jpg">
+                                <div class="blog_tag">{{$post->tags}}</div>
                             </div>
                             <div class="details">
                                 <div class="tc_content">
-                                    <h4>Redfin Ranks the Most Competitive Neighborhoods of 2020</h4>
+                                    <h4>{{$post->title}}</h4>
                                     <ul class="bpg_meta">
                                         <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                        <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
+                                        <li class="list-inline-item"><a href="#">{{$post->created_at}}</a></li>
                                     </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
+                                    <p>{{$post->headline}}</p>
                                 </div>
                                 <div class="fp_footer">
                                     <ul class="fp_meta float-left mb0">
-                                        <li class="list-inline-item"><a href="#"><img src="images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                        <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
+                                        <li class="list-inline-item"><a href="#"><img src="{{asset('assets/front/images/header-logo.png')}}" alt="pposter1.png"></a></li>
+                                        <li class="list-inline-item"><a href="#">Bellushomes</a></li>
                                     </ul>
-                                    <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
+                                    <a class="fp_pdate float-right text-thm" href="{{route('single.post', $post->id)}}">Read More <span class="flaticon-next"></span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
-                        <div class="for_blog feat_property">
-                            <div class="thumb">
-                                <img class="img-whp" src="images/blog/2.jpg" alt="2.jpg">
-                                <div class="blog_tag">Construction</div>
-                            </div>
-                            <div class="details">
-                                <div class="tc_content">
-                                    <h4>Housing Markets That Changed the Most This Decade</h4>
-                                    <ul class="bpg_meta">
-                                        <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                        <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
-                                </div>
-                                <div class="fp_footer">
-                                    <ul class="fp_meta float-left mb0">
-                                        <li class="list-inline-item"><a href="#"><img src="images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                        <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-                                    </ul>
-                                    <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="for_blog feat_property">
-                            <div class="thumb">
-                                <img class="img-whp" src="images/blog/3.jpg" alt="3.jpg">
-                                <div class="blog_tag">Construction</div>
-                            </div>
-                            <div class="details">
-                                <div class="tc_content">
-                                    <h4>Redfin Unveils the Best Canadian Cities for Biking</h4>
-                                    <ul class="bpg_meta">
-                                        <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                        <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
-                                </div>
-                                <div class="fp_footer">
-                                    <ul class="fp_meta float-left mb0">
-                                        <li class="list-inline-item"><a href="#"><img src="images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                        <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-                                    </ul>
-                                    <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="for_blog feat_property">
-                            <div class="thumb">
-                                <img class="img-whp" src="images/blog/4.jpg" alt="4.jpg">
-                                <div class="blog_tag">Construction</div>
-                            </div>
-                            <div class="details">
-                                <div class="tc_content">
-                                    <h4>You Can Buy The Piano Teacher’s Home from Groundhog Day</h4>
-                                    <ul class="bpg_meta">
-                                        <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                        <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
-                                </div>
-                                <div class="fp_footer">
-                                    <ul class="fp_meta float-left mb0">
-                                        <li class="list-inline-item"><a href="#"><img src="images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                        <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-                                    </ul>
-                                    <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="for_blog feat_property">
-                            <div class="thumb">
-                                <img class="img-whp" src="images/blog/5.jpg" alt="5.jpg">
-                                <div class="blog_tag">Construction</div>
-                            </div>
-                            <div class="details">
-                                <div class="tc_content">
-                                    <h4>Why We Should All Support Clear Cooperation</h4>
-                                    <ul class="bpg_meta">
-                                        <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                        <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
-                                </div>
-                                <div class="fp_footer">
-                                    <ul class="fp_meta float-left mb0">
-                                        <li class="list-inline-item"><a href="#"><img src="images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                        <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-                                    </ul>
-                                    <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="for_blog feat_property">
-                            <div class="thumb">
-                                <img class="img-whp" src="images/blog/6.jpg" alt="6.jpg">
-                                <div class="blog_tag">Construction</div>
-                            </div>
-                            <div class="details">
-                                <div class="tc_content">
-                                    <h4>Housing Markets That Changed the Most This Decade</h4>
-                                    <ul class="bpg_meta">
-                                        <li class="list-inline-item"><a href="#"><i class="flaticon-calendar"></i></a></li>
-                                        <li class="list-inline-item"><a href="#">January 16, 2020</a></li>
-                                    </ul>
-                                    <p>Lorem ipsum dolor sit amet, consectetur text link libero tempus congue.</p>
-                                </div>
-                                <div class="fp_footer">
-                                    <ul class="fp_meta float-left mb0">
-                                        <li class="list-inline-item"><a href="#"><img src="images/property/pposter1.png" alt="pposter1.png"></a></li>
-                                        <li class="list-inline-item"><a href="#">Ali Tufan</a></li>
-                                    </ul>
-                                    <a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                    @endisset
                 </div>
+
+                {{-- Pagination --}}
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="mbp_pagination mt20">
-                            <ul class="page_navigation">
-                                <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"> <span class="flaticon-left-arrow"></span> Prev</a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                                <li class="page-item active" aria-current="page">
-                                    <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                                </li>
-                                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                                <li class="page-item"><a class="page-link" href="#">...</a></li>
-                                <li class="page-item"><a class="page-link" href="#">29</a></li>
-                                <li class="page-item">
-                                    <a class="page-link" href="#"><span class="flaticon-right-arrow"></span></a>
-                                </li>
-                            </ul>
+                            {{ $posts->links() }}
                         </div>
                     </div>
                 </div>
             </div>
+
+            {{-- sidebar --}}
             <div class="col-lg-4">
                 <div class="sidebar_search_widget">
                     <div class="blog_search_widget">
@@ -215,45 +86,28 @@
                         </ul>
                     </div>
                 </div>
+				
                 <div class="sidebar_feature_listing">
-                    <h4 class="title">Featured Listings</h4>
-                    <div class="media">
-                        <img class="align-self-start mr-3" src="images/blog/fls1.jpg" alt="fls1.jpg">
-                        <div class="media-body">
-                            <h5 class="mt-0 post_title">Nice Room With View</h5>
-                            <a href="#">$13,000/<small>/mo</small></a>
-                            <ul class="mb0">
-                                <li class="list-inline-item">Beds: 4</li>
-                                <li class="list-inline-item">Baths: 2</li>
-                                <li class="list-inline-item">Sq Ft: 5280</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <img class="align-self-start mr-3" src="images/blog/fls2.jpg" alt="fls2.jpg">
-                        <div class="media-body">
-                            <h5 class="mt-0 post_title">Villa called Archangel</h5>
-                            <a href="#">$13,000<small>/mo</small></a>
-                            <ul class="mb0">
-                                <li class="list-inline-item">Beds: 4</li>
-                                <li class="list-inline-item">Baths: 2</li>
-                                <li class="list-inline-item">Sq Ft: 5280</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="media">
-                        <img class="align-self-start mr-3" src="images/blog/fls3.jpg" alt="fls3.jpg">
-                        <div class="media-body">
-                            <h5 class="mt-0 post_title">Sunset Studio</h5>
-                            <a href="#">$13,000<small>/mo</small></a>
-                            <ul class="mb0">
-                                <li class="list-inline-item">Beds: 4</li>
-                                <li class="list-inline-item">Baths: 2</li>
-                                <li class="list-inline-item">Sq Ft: 5280</li>
-                            </ul>
-                        </div>
-                    </div>
+					<h4 class="title">Featured Listings</h4>
+					
+					@isset($properties)
+					@foreach($properties as $property)
+					<div class="media">
+						<img class="align-self-start mr-3" height="80px" width="90px" src="{{$property -> images[0] -> photo ?? '' }}" alt="fls1.jpg">
+						<div class="media-body">
+					    	<h5 class="mt-0 post_title">{{$property->title}}</h5>
+					    	<a href="#">{{number_format($property->total_price, 0, ',')}} $</a>
+					    	<ul class="mb0">
+					    		<li class="list-inline-item">Beds: {{$property->bedrooms}}</li>
+					    		<li class="list-inline-item">Baths: {{$property->bathrooms}}</li>
+					    		<li class="list-inline-item">Sq Ft: {{$property->area}}</li>
+					    	</ul>
+						</div>
+					</div>
+					@endforeach
+					@endisset
                 </div>
+
                 <div class="blog_tag_widget">
                     <h4 class="title">Tags</h4>
                     <ul class="tag_list">

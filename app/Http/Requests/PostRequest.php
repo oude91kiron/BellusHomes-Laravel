@@ -24,17 +24,30 @@ class PostRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            
+            // ________ Title + P1 _______
             'title' => 'required|string|max:250',
-            'headline' => 'required|string|max:250',
             'paragraph' => 'required|string|max:10000',
-            'firstSubhead' => 'required|string|max:250',
+            
+            // ________ Headline 1 + P2 _______
+            'headline' => 'required|string|max:250',
             'secondParagraph' => 'required|string|max:10000',
-            'secondHeadline' => 'required|string|max:250',
+
+            //________ Quote + P3 ________
+            'firstSubhead' => 'required|string|max:250',
             'thirdParagraph' => 'required|string|max:10000',
+            
+            //________ headline 2 + P4 ________
+            'secondHeadline' => 'required|string|max:250',
+            'paragraph4' => 'required|string|max:10000',
+           
+            //________ P5 & catg/tags ________
+            'paragraph5' => 'required|string|max:10000',            
             'categories' => 'required|string|max:250',
             'tags' => 'required|string|max:100',
-            'post_image' => 'required|mimes:jpg,png,jpeg,jfif|max:4000'
+            
+            //________ Image ________
+            'post_image' => 'mimes:jpg,png,jpeg,jfif|max:4000'
 
         
         ];

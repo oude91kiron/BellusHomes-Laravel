@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\site;
+
 use App\Http\Controllers\Controller;
 use Illuminate\Database\Eloquent; 
 use Illuminate\Http\Request;
@@ -45,9 +46,13 @@ class PagesController extends Controller
     public function blog() {
 
         $posts = Post::paginate(9);
+        
         $sitedata = SiteData::first();
 
-        return view('front.pages.Blog', compact('posts', 'sitedata'));
+        $properties = Property::paginate(4);
+
+        
+        return view('front.pages.Blog', compact('posts', 'sitedata', 'properties'));
     }
 
     //
@@ -64,9 +69,29 @@ class PagesController extends Controller
      */
     public function singlePost(Post $post) {
 
+        $posts = Post::where('id', '!=', $post->id)->get();
+        
         $sitedata = SiteData::first();
 
-        return view('front.pages.post',compact('sitedata', 'post'));
-      }
-    //----------------------------------------------------------------------
+        $properties = Property::paginate(4);
+
+        return view('front.pages.post',compact('sitedata', 'posts', 'post', 'properties'));
+    }
+    
+      
+    // public function ShareWidget()
+    // {
+    //     $shareComponent = \Share::page(
+    //         'https://www.positronx.io/create-autocomplete-search-in-laravel-with-typeahead-js/',
+    //         'Your share text comes here',
+    //     )
+    //     ->facebook()
+    //     ->twitter()
+    //     ->linkedin()
+    //     ->telegram()
+    //     ->whatsapp()        
+    //     ->reddit();
+        
+    //     return view('front.pages.post', compact('shareComponent'));
+    // }
 }

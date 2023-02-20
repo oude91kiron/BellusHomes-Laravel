@@ -28,13 +28,12 @@
 									<div class="clearfix"></div>
 								</div>
 								<div class="x_content">
-									<br />
-									<form class="form" action="{{route('admin.categories.update',$category->id)}}" method="POST"
-									enctype="multipart/form-data">
+									<br/>
+									<form class="form" action="{{route('admin.categories.update',$category->id)}}" method="POST" enctype="multipart/form-data">
 									@csrf
 
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Name Of Category <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Name Of Category <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 												<input type="text" value="{{$category->name}}" id="name"
@@ -47,35 +46,14 @@
 											</div>
 										</div>
 
-
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Slug<span class="required">*</span>
-											</label>
-											<div class="col-md-6 col-sm-6 ">
-												<input type="text" id="abbr"
-                                              class="form-control"
-                                              placeholder="  "
-                                             value="{{$category->slug}}"
-                                              name="slug">
-											  @error("slug")
-                                              <span class="text-danger">{{$message}}</span>
-                                              @enderror
-											</div>
-										</div>
-										
-
-
-
-
-
-										<div class="item form-group">
-                                              <label for="eventInput1">Status </label>
+                                              <label for="is_active">Status</label>
                                            
                                                 <input type="checkbox" value="1"
                                                 name="is_active"
                                                 id="switcheryColor4"
                                                 class="switchery" data-color="success"
-                                                checked/>
+												@if($category->is_active ==1)checked @endif/>
 												<label for="switcheryColor4"
 												class="card-title ml-1">Active</label>
                 
@@ -84,14 +62,10 @@
 												@enderror
                                         </div>
 
-
-											
-									
-								
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button class="btn btn-primary" type="button">Cancel</button>
+												<button class="btn btn-primary" type="button"><a style="color: white" href="{{route('admin.dashboard')}}">Cancel</a></button>
 												<button type="submit" class="btn btn-success">Submit</button>
 											</div>
 										</div>

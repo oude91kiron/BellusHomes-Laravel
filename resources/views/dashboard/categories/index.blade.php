@@ -42,42 +42,35 @@
                     <table id="datatable" class="table table-striped table-bordered" style="width:100%">
                       <thead>
                         <tr>
-
-                            <th>Name </th> 
-                            <th >Main section </th>
-                            <th >Slug </th>
-                            <th >Status </th>
-                            <th >Edit</th>
-                        
+                            <th class="text-center">Name </th> 
+                            <th class="text-center">Status </th>
+                            <th class="text-center">Edit</th>
                         </tr>
                       </thead>
 
-
                       <tbody>
                       @isset($categories)
-                            @foreach ($categories as $category)
-                                <tr>
-                                    <td>{{$category ->name}}</td>
-                                    <td>{{$category ->_parent->name ?? ''}}</td>
-                                    <td>{{$category ->slug}}</td>
-                                    <td>{{$category ->getActive()}}</td>
-                                    
-                                    {{-- <td><img style="width: 200px ; height:100px" src=""></td> --}}
-                                        <td>
-                                            <div class="btn-group" role="group"
-                                                    aria-label="Basic example">
-                                                    <a href="{{route('admin.categories.edit',$category -> id)}}"
-                                                    class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Edit</a>
-                
-                
-                                                    <a href="{{route('admin.categories.delete',$category -> id)}}"
-                                                        class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
-                                            </div>
-                                        </td>
-                                </tr>
-                            @endforeach
-                          @endisset
-                     
+                      @foreach ($categories as $category)
+                          <tr>
+                              <td class="text-center">{{$category ->name}}</td>
+                              {{-- <td>{{$category ->_parent->name ?? ''}}</td> --}}
+                              {{-- I deleted this because its not in the translation table --}}
+                              {{-- <td>{{$category ->slug}}</td> --}}
+                              <td class="text-center">{{$category ->getActive()}}</td>
+                              {{-- <td><img style="width: 200px ; height:100px" src=""></td> --}}
+                              <td class="text-center">
+                                <div class="btn-group" role="group"aria-label="Basic example">
+                                    <a href="{{route('admin.categories.edit',$category -> id)}}"class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">
+                                      Edit
+                                    </a>
+                                    <a href="{{route('admin.categories.delete',$category -> id)}}"class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
+                                      Delete
+                                    </a>
+                                </div>
+                              </td>
+                          </tr>
+                      @endforeach
+                      @endisset
                       </tbody>
                     </table>
                   </div>

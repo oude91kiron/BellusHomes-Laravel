@@ -16,7 +16,6 @@ class CreatePropertiesTable extends Migration
         Schema::create('properties', function (Blueprint $table) {
             // Property Details
             $table->increments('id');
-            $table->string('slug')->unique()->nullable();
             $table->decimal('total_price',18,0)->unsigned()->default();
             $table->decimal('price_meter',18,0)->unsigned()->nullable();
             $table->string('location')->nullable();

@@ -49,8 +49,11 @@ Route::group(
       Route::get('create','propertiesController@create')->name('admin.properties.general.create');
       Route::post('store','propertiesController@store')->name('admin.properties.general.store');
       Route::get('edit/{id}','propertiesController@edit')->name('admin.properties.edit');
-      Route::get('update/{id}','propertiesController@update')->name('admin.properties.update');
+      Route::post('update/{property}','propertiesController@update')->name('admin.properties.general.update');
       Route::get('delete/{id}','propertiesController@delete')->name('admin.properties.delete');
+
+      Route::get('project/{property}','PropertiesController@getProjectGeneral') ->name('admin.properties.general');
+
 
       Route::get('price/{id}','PropertiesController@getprice') ->name('admin.properties.price');
       Route::post('price','PropertiesController@savePropertyPrice') ->name('admin.properties.price.store');
@@ -89,7 +92,6 @@ Route::group(
       Route::Post('update/', 'SitedataController@update')->name('sitedata.update');
     
       });
-    
   });
 
 

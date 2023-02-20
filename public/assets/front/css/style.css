@@ -9458,7 +9458,7 @@ a.btn.btn_error{
   width: 100px;
 }
 .ui_kit_tooltip .btn:hover {
-  color: 
+  color: #6d6d6d;
 }
 .ui_kit_tooltip .btn:focus {
   box-shadow: none;

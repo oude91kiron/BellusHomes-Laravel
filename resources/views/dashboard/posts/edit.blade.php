@@ -43,15 +43,16 @@
 											@enderror
 										</div>
 
-                                        <!-- title -->										
-										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Title: <span class="required">*</span>
+
+										<div class="mt-5">
+											<!-- title -->										
+											<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="title">Title: <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 											<input type="text" id="title"
 											class="form-control"
-											placeholder="{{$post->title}}"
-											value="{{old('title')}}"
+											value="{{old('title', $post->title)}}"
 											name="title">
 												@error("title")
 												<span class="text-danger">{{$message}}</span>
@@ -59,15 +60,32 @@
 											</div>
 										</div>
 
+
+										<!-- paragraph 1-->
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="paragraph">Paragraph: <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<textarea type="text" id="paragraph"
+											class="form-control"
+											name="paragraph"
+											rows="6" 
+											cols="12">{{old('paragraph', $post->paragraph)}}</textarea>
+												@error("paragraph")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
+										</div>
+										
                                         <!-- headline -->										
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Headline: <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="headline">Headline: <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 											<input type="text" id="headline"
 											class="form-control"
-											placeholder="{{$post->headline}}"
-											value="{{old('headline')}}"
+											value="{{old('headline', $post->headline)}}"
 											name="headline">
 												@error("headline")
 												<span class="text-danger">{{$message}}</span>
@@ -75,67 +93,64 @@
 											</div>
 										</div>
 
-										<!-- paragraph -->
-										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Paragraph: <span class="required">*</span>
-											</label>
-											<div class="col-md-6 col-sm-6 ">
-											<textarea type="text" id="paragraph"
-											class="form-control"
-											placeholder="{{$post->paragraph}}"
-											value="{{old('paragraph')}}"
-											name="paragraph"
-                                            rows="6" 
-                                            cols="12"></textarea>
-												@error("paragraph")
-												<span class="text-danger">{{$message}}</span>
-												@enderror
-											</div>
-										</div>
 
-                                        <!-- firstSubhead -->										
+										<!-- paragraph 2 -->
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Sub Headline: <span class="required">*</span>
-											</label>
-											<div class="col-md-6 col-sm-6 ">
-											<input type="text" id="firstSubhead"
-											class="form-control"
-											placeholder="{{$post->firstSubhead}}"
-											value="{{old('firstSubhead')}}"
-											name="firstSubhead">
-												@error("firstSubhead")
-												<span class="text-danger">{{$message}}</span>
-												@enderror
-											</div>
-										</div>
-
-										<!-- secondParagraph -->
-										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Second Paragraph: <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="secondParagraph">secondParagraph: <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 											<textarea type="text" id="secondParagraph"
 											class="form-control"
-											placeholder="{{$post->secondParagraph}}"
-											value="{{old('secondParagraph')}}"
 											name="secondParagraph"
-                                            rows="6" 
-                                            cols="12"></textarea>
+											rows="6" 
+											cols="12">{{old('secondParagraph', $post->secondParagraph)}}</textarea>
 												@error("secondParagraph")
 												<span class="text-danger">{{$message}}</span>
 												@enderror
 											</div>
 										</div>
 
+
+
+										<!-- Quote -->										
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="firstSubhead">Quote: <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6">
+											<input type="text" id="firstSubhead"
+											class="form-control"
+											value="{{old('firstSubhead', $post->firstSubhead)}}"
+											name="firstSubhead">
+												@error("firstSubhead")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
+										<!-- Paragraph 3 -->
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="thirdParagraph">Paragraph: <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<textarea type="text" id="thirdParagraph"
+											class="form-control"
+											name="thirdParagraph"
+											rows="6" 
+											cols="12">{{old('thirdParagraph', $post->thirdParagraph)}}</textarea>
+												@error("thirdParagraph")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
+
+
 										<!-- secondHeadline -->										
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Second Sub Head: <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="secondHeadline">Headline: <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 											<input type="text" id="secondHeadline"
 											class="form-control"
-											placeholder="{{$post->secondHeadline}}"
-											value="{{old('secondHeadline')}}"
+											value="{{old('secondHeadline', $post->secondHeadline)}}"
 											name="secondHeadline">
 												@error("secondHeadline")
 												<span class="text-danger">{{$message}}</span>
@@ -143,34 +158,47 @@
 											</div>
 										</div>
 
-										<!-- thirdParagraph -->
+
+										 <!-- Paragraph 4 -->
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Third Paragraph: <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="paragraph4">Paragraph: <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-											<textarea type="text" id="thirdParagraph"
+											<textarea type="text" id="paragraph4"
 											class="form-control"
-											placeholder="{{$post->thirdParagraph}}"
-											value="{{old('thirdParagraph')}}"
-											name="thirdParagraph"
-                                            rows="6" 
-                                            cols="12"></textarea>
-												@error("thirdParagraph")
+											name="paragraph4"
+											rows="6" 
+											cols="12">{{old('paragraph4', $post->paragraph4)}}</textarea>
+												@error("paragraph4")
 												<span class="text-danger">{{$message}}</span>
 												@enderror
 											</div>
 										</div>
 
-										
+										<!-- Paragraph 5 -->
+										<div class="item form-group">
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="paragraph5">Conclusion: <span class="required">*</span>
+											</label>
+											<div class="col-md-6 col-sm-6 ">
+											<textarea type="text" id="paragraph5"
+											class="form-control"
+											name="paragraph5"
+											rows="6" 
+											cols="12">{{old('paragraph5', $post->paragraph5)}}</textarea>
+												@error("paragraph5")
+												<span class="text-danger">{{$message}}</span>
+												@enderror
+											</div>
+										</div>
+
 										<!-- categories -->										
 										<div class="item form-group">
-											<label class="col-form-label col-md-3 col-sm-3 label-align" for="whatsapp">Categories: <span class="required">*</span>
+											<label class="col-form-label col-md-3 col-sm-3 label-align" for="categories">Categories: <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
 											<input type="text" id="categories"
 											class="form-control"
-											placeholder="{{$post->categories}}"
-											value="{{old('categories')}}"
+												value="{{old('categories', $post->categories)}}"
 											name="categories">
 												@error("categories")
 												<span class="text-danger">{{$message}}</span>
@@ -185,8 +213,7 @@
 											<div class="col-md-6 col-sm-6 ">
 											<input type="text" id="tags"
 											class="form-control"
-											placeholder="{{$post->tags}}"
-											value="{{old('tags')}}"
+											value="{{old('tags', $post->tags)}}"
 											name="tags">
 												@error("tags")
 												<span class="text-danger">{{$message}}</span>
@@ -209,3 +236,5 @@
 				</div>
 			</div>
 @stop
+
+
