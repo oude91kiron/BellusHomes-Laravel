@@ -78,20 +78,4 @@ class PagesController extends Controller
         return view('front.pages.post',compact('sitedata', 'posts', 'post', 'properties'));
     }
     
-      
-    // public function ShareWidget()
-    // {
-    //     $shareComponent = \Share::page(
-    //         'https://www.positronx.io/create-autocomplete-search-in-laravel-with-typeahead-js/',
-    //         'Your share text comes here',
-    //     )
-    //     ->facebook()
-    //     ->twitter()
-    //     ->linkedin()
-    //     ->telegram()
-    //     ->whatsapp()        
-    //     ->reddit();
-        
-    //     return view('front.pages.post', compact('shareComponent'));
-    // }
 }

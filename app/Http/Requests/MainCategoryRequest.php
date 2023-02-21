@@ -25,8 +25,7 @@ class MainCategoryRequest extends FormRequest
     {
         return [
             'name' => 'required|max:255',
-            'type' => 'required|in:1,2',
-            //  'slug' => 'required|unique:categories,slug,'.$this -> id
+            'is_active' => 'boolean',
         ];
     }
 }

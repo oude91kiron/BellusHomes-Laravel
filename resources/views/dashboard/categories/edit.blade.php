@@ -9,8 +9,6 @@
 						<div class="title_left">
 							<h3>Categories</h3>
 						</div>
-
-					
 					</div>
 					<div class="clearfix"></div>
 					<div class="row">
@@ -36,10 +34,7 @@
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="name">Name Of Category <span class="required">*</span>
 											</label>
 											<div class="col-md-6 col-sm-6 ">
-												<input type="text" value="{{$category->name}}" id="name"
-												class="form-control"
-												placeholder=""
-												name="name">
+												<input type="text" value="{{$category->name}}" id="name" class="form-control" name="name">
 												@error("name")
 												<span class="text-danger">{{$message}}</span>
 												@enderror
@@ -48,15 +43,8 @@
 
 										<div class="item form-group">
                                               <label for="is_active">Status</label>
-                                           
-                                                <input type="checkbox" value="1"
-                                                name="is_active"
-                                                id="switcheryColor4"
-                                                class="switchery" data-color="success"
-												@if($category->is_active ==1)checked @endif/>
-												<label for="switcheryColor4"
-												class="card-title ml-1">Active</label>
-                
+                                                <input type="checkbox" value="1" name="is_active" id="switcheryColor4" class="switchery" data-color="success" @if($category->is_active ==1)checked @endif/>
+												<label for="switcheryColor4" class="card-title ml-1">Active</label>
 												@error("is_active")
 												<span class="text-danger">{{$message}}</span>
 												@enderror

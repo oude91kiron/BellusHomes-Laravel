@@ -24,12 +24,8 @@ class HomeController extends Controller
     $data ['posts'] =Post::get();
     $data ['sitedata'] = SiteData::first();
 
-    $data['categories'] = Category::parent()->select('id','slug')->with(['childrens' => function($q){
-        $q->select('id','parent_id','slug');
-        $q->with(['childrens'=>function($qq){
-            $qq->select('id','parent_id','slug');
-        }]);
-    }])->get();
+    $data['categories'] = Category::get();
+    
     return view('front.site',$data);
 
    }

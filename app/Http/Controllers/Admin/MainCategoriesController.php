@@ -84,6 +84,8 @@ class MainCategoriesController extends Controller
         if (!$category) {
             return redirect()->route('admin.categories')->with(['error'=>'This section does not exist']);
         }
+        //dump($category);
+
         return view('dashboard.categories.edit', compact('category'));
     }
 
@@ -94,44 +96,37 @@ class MainCategoriesController extends Controller
      public function update($id, MainCategoryRequest $request)
      {
 
-
-      try {
-         DB::beginTransaction();
-
-
-         $category = Category::find($id);
-
-         //validation
-         if (!$request->has('is_active')) {
-             $request->request->add(['is_active' => 0]);
-         } else {
-             $request->request->add(['is_active' => 1]);
+        
+        try{
+            DB::beginTransaction();
+      
+            //validation
+    
+            if (!$request->has('is_active'))
+                $request->request->add(['is_active' => 0]);
+            else
+                $request->request->add(['is_active' => 1]);
+   
+   
+                $category=  Category::find($id);
+                if(!$category){
+                  return redirect()->route('admin.categories')->with(['error'=>'This section does not exist']);
+               }
+               $category->update($request->all());
+   
+               //save translation
+               $category->name = $request->name;
+               $category->save();
+   
+   
+               DB::commit();
+    
+               return redirect()->route('admin.categories')->with(['success' => 'The Session Has Updated Successfully']);
+   
+         }catch(\Exception $ex){
+            DB::rollback();
+            return redirect()->route('admin.categories')->with(['error' => 'There is Something Wrong In Session']);
          }
-
-
-
-      //if user choose main category then we must remove paret id from the request
-         if ($request -> type == CategoryType::mainCategory) { //main category
-             $request->request->add(['parent_id' => null]);
-         }
-
-
-         // if he choose child category we mus to add parent id
-         $category =Category::update($request->except('_token'));
-
-         //save translations
-         $category->name = $request->name;
-
-
-         $category->save();
-
-         DB::commit();
-         return redirect()->route('admin.categories')->with(['success' => 'The Session Has Updated Successfully']);
-     } catch (\Exception $ex) {
-         DB::rollback();
-         return redirect()->route('admin.categories')->with(['error' => 'There is Something Wrong In Session']);
-     }
-
      }
 
 

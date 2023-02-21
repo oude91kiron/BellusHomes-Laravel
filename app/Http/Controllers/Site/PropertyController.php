@@ -27,12 +27,7 @@ class PropertyController extends Controller
     
         $data['properties'] = Property::get();
     
-        $data['categories'] = Category::parent()->select('id', 'slug')->with(['childrens' => function ($q) {
-           $q->select('id', 'parent_id', 'slug');
-           $q->with(['childrens' => function ($qq) {
-               $qq->select('id', 'parent_id', 'slug');
-           }]);
-       }])->get();
+        $data['categories'] = Category::get();
 
 
        if(!$data['property']){

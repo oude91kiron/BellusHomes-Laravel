@@ -70,7 +70,7 @@ class PostController extends Controller
        $post->post_image = $post_image;
         
         if($post->save()){
-            return redirect()->route('post.create')->with(['success'=>'The data has been Saved']);
+            return redirect()->route('post.index')->with(['success'=>'The data has been Saved']);
         }
         return redirect()->route('post.create')->with(['error'=>'Something went wrong']);
 

@@ -13,7 +13,7 @@
         <div class="col-md-6 col-lg-4 col-xl-4">
           <div class="for_blog feat_property">
             <div class="thumb">
-              <a href="#">
+              <a href="{{route('single.post', $post)}}">
                 <img class="img-whp" src="{{asset('assets/admin/images/posts/'. $post->post_image )}}" alt="post.jpg">
               </a>
             </div>
