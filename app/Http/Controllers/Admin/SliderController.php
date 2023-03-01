@@ -12,11 +12,19 @@ use Illuminate\Http\Request;
 
 class SliderController extends Controller
 {
+    
+    /**
+     * 
+     */
     public function addImages(){
         $images = Slider::get();
         return view('dashboard.sliders.create',compact('images'));
     }
 
+
+    /**
+     * 
+     */
     public function saveSliderImages(Request $request){
 
         $file = $request ->file('dzfile');
@@ -28,6 +36,9 @@ class SliderController extends Controller
         ]);
     }
 
+    /**
+     * 
+     */
     public function saveSliderImagesDB(SliderImagesRequest $request ){
         try{
 

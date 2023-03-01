@@ -84,6 +84,8 @@ class MainCategoriesController extends Controller
         if (!$category) {
             return redirect()->route('admin.categories')->with(['error'=>'This section does not exist']);
         }
+        //dump($category);
+
         return view('dashboard.categories.edit', compact('category'));
     }
 
@@ -94,7 +96,41 @@ class MainCategoriesController extends Controller
      public function update($id, MainCategoryRequest $request)
      {
 
+<<<<<<< HEAD
 
+=======
+        
+        try{
+            DB::beginTransaction();
+      
+            //validation
+    
+            if (!$request->has('is_active'))
+                $request->request->add(['is_active' => 0]);
+            else
+                $request->request->add(['is_active' => 1]);
+   
+   
+                $category=  Category::find($id);
+                if(!$category){
+                  return redirect()->route('admin.categories')->with(['error'=>'This section does not exist']);
+               }
+               $category->update($request->all());
+   
+               //save translation
+               $category->name = $request->name;
+               $category->save();
+   
+   
+               DB::commit();
+    
+               return redirect()->route('admin.categories')->with(['success' => 'The Session Has Updated Successfully']);
+   
+         }catch(\Exception $ex){
+            DB::rollback();
+            return redirect()->route('admin.categories')->with(['error' => 'There is Something Wrong In Session']);
+         }
+>>>>>>> 906fb739a5b9019237cea8642e78277ea6d3deb7
      }
 
 

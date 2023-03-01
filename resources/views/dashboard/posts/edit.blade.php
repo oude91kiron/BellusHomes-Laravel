@@ -61,7 +61,7 @@
 										</div>
 
 
-										<!-- paragraph 1-->
+										<!-- paragraph -->
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="paragraph">Paragraph: <span class="required">*</span>
 											</label>
@@ -78,7 +78,7 @@
 										</div>
 										</div>
 										
-                                        <!-- headline -->										
+                                        <!-- headline 1-->										
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="headline">Headline: <span class="required">*</span>
 											</label>
@@ -94,7 +94,7 @@
 										</div>
 
 
-										<!-- paragraph 2 -->
+										<!-- paragraph -->
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="secondParagraph">secondParagraph: <span class="required">*</span>
 											</label>
@@ -126,7 +126,8 @@
 												@enderror
 											</div>
 										</div>
-										<!-- Paragraph 3 -->
+
+										<!-- Paragraph -->
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="thirdParagraph">Paragraph: <span class="required">*</span>
 											</label>
@@ -143,7 +144,7 @@
 										</div>
 
 
-										<!-- secondHeadline -->										
+										<!-- Headline 2-->										
 										<div class="item form-group">
 											<label class="col-form-label col-md-3 col-sm-3 label-align" for="secondHeadline">Headline: <span class="required">*</span>
 											</label>

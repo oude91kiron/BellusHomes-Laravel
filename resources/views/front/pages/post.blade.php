@@ -21,6 +21,9 @@
 					<div class="main_blog_post_content">
 						<div class="mbp_thumb_post">
 							<div class="blog_sp_tag"><a href="#">Real estate</a></div>
+							
+							{{-- ________________________________   Entro  __________________________________ --}}
+
 							{{-- title --}}
 							<h1 class="title">{{$post->title}}</h1>
 							<ul class="blog_sp_post_meta">
@@ -39,17 +42,18 @@
 							</div>
 							<div class="details">
 								
-								{{-- Paragraph1 --}}
+								{{-- Paragraph --}}
 								<p class="mb30">{{$post->paragraph}}</p>
 								
-								{{-- headline --}}
+
+								{{-- ________________________________   Post Body  __________________________________ --}}
+
+								{{-- headline 1--}}
 								<h4 class="mb15">{{$post->headline}}</h4>
 								
-								{{-- Paragraph2 --}}
+								{{-- Paragraph --}}
 								<p class="mb30">{{$post->secondParagraph}}</p>
 								
-								{{-- Paragraph3 --}}
-								<p>{{$post->thirParagraph}}</p>
 								<div class="mbp_blockquote">
 									<div class="blockquote">
 										<span class="font-italic"><i class="fa fa-quote-left"></i></span><br>
@@ -58,18 +62,23 @@
 									</div>
 								</div>
 
-								{{-- firstSubheader --}}
+								{{-- Paragraph3 --}}
+								<p>{{$post->thirdParagraph}}</p>
+
+
+								{{-- ________________________________   Conclusion  __________________________________ --}}
+
+								{{-- headline 2 --}}
 								<h4 class="mb15">{{$post->secondHeadline}}</h4>
 								
-								{{-- paragraph4 --}}
+								{{-- paragraph --}}
 								<p class="mb25">{{$post->paragraph4}}</p>
 								
-								{{-- paragraph5 --}}
+								{{-- paragraph --}}
 								<p class="mb25">{{$post->paragraph5}}</p>
 							</div>
 							<ul class="blog_post_share">
 								<li><p>Share</p></li>
-
 								<li><a href="https://www.facebook.com/sharer/sharer.php?u={{ route('single.post', $post->id) }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
 								<li><a href="https://twitter.com/intent/tweet?url={{ route('single.post', $post->id) }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
 								<li><a href="https://www.instagram.com/share?url={{ route('single.post', $post->id) }}" target="_blank"><i class="fa fa-instagram"></i></a></li>
@@ -83,13 +92,13 @@
 							<div class="row">
 								<div class="col-sm-6 col-lg-6">
 									<div class="pag_prev">
-										<a href="{{route('single.post', $post->id - 1)}}"><span class="flaticon-back"></span></a>
+										<a href=" @if ($post->id - 1 <= 0) {{route('single.post', $posts->last()->id)}} @else {{route('single.post', $post->id-1)}} @endif"><span class="flaticon-back"></span></a>
 										<div class="detls"><h5>Previous Post</h5></div>
 									</div>
 								</div>
 								<div class="col-sm-6 col-lg-6">
 									<div class="pag_next text-right">
-										<a href="{{route('single.post', $post->id + 1)}}"><span class="flaticon-next"></span></a>
+										<a href=" @if ($post->id + 1 > $posts->count()+1) {{route('single.post', $posts->first()->id)}} @else {{route('single.post', $post->id+1)}} @endif"><span class="flaticon-next"></span></a>
 										<div class="detls"><h5>Next Post</h5></div>
 									</div>
 								</div>
@@ -178,10 +187,10 @@
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
-											<li class="list-inline-item"><a href="#"><img src="{{asset('assets/front/images/header-logo.png')}}" alt="pposter1.png"></a></li>
+											<li class="list-inline-item"><a href="{{route('single.post', $post)}}"><img src="{{asset('assets/front/images/header-logo.png')}}" alt="pposter1.png"></a></li>
 											<li class="list-inline-item"><a href="#">{{$sitedata->company_name}}</a></li>
 										</ul>
-										<a class="fp_pdate float-right text-thm" href="#">Read More <span class="flaticon-next"></span></a>
+										<a class="fp_pdate float-right text-thm" href="{{route('single.post', $post)}}">Read More <span class="flaticon-next"></span></a>
 									</div>
 								</div>
 							</div>
