@@ -1,4 +1,3 @@
-		
 @extends('layouts.dashboard.admin')
 @section('content')
 
@@ -9,8 +8,6 @@
 						<div class="title_left">
 							<h3>Categories</h3>
 						</div>
-
-					
 					</div>
 					<div class="clearfix"></div>
 					<div class="row">
@@ -69,15 +66,11 @@
 												<button type="submit" class="btn btn-success">Submit</button>
 											</div>
 										</div>
-
 									</form>
 								</div>
 							</div>
 						</div>
 					</div>
-
-				
-					
 				</div>
 			</div>
 			<!-- /page content -->

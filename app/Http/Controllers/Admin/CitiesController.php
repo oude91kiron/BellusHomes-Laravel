@@ -57,7 +57,6 @@ class CitiesController extends Controller
        $city->name = $request->name;
        $city->photo = $fileName;
 
-
        $city->save();
 
        DB::commit();
@@ -80,6 +79,7 @@ class CitiesController extends Controller
             if(!$city){
                 return redirect()->route('admin.cities')->with(['error'=>'Not Exist']);
             }
+            dump($city);
 
             return view('dashboard.cities.edit',compact('city'));
 
@@ -114,6 +114,7 @@ class CitiesController extends Controller
             $request->request->add(['is_active' => 1]);
 
             $city->update($request->except('_token','id','photo'));
+
 
             //save translation
             $city->name=$request->name;
