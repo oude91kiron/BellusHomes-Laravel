@@ -1,3 +1,4 @@
+		
 @extends('layouts.dashboard.admin')
 @section('content')
 
@@ -56,11 +57,15 @@
 												<button type="submit" class="btn btn-success">Submit</button>
 											</div>
 										</div>
+
 									</form>
 								</div>
 							</div>
 						</div>
 					</div>
+
+				
+					
 				</div>
 			</div>
 			<!-- /page content -->

@@ -27,7 +27,7 @@ class MainCategoriesController extends Controller
      */
     public function create()
     {
-        $categories = Category::select('id', 'parent_id')->get();
+        $categories = Category::select('id')->get();
         return view('dashboard.categories.create', compact('categories'));
     }
 
@@ -47,16 +47,7 @@ class MainCategoriesController extends Controller
                 $request->request->add(['is_active' => 1]);
             }
 
-
-
-         //if user choose main category then we must remove paret id from the request
-            if ($request -> type == CategoryType::mainCategory) { //main category
-                $request->request->add(['parent_id' => null]);
-            }
-            
-
-            // if he choose child category we mus to add parent id
-            $category = Category::create($request->except('_token'));
+            $category =Category::create($request->except('_token'));
 
             //save translations
             $category->name = $request->name;
@@ -80,7 +71,7 @@ class MainCategoriesController extends Controller
     public function edit($id)
     {
         $category =Category::orderBy('id', 'DESC')->find($id);
-        
+        // dump($category);
         if (!$category) {
             return redirect()->route('admin.categories')->with(['error'=>'This section does not exist']);
         }
@@ -96,9 +87,6 @@ class MainCategoriesController extends Controller
      public function update($id, MainCategoryRequest $request)
      {
 
-<<<<<<< HEAD
-
-=======
         
         try{
             DB::beginTransaction();
@@ -130,7 +118,6 @@ class MainCategoriesController extends Controller
             DB::rollback();
             return redirect()->route('admin.categories')->with(['error' => 'There is Something Wrong In Session']);
          }
->>>>>>> 906fb739a5b9019237cea8642e78277ea6d3deb7
      }
 
 
@@ -138,10 +125,9 @@ class MainCategoriesController extends Controller
     /**
       *
       */
-    public function delete($id)
+    public function delete(Category $category)
     {
         try {
-            $category =Category::orderBy('id', 'DESC')->find($id);
 
             if (!$category) {
                 return redirect()->route('admin.categories')->with(['error'=>'This section does not exist']);

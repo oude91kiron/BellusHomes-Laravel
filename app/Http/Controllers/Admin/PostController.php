@@ -57,7 +57,6 @@ class PostController extends Controller
             'paragraph5' => $request->paragraph5,
             'categories' => $request->categories,
             'tags' => $request->tags,
-            'user_id' => $user->id,
         ]);
 
 

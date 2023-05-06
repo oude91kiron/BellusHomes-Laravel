@@ -4,17 +4,13 @@
     
     <!-- page content -->
       <div class="right_col" role="main">
-          <div class="">
+          <div>
             <div class="page-title">
               <div class="title_left">
                 <h3>All <small> Cities</small></h3>
               </div>
-
-        
             </div>
-
             <div class="clearfix"></div>
-
             <div class="row">
               <div class="col-md-12 col-sm-12 ">
                 <div class="x_panel">
@@ -68,14 +64,13 @@
                                                     class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">Edit</a>
                 
                 
-                                                    <a href="{{route('admin.cities.delete',$city -> id)}}"
+                                                    <a href="{{route('admin.cities.delete', $city)}}"
                                                         class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">Delete</a>
                                             </div>
                                         </td>
                                 </tr>
                             @endforeach
                           @endisset
-                     
                       </tbody>
                     </table>
                   </div>

@@ -20,7 +20,7 @@ Route::group(
       Route::post('store','MainCategoriesController@store')->name('admin.categories.store');
       Route::get('edit/{id}','MainCategoriesController@edit')->name('admin.categories.edit');
       Route::post('update/{id}','MainCategoriesController@update')->name('admin.categories.update');
-      Route::get('delete/{id}','MainCategoriesController@delete')->name('admin.categories.delete');
+      Route::get('delete/{category}','MainCategoriesController@delete')->name('admin.categories.delete');
     });
  
 
@@ -30,7 +30,7 @@ Route::group(
       Route::post('store','CitiesController@store')->name('admin.cities.store');
       Route::get('edit/{id}','CitiesController@edit')->name('admin.cities.edit');
       Route::post('update/{id}','CitiesController@update')->name('admin.cities.update');
-      Route::get('delete/{id}','CitiesController@delete')->name('admin.cities.delete');
+      Route::get('delete/{city}','CitiesController@delete')->name('admin.cities.delete');
     });
 
 
@@ -45,12 +45,12 @@ Route::group(
 
     Route::group(['prefix'=>'properties'],function(){ 
 
-      Route::get('/','propertiesController@index')->name('admin.properties');
-      Route::get('create','propertiesController@create')->name('admin.properties.general.create');
-      Route::post('store','propertiesController@store')->name('admin.properties.general.store');
-      Route::get('edit/{id}','propertiesController@edit')->name('admin.properties.edit');
-      Route::post('update/{property}','propertiesController@update')->name('admin.properties.general.update');
-      Route::get('delete/{id}','propertiesController@delete')->name('admin.properties.delete');
+      Route::get('/','PropertiesController@index')->name('admin.properties');
+      Route::get('create','PropertiesController@create')->name('admin.properties.general.create');
+      Route::post('store','PropertiesController@store')->name('admin.properties.general.store');
+      Route::get('edit/{id}','PropertiesController@edit')->name('admin.properties.edit');
+      Route::post('update/{property}','PropertiesController@update')->name('admin.properties.general.update');
+      Route::get('delete/{id}','PropertiesController@delete')->name('admin.properties.delete');
 
       Route::get('project/{property}','PropertiesController@getProjectGeneral') ->name('admin.properties.general');
 

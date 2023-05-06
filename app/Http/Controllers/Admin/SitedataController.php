@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\admin;
-use App\Models\siteData;
+use App\Models\SiteData;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\adminRequest;
 use App\Http\Requests\SitedataRequest;

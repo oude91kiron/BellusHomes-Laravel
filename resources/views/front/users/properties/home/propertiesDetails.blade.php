@@ -10,7 +10,7 @@
             <div class="col-lg-7 col-xl-8">
                 <div class="single_property_title mt30-767">
                     <h2>{{$property -> name}}</h2>
-                    <p>{{$property -> total_location}}</p>
+                    <p>{{$property -> location}}</p>
                 </div>
             </div>
             <div class="col-lg-5 col-xl-4">
@@ -72,10 +72,10 @@
                         <div class="listing_single_description">
                             <div class="lsd_list">
                                 <ul class="mb0">
-                                    <li class="list-inline-item"><a href="#">{{$property->categories()->first()->name}}</a></li>
-                                    <li class="list-inline-item"><a href="#">Beds: {{$property->bedrooms}}</a></li>
-                                    <li class="list-inline-item"><a href="#">Baths: {{$property->bathrooms}}</a></li>
-                                    <li class="list-inline-item"><a href="#">Sq Mt: {{$property->area}}</a></li>
+                                    <li class="list-inline-item"><a href="#"> Category: {{$property->categories()->first()->name}}</a></li>
+                                    <li class="list-inline-item"><a href="#">Blocks: {{$property->bedrooms}}</a></li>
+                                    <li class="list-inline-item"><a href="#">Units: {{$property->bathrooms}}</a></li>
+                                    <li class="list-inline-item"><a href="#"> Area: {{$property->area}}</a></li>
                                 </ul>
                             </div>
 
@@ -83,9 +83,9 @@
 
                                 //print_r($arr );
 
-                                $arr1 = array_slice($arr, 0, 10);
-                                $arr2 = array_slice($arr, 10, 20);
-                                $arr3 = array_slice($arr, 20, count($arr)-1);
+                                $arr1 = array_slice($arr, 0, 4);
+                                $arr2 = array_slice($arr, 4, 8);
+                                $arr3 = array_slice($arr, 8, count($arr)-1);
 
                                 $paragraph1 = implode(" ",$arr1);
                                 $paragraph2 = implode(" ",$arr2);
@@ -118,7 +118,7 @@
                                     <ul class="list-inline-item">
                                         <li><p>Project ID : </p></li>
                                         <li><p>Starting Price: </p></li>
-                                        <li><p>Area : </p></li>
+                                        <li><p>Project Area : </p></li>
                                         <li><p>Year Built : </p></li>
                                     </ul>
                                     <ul class="list-inline-item">
@@ -130,8 +130,8 @@
                                 </div>
                                 <div class="col-md-6 col-lg-6 col-xl-4">
                                     <ul class="list-inline-item">
-                                        <li><p>Bedrooms : </p></li>
-                                        <li><p>Bathrooms :</p></li>
+                                        <li><p>Blocks : </p></li>
+                                        <li><p>Units :</p></li>
                                         <li><p>Garage :</p></li>
                                         <li><p>Garage Size :</p></li>
                                     </ul>
@@ -387,18 +387,18 @@
                                         <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}"><span class="flaticon-transfer-1"></span></a></li>
                                         <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}"><span class="flaticon-heart"></span></a></li>
                                     </ul>
-                                    <a class="fp_price" href="{{route('property.details', $property->id)}}">{{number_format($property->price, 0, ',')}} $</a>
+                                    <a class="fp_price" href="{{route('property.details', $property->id)}}">{{number_format($property -> total_price, 0, ',')}} $</a>
                                 </div>
                             </div>
                             <div class="details">
                                 <div class="tc_content">
                                     <p class="text-thm">{{$property->categories()->first()->name}}</p>
-                                    <h4>{{$property->title}}</h4>
+                                    <h4>{{$property->name}}</h4>
                                     <p><span class="flaticon-placeholder"></span> {{$property->location}}</p>
                                     <ul class="prop_details mb0">
-                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">Bedrooms: {{$property->bedrooms}}</a></li>
-                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">Bathrooms: {{$property->bathrooms}}</a></li>
-                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">Sq M: {{$property->area}}</a></li>
+                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">Blocks: {{$property->bedrooms}}</a></li>
+                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">Units: {{$property->bathrooms}}</a></li>
+                                        <li class="list-inline-item"><a href="{{route('property.details', $property->id)}}">Area: {{$property->area}}  Sq Mt</a></li>
                                     </ul>
                                 </div>
                                 <div class="fp_footer">

@@ -63,7 +63,7 @@
                                     <a href="{{route('admin.categories.edit',$category -> id)}}"class="btn btn-outline-primary btn-min-width box-shadow-3 mr-1 mb-1">
                                       Edit
                                     </a>
-                                    <a href="{{route('admin.categories.delete',$category -> id)}}"class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
+                                    <a href="{{route('admin.categories.delete',$category)}}"class="btn btn-outline-danger btn-min-width box-shadow-3 mr-1 mb-1">
                                       Delete
                                     </a>
                                 </div>

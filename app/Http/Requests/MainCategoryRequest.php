@@ -26,10 +26,6 @@ class MainCategoryRequest extends FormRequest
         return [
             'name' => 'required|max:255',
             'is_active' => 'boolean',
-<<<<<<< HEAD
-            'type' => 'required|in:1,2',
-=======
->>>>>>> 906fb739a5b9019237cea8642e78277ea6d3deb7
         ];
     }
 }

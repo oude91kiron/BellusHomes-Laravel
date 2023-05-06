@@ -17,7 +17,7 @@
 <link rel="stylesheet" href="{{asset('assets/front/css/responsive.css')}}"> 
 
     <!-- External CSS libraries -->
-    <link type="text/css" rel="stylesheet" href="{{asset('assets/front/css/bootstrap.min.css')}}">
+    <!--<link type="text/css" rel="stylesheet" href="{{asset('assets/front/css/bootstrap.min.css')}}">-->
     <link type="text/css" rel="stylesheet" href="{{asset('assets/front/css/magnific-popup.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('assets/front/css/jquery.selectBox.css')}}">
     <link type="text/css" rel="stylesheet" href="{{asset('assets/front/css/dropzone.css')}}">

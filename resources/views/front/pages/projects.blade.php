@@ -342,11 +342,11 @@
 										<p class="text-thm">Apartment</p>
 										<h4>{{$property->name }}</h4>
 										<p><span class="flaticon-placeholder"></span>{{$property ->location}}</p>
-										<ul class="prop_details mb0">
-											<li class="list-inline-item"><a class="text-thm3" href={{route('property.details',$property->id)}}">Bedrooms: {{$property -> bedrooms}}</a></li>
-											<li class="list-inline-item"><a class="text-thm3" href={{route('property.details',$property->id)}}">Baths: {{$property -> bathrooms}}</a></li>
-											<li class="list-inline-item"><a class="text-thm3" href={{route('property.details',$property->id)}}">{{$property -> area}} </a></li>
-										</ul>
+										<!--<ul class="prop_details mb0">-->
+										<!--	<li class="list-inline-item"><a class="text-thm3" href={{route('property.details',$property->id)}}">Bedrooms: {{$property -> bedrooms}}</a></li>-->
+										<!--	<li class="list-inline-item"><a class="text-thm3" href={{route('property.details',$property->id)}}">Baths: {{$property -> bathrooms}}</a></li>-->
+										<!--	<li class="list-inline-item"><a class="text-thm3" href={{route('property.details',$property->id)}}">{{$property -> area}} </a></li>-->
+										<!--</ul>-->
 									</div>
 									<div class="fp_footer">
 										<ul class="fp_meta float-left mb0">
